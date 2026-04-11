@@ -32,7 +32,7 @@ export default function Contato() {
 
   const socialLinks = {
     whatsapp: "https://wa.me/5521987881633", // substitua pelo número real
-    linkedin: "https://linkedin.com/in/brototec",
+    linkedin: "https://linkedin.com/company/brototec",
     instagram: "https://instagram.com/brototecbr",
   };
 
@@ -216,7 +216,7 @@ export default function Contato() {
                 <ul className="space-y-4 text-muted-foreground">
                   <li className="flex items-center gap-3">
                     <Mail size={18} className="text-primary/70" />
-                    <span>oi@brototec.com.br</span>
+                    <span>brototec@zohomail.com</span>
                   </li>
                   <li className="flex items-center gap-3">
                     <Phone size={18} className="text-primary/70" />

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 
-const HERO_IMAGE = "https://media.base44.com/images/public/69d93e23dc4bba4faeae3b3f/515d2fd7d_generated_4ec9c2f1.png";
+const HERO_IMAGE = "../images/home/hero.png";
 
 export default function HeroSection() {
   return (

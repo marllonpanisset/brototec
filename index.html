@@ -1,14 +1,98 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="https://base44.com/logo_v2.svg" />
+
+    <!-- RESPONSIVO -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- SEO TITLE (FOCADO EM BUSCA REAL) -->
+    <title>
+      Criação de sites, sistemas e automações | Brototec
+    </title>
+
+    <!-- META DESCRIPTION (FOCADO EM CLIQUE) -->
+    <meta
+      name="description"
+      content="Criamos sites profissionais, sistemas e automações para empresas. Soluções sob medida com código aberto, tecnologia acessível e foco em resultado."
+    />
+
+    <!-- ROBOTS -->
+    <meta name="robots" content="index, follow" />
+
+    <!-- CANONICAL (IMPORTANTE: MUDE QUANDO TIVER DOMÍNIO .com.br) -->
+    <link rel="canonical" href="https://brototec.vercel.app" />
+
+    <!-- GEO SEO (ajuda no Brasil) -->
+    <meta name="geo.region" content="BR" />
+    <meta name="geo.placename" content="Brasil" />
+    <meta name="language" content="pt-BR" />
+
+    <!-- FAVICON -->
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+
+    <!-- PWA -->
     <link rel="manifest" href="/manifest.json" />
-    <title>Base44 APP</title>
+
+    <!-- TEMA -->
+    <meta name="theme-color" content="#0f172a" />
+
+    <!-- ===================== -->
+    <!-- OPEN GRAPH -->
+    <!-- ===================== -->
+
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://brototec.vercel.app" />
+    <meta
+      property="og:title"
+      content="Criação de sites e automações | Brototec"
+    />
+    <meta
+      property="og:description"
+      content="Sites, sistemas e automações sob medida com código aberto e foco em resultado."
+    />
+    <meta property="og:image" content="https://brototec.vercel.app/og-image.png" />
+
+    <!-- ===================== -->
+    <!-- TWITTER -->
+    <!-- ===================== -->
+
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Brototec" />
+    <meta
+      name="twitter:description"
+      content="Criação de sites, sistemas e automações para empresas."
+    />
+    <meta name="twitter:image" content="https://brototec.vercel.app/og-image.png" />
+
+    <!-- PERFORMANCE -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <!-- ===================== -->
+    <!-- STRUCTURED DATA (MELHORADO) -->
+    <!-- ===================== -->
+
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Brototec",
+        "url": "https://brototec.vercel.app",
+        "logo": "https://brototec.vercel.app/logo.png",
+        "description": "Criação de sites, sistemas e automações com código aberto e tecnologia acessível.",
+        "areaServed": "BR",
+        "sameAs": [
+          "https://www.instagram.com/brototecbr",
+          "https://www.linkedin.com/company/brototec"
+        ]
+      }
+    </script>
   </head>
+
   <body>
     <div id="root"></div>
+
     <script type="module" src="/src/main.jsx"></script>
   </body>
 </html>

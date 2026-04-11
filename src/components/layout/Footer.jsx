@@ -20,7 +20,7 @@ const Footer = () => {
           <div className="lg:col-span-4">
             <Link to="/" className="inline-block group">
               <span className="font-heading text-2xl font-bold tracking-tight text-foreground">
-                broto<span className="text-primary">tec</span>
+                <span className="text-primary">&#123; </span>brototec<span className="text-primary"> &#125;</span>
               </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
@@ -114,8 +114,8 @@ const Footer = () => {
             <ul className="space-y-3">
               <li className="flex items-start gap-3">
                 <Mail size={16} className="text-primary/70 mt-0.5 flex-shrink-0" />
-                <a href="mailto:oi@brototec.com.br" className="text-sm text-muted-foreground hover:text-primary transition-colors break-all">
-                  oi@brototec.com.br
+                <a href="mailto:brototec@zohomail.com" className="text-sm text-muted-foreground hover:text-primary transition-colors break-all">
+                  brototec@zohomail.com
                 </a>
               </li>
               <li className="flex items-start gap-3">
