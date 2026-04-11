@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --font-heading: 'Space Grotesk', sans-serif;
+    --font-body: 'Inter', sans-serif;
+
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 155 100% 45%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 155 40% 15%;
+    --secondary-foreground: 155 60% 80%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 155 60% 20%;
+    --accent-foreground: 155 80% 85%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 155 100% 45%;
+    --chart-1: 155 100% 45%;
+    --chart-2: 155 60% 35%;
+    --chart-3: 155 40% 25%;
+    --chart-4: 155 80% 55%;
+    --chart-5: 155 50% 45%;
+    --radius: 0.75rem;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 155 100% 45%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 155 60% 12%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 155 100% 45%;
+  }
+
+  .dark {
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 7%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 7%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 155 100% 45%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 155 40% 15%;
+    --secondary-foreground: 155 60% 80%;
+    --muted: 0 0% 12%;
+    --muted-foreground: 0 0% 55%;
+    --accent: 155 60% 20%;
+    --accent-foreground: 155 80% 85%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 14%;
+    --input: 0 0% 14%;
+    --ring: 155 100% 45%;
+    --chart-1: 155 100% 45%;
+    --chart-2: 155 60% 35%;
+    --chart-3: 155 40% 25%;
+    --chart-4: 155 80% 55%;
+    --chart-5: 155 50% 45%;
+    --sidebar-background: 0 0% 6%;
+    --sidebar-foreground: 0 0% 96%;
+    --sidebar-primary: 155 100% 45%;
+    --sidebar-primary-foreground: 0 0% 4%;
+    --sidebar-accent: 155 60% 12%;
+    --sidebar-accent-foreground: 0 0% 96%;
+    --sidebar-border: 0 0% 14%;
+    --sidebar-ring: 155 100% 45%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground font-body;
+  }
+}
+
+@layer utilities {
+  .glow-green {
+    box-shadow: 0 0 40px rgba(0, 232, 123, 0.15), 0 0 80px rgba(0, 232, 123, 0.05);
+  }
+  .glow-green-sm {
+    box-shadow: 0 0 20px rgba(0, 232, 123, 0.1), 0 0 40px rgba(0, 232, 123, 0.03);
+  }
+  .text-gradient-green {
+    background: linear-gradient(135deg, hsl(155, 100%, 45%), hsl(155, 80%, 65%));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  .bg-gradient-radial {
+    background: radial-gradient(ellipse at center, rgba(0, 232, 123, 0.08) 0%, transparent 70%);
+  }
+  .bg-noise {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  }
+}
