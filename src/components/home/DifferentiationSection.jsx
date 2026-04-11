@@ -26,13 +26,13 @@ export default function DifferentiationSection() {
             <span className="text-sm font-medium text-primary tracking-widest uppercase">
               Diferencial
             </span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 tracking-tight leading-tight">
-              Pensamento estruturado,{" "}
-              <span className="text-gradient-green">não apenas execução.</span>
-            </h2>
-            <p className="mt-6 text-muted-foreground leading-relaxed">
-              A maioria entrega tarefas. Nós entregamos soluções completas com raciocínio estratégico em cada etapa.
-            </p>
+            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold">
+            Soluções digitais com estratégia, não apenas execução
+          </h2>
+
+          <p className="mt-6 text-muted-foreground">
+            Desenvolvemos sites, sistemas e automações com foco em resultado e crescimento real para empresas.
+          </p>
           </motion.div>
 
           {/* Right steps - broken grid */}

@@ -7,7 +7,7 @@ const Footer = () => {
 
   const socialLinks = {
     whatsapp: "https://wa.me/5521987881633",
-    linkedin: "https://linkedin.com/in/brototec",
+    linkedin: "https://linkedin.com/company/brototec",
     instagram: "https://instagram.com/brototecbr",
   };
 

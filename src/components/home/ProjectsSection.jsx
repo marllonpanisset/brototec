@@ -52,7 +52,8 @@ export default function ProjectsSection() {
               <div className="aspect-[3/2] overflow-hidden bg-muted">
                 <img
                   src={p.image}
-                  alt={p.title}
+                  alt={`${p.title} - projeto de criação de site e automação`}
+                  loading="lazy"
                   className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
                 />
               </div>

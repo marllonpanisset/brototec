@@ -32,9 +32,9 @@ export default function ImpactSection() {
               transition={{ duration: 0.6, delay: 0.1 }}
               className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight"
             >
-              Cada projeto contribui para a{" "}
-              <span className="text-gradient-green">educação tecnológica</span>{" "}
-              e o desenvolvimento de novos talentos.
+                Cada projeto contribui para a{" "}
+              <span className="text-gradient-green">educação tecnológica e inovação digital</span>{" "}
+              
             </motion.h2>
 
             <motion.p

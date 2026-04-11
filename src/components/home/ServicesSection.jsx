@@ -4,23 +4,23 @@ import { Code, Megaphone, Share2, TrendingUp } from "lucide-react";
 const services = [
   {
     icon: Code,
-    title: "Desenvolvimento Web",
-    desc: "Sites e aplicações de alta performance, feitos sob medida.",
+    title: "Criação de Sites Profissionais",
+    desc: "Sites rápidos, modernos e otimizados para gerar clientes.",
   },
   {
     icon: Megaphone,
-    title: "Marketing Digital",
-    desc: "Estratégias de crescimento orientadas por dados reais.",
+    title: "Automações de Processos",
+    desc: "Automatize tarefas e aumente a produtividade da sua empresa.",
   },
   {
     icon: Share2,
-    title: "Redes Sociais",
-    desc: "Presença digital autêntica que conecta e converte.",
+    title: "Gestão de Redes Sociais",
+    desc: "Presença digital estratégica que conecta e converte.",
   },
   {
     icon: TrendingUp,
-    title: "Tráfego Pago",
-    desc: "Campanhas otimizadas para o máximo retorno.",
+    title: "Tráfego Pago para Empresas",
+    desc: "Campanhas otimizadas para gerar leads e vendas.",
   },
 ];
 

@@ -33,8 +33,8 @@ export default function ConceptSection() {
           <span className="text-sm font-medium text-primary tracking-widest uppercase">
             Princípios
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mt-4 tracking-tight">
-            O que nos guia.
+          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mt-4">
+            Tecnologia, eficiência e estratégia no desenvolvimento digital
           </h2>
         </motion.div>
 
