@@ -17,11 +17,11 @@ export default function Navbar() {
       initial={{ y: -20, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
-      className="py-4 fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-xl border-b border-border/50 bg-black"
+      className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-xl border-b border-border/50"
     >
       <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
-        <a href="/" className="font-heading font-bold text-xl tracking-tight text-foreground">
-          <img src="./images/logo.png" alt="brototec" className="inline-block" />
+        <a href="/" className="font-heading font-bold text-2xl tracking-tight text-foreground">
+          broto<span className="text-primary">tec</span>  
         </a>
 
         {/* Desktop */}

@@ -7,7 +7,7 @@ const Footer = () => {
 
   const socialLinks = {
     whatsapp: "https://wa.me/5521987881633",
-    linkedin: "https://linkedin.com/company/brototec",
+    linkedin: "https://linkedin.com/compan/brototec",
     instagram: "https://instagram.com/brototecbr",
   };
 
@@ -19,7 +19,9 @@ const Footer = () => {
           {/* Coluna 1: Marca e Descrição */}
           <div className="lg:col-span-4">
             <Link to="/" className="inline-block group">
-              <img src="./images/logo.png" alt="brototec" className="inline-block" />
+              <span className="font-heading text-2xl font-bold tracking-tight text-foreground">
+                broto<span className="text-primary">tec</span>
+              </span>
             </Link>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
               Tecnologia com intenção. Transformamos ideias em produtos digitais de alto impacto.
