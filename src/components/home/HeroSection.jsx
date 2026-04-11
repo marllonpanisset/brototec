@@ -73,13 +73,13 @@ export default function HeroSection() {
             initial={{ opacity: 0, scale: 0.9 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="order-1 lg:order-2 flex justify-center"
+            className="hidden lg:flex order-2 lg:order-1 justify-center"
           >
             <div className="relative w-72 h-72 sm:w-96 sm:h-96 lg:w-[460px] lg:h-[460px]">
               <div className="absolute inset-0 rounded-full bg-primary/10 blur-[60px] animate-pulse-glow" />
               <img
                 src={HERO_IMAGE}
-                alt="Brototec visual abstrato"
+                alt="Visual abstrato representando tecnologia sustentável e automação da Brototec"
                 className="relative w-full h-full object-contain animate-float"
               />
             </div>
