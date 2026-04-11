@@ -19,9 +19,7 @@ const Footer = () => {
           {/* Coluna 1: Marca e Descrição */}
           <div className="lg:col-span-4">
             <Link to="/" className="inline-block group">
-              <span className="font-heading text-2xl font-bold tracking-tight text-foreground">
-                <span className="text-primary">&#123; </span>brototec<span className="text-primary"> &#125;</span>
-              </span>
+              <img src="./images/logo.png" alt="brototec" className="inline-block" />
             </Link>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed max-w-xs">
               Tecnologia com intenção. Transformamos ideias em produtos digitais de alto impacto.
