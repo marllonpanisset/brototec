@@ -4,32 +4,42 @@ import Footer from "../components/layout/Footer";
 import CtaSection from "../components/home/CtaSection";
 
 const fadeUp = {
-  initial: { opacity: 0, y: 24 },
+  initial: { opacity: 0, y: 28 },
   whileInView: { opacity: 1, y: 0 },
-  viewport: { once: true, margin: "-80px" },
+  viewport: { once: true, margin: "-60px" },
+  transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] },
 };
 
-const beliefs = [
+const pillars = [
   {
     num: "01",
-    statement: "Tecnologia só tem valor quando resolve problemas reais.",
-    sub: "Não construímos por construir. Cada linha de código tem propósito.",
+    title: "Autonomia digital: não criamos dependência, entregamos a chave.",
+    desc: "O código é seu. A infra é sua. A documentação é sua. Quando um projeto termina, você tem tudo que precisa para seguir sozinho — ou com quem quiser. Nunca refém de um fornecedor.",
   },
   {
     num: "02",
-    statement: "Simplicidade é a forma mais sofisticada de inteligência.",
-    sub: "O difícil é simplificar. O fácil é complicar.",
+    title: "Horizontalidade real: sem chefes, com responsabilidade compartilhada.",
+    desc: "Operamos como uma cooperativa. Decisões são tomadas em conjunto, os frutos são divididos, e ninguém acumula poder sobre o trabalho dos outros. Economia solidária não é slogan — é como pagamos as contas.",
   },
   {
     num: "03",
-    statement: "Crescimento sem impacto coletivo não é progresso.",
-    sub: "Acreditamos que cada projeto pode contribuir para algo maior.",
+    title: "Tecnologia com intenção: cada linha de código tem um propósito ético.",
+    desc: "Não aceitamos projetos que exploram dados sem consentimento, criam dark patterns ou aprisionam usuários. Simplicidade não é falta de ambição — é resultado de decisão técnica consciente.",
   },
   {
     num: "04",
-    statement: "Clareza é respeito.",
-    sub: "Com o cliente, com o time, com o processo.",
+    title: "Clareza radical: você entende tudo que está sendo construído.",
+    desc: "Sem jargão técnico como escudo. Sem caixa-preta no orçamento. Escopo claro, decisões justificadas, e você acompanha cada etapa — não como cliente, mas como parceiro.",
   },
+];
+
+const practice = [
+  "Escopo definido antes de qualquer desenvolvimento",
+  "Arquitetura documentada e explicada para o cliente",
+  "Decisões técnicas com justificativa clara",
+  "Código organizado, comentado e transferível",
+  "Nenhum lock-in tecnológico proposital",
+  "Foco no impacto real, não no volume de entregas",
 ];
 
 export default function Manifesto() {
@@ -39,81 +49,104 @@ export default function Manifesto() {
 
       {/* HERO */}
       <section className="relative pt-44 pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-radial pointer-events-none opacity-50" />
-        <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[140px] pointer-events-none" />
+        <div className="absolute top-0 left-0 w-[400px] h-[400px] rounded-full bg-primary/[0.04] blur-[120px] pointer-events-none -translate-x-1/3 -translate-y-1/3" />
 
         <div className="relative max-w-7xl mx-auto px-6">
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="inline-block text-sm font-medium text-primary tracking-widest uppercase mb-8"
+            transition={{ duration: 0.6 }}
+            className="inline-block text-xs font-medium text-primary/70 tracking-[0.2em] uppercase mb-8"
           >
             Manifesto
           </motion.span>
 
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 36 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading text-5xl sm:text-6xl lg:text-8xl font-bold leading-[1.0] tracking-tight max-w-4xl"
+            className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.06] tracking-tight max-w-4xl"
           >
-            Fazemos tecnologia{" "}
-            <span className="text-gradient-green">com intenção.</span>
+            O futuro não é algo que acontece.{" "}
+            <span className="text-gradient-green">
+              É algo que plantamos.
+            </span>
           </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 16 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.65, delay: 0.3 }}
+            className="mt-6 text-base text-muted-foreground max-w-xl leading-relaxed"
+          >
+            Acreditamos que tecnologia deve servir à vida — não ao controle. Que
+            sistemas devem libertar equipes, não aprisionar clientes. Que o trabalho
+            pode ser horizontal, os frutos podem ser divididos, e o código pode ter intenção.
+          </motion.p>
 
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-            className="mt-20 h-px bg-gradient-to-r from-primary/60 via-primary/20 to-transparent origin-left"
+            transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+            className="mt-20 h-px bg-gradient-to-r from-primary/50 via-primary/15 to-transparent origin-left"
           />
         </div>
       </section>
 
-      {/* OPENING STATEMENT */}
-      <section className="py-24">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-12 gap-8">
-            <div className="lg:col-span-1" />
-            <motion.div
-              {...fadeUp}
-              transition={{ duration: 0.8 }}
-              className="lg:col-span-8"
-            >
-              <p className="font-heading text-2xl sm:text-3xl lg:text-4xl font-medium leading-[1.3] text-foreground/90">
-                Vivemos num mundo com excesso de ferramentas e escassez de{" "}
-                <em className="not-italic text-gradient-green">pensamento.</em>{" "}
-                A Brototec existe para inverter isso.
-              </p>
-            </motion.div>
-          </div>
+      {/* CONTEXTO */}
+      <section className="py-24 border-t border-border/40">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-8">
+          <div className="lg:col-span-1" />
+          <motion.div {...fadeUp} className="lg:col-span-8">
+            <span className="text-xs font-medium text-primary tracking-[0.2em] uppercase block mb-6">
+              O problema que vemos
+            </span>
+            <p className="font-heading text-2xl sm:text-3xl font-semibold leading-relaxed">
+              A maioria das empresas cresce criando dependências que não percebe.
+            </p>
+            <p className="mt-7 text-muted-foreground leading-relaxed max-w-xl">
+              Ferramentas que prendem. Fornecedores que complicam de propósito.
+              Sistemas que só eles entendem — e cobram por isso. No começo funciona.
+              Depois vira gargalo, retrabalho, e uma conta que nunca para de crescer.
+            </p>
+            <p className="mt-5 text-muted-foreground leading-relaxed max-w-xl">
+              Nosso papel é o oposto: estruturar o digital da empresa para que ela
+              possa crescer com soberania — sem travar, sem depender, sem pedir
+              licença para evoluir.
+            </p>
+          </motion.div>
         </div>
       </section>
 
-      {/* BELIEFS */}
-      <section className="py-16">
-        <div className="max-w-7xl mx-auto px-6 space-y-0">
-          {beliefs.map((b, i) => (
+      {/* PILARES */}
+      <section className="py-16 border-t border-border/40">
+        <div className="max-w-7xl mx-auto px-6">
+          <div className="mb-10">
+            <span className="text-xs font-medium text-primary tracking-[0.2em] uppercase">
+              Os pilares
+            </span>
+          </div>
+
+          {pillars.map((p, i) => (
             <motion.div
-              key={b.num}
+              key={p.num}
               {...fadeUp}
-              transition={{ duration: 0.6, delay: i * 0.08 }}
-              className="group grid lg:grid-cols-12 gap-6 lg:gap-8 py-14 border-t border-border/40 last:border-b hover:pl-3 transition-all duration-500"
+              transition={{ ...fadeUp.transition, delay: i * 0.07 }}
+              className="grid lg:grid-cols-12 gap-6 py-12 border-t border-border/40 last:border-b"
             >
               <div className="lg:col-span-1">
-                <span className="font-heading text-sm text-primary/40 group-hover:text-primary/70 transition-colors duration-500 font-medium">
-                  {b.num}
+                <span className="text-xs font-medium text-primary/50 tracking-[0.12em] uppercase">
+                  {p.num}
                 </span>
               </div>
-              <div className="lg:col-span-7">
-                <h2 className="font-heading text-2xl sm:text-3xl font-bold leading-tight tracking-tight">
-                  {b.statement}
+              <div className="lg:col-span-6">
+                <h2 className="font-heading text-xl font-bold leading-snug">
+                  {p.title}
                 </h2>
               </div>
-              <div className="lg:col-span-4 flex items-center">
-                <p className="text-muted-foreground text-sm leading-relaxed">
-                  {b.sub}
+              <div className="lg:col-span-5">
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  {p.desc}
                 </p>
               </div>
             </motion.div>
@@ -121,51 +154,98 @@ export default function Manifesto() {
         </div>
       </section>
 
-      {/* INTERLUDE — large quote */}
-      <section className="py-40 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-primary/4 to-transparent pointer-events-none" />
-        <div className="relative max-w-7xl mx-auto px-6 text-center">
-          <motion.div
-            {...fadeUp}
-            transition={{ duration: 0.9 }}
-          >
-            <span className="font-heading text-8xl sm:text-[10rem] lg:text-[14rem] font-black leading-none text-primary/6 select-none pointer-events-none">
-              broto
-            </span>
-          </motion.div>
-          <motion.p
-            {...fadeUp}
-            transition={{ duration: 0.7, delay: 0.15 }}
-            className="font-heading text-xl sm:text-2xl lg:text-3xl font-medium max-w-2xl mx-auto mt-6 leading-relaxed"
-          >
-            "Brotar é o ato de crescer a partir de dentro — com raiz, com força, com direção."
-          </motion.p>
-        </div>
-      </section>
-
-      {/* CLOSING STATEMENT */}
+      {/* BUILD IN PUBLIC */}
       <section className="py-24 border-t border-border/40">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-            <motion.div {...fadeUp} transition={{ duration: 0.7 }}>
-              <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
-                Somos um time pequeno que pensa{" "}
-                <span className="text-gradient-green">grande.</span>
-              </h2>
-            </motion.div>
-            <motion.div {...fadeUp} transition={{ duration: 0.7, delay: 0.15 }}>
-              <p className="text-muted-foreground leading-relaxed mb-6">
-                Acreditamos que o tamanho de uma empresa não define sua capacidade de impacto. Definição disso é a clareza da sua visão e a qualidade do seu trabalho.
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-12 gap-8">
+          <div className="lg:col-span-1" />
+          <motion.div {...fadeUp} className="lg:col-span-8">
+            <span className="text-xs font-medium text-primary tracking-[0.2em] uppercase block mb-6">
+              Build in public
+            </span>
+
+            <div className="p-8 rounded-2xl border border-border/40 bg-primary/[0.025]">
+              <div className="flex items-center gap-2 mb-5">
+                <div className="w-1.5 h-1.5 rounded-full bg-primary" />
+                <span className="text-xs font-medium text-primary tracking-[0.12em] uppercase">
+                  Construção transparente
+                </span>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Acreditamos que compartilhar o processo é um ato político. Ao
+                mostrar como trabalhamos, quebramos o misticismo que a indústria de
+                tecnologia criou para justificar preços opacos e relações de poder
+                assimétricas.
               </p>
-              <p className="text-muted-foreground leading-relaxed">
-                Cada projeto que entregamos carrega um compromisso com a excelência, com a pessoa do outro lado e com o futuro que queremos construir.
+              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+                Documentamos erros, decisões e aprendizados em público — não para
+                parecer vulneráveis, mas porque transparência é o único antídoto
+                contra a dependência. Quando você vê como fazemos, você pode fazer
+                também. Ou nos cobrar quando erramos.
               </p>
-            </motion.div>
-          </div>
+              <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
+                Acompanhe nossa construção. Questione. Sugira. Esse manifesto também é seu.
+              </p>
+            </div>
+          </motion.div>
         </div>
       </section>
 
-      <CtaSection />
+      {/* APLICAÇÃO */}
+      <section className="py-24 border-t border-border/40">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
+          <motion.div {...fadeUp}>
+            <span className="text-xs font-medium text-primary tracking-[0.2em] uppercase block mb-4">
+              Na prática
+            </span>
+            <h2 className="font-heading text-3xl lg:text-4xl font-bold leading-tight">
+              Como isso aparece em cada projeto
+            </h2>
+          </motion.div>
+
+          <motion.div {...fadeUp}>
+            <ul className="space-y-4">
+              {practice.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-sm text-muted-foreground">
+                  <div className="w-1.5 h-1.5 rounded-full bg-primary mt-1.5 flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </motion.div>
+        </div>
+      </section>
+
+      {/* FECHAMENTO */}
+      <section className="py-24 border-t border-border/40">
+        <div className="max-w-7xl mx-auto px-6 grid lg:grid-cols-2 gap-16 items-start">
+          <motion.div {...fadeUp}>
+            <h2 className="font-heading text-3xl lg:text-4xl font-bold leading-tight">
+              Sistemas vivos.<br />
+              Não prisões digitais.
+            </h2>
+          </motion.div>
+
+          <motion.div {...fadeUp}>
+            <p className="text-muted-foreground leading-relaxed">
+              Cada projeto é construído com base no contexto real do negócio — não
+              em templates, não em modelos genéricos, não em soluções que só nós
+              sabemos manter.
+            </p>
+            <p className="mt-5 text-muted-foreground leading-relaxed">
+              O objetivo é simples: criar algo que funcione hoje, que você entenda
+              amanhã, e que continue evoluindo conforme a empresa cresce — com ou
+              sem a gente.
+            </p>
+          </motion.div>
+        </div>
+      </section>
+
+      <CtaSection
+        heading="Vamos construir o amanhã?"
+        body="Não como fornecedor e cliente. Como parceiros que acreditam que tecnologia pode ser diferente."
+        cta="Vamos conversar"
+        hint="Sem formulário padrão. Só uma conversa honesta."
+      />  
       <Footer />
     </div>
   );

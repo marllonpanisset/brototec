@@ -1,63 +1,58 @@
 import { motion } from "framer-motion";
-import { Zap, Target, Eye } from "lucide-react";
 
-const concepts = [
+const audience = [
   {
-    icon: Zap,
-    title: "Simplicidade",
-    desc: "Menos ruído, mais resultado. Tecnologia que funciona sem complicação.",
+    num: "01",
+    text: "Empresas que querem atualizar o próprio site sem depender de desenvolvedor",
   },
   {
-    icon: Target,
-    title: "Eficiência",
-    desc: "Cada decisão otimizada para gerar impacto máximo com recursos mínimos.",
+    num: "02",
+    text: "Negócios que precisam de um site profissional que acompanhe o crescimento",
   },
   {
-    icon: Eye,
-    title: "Clareza",
-    desc: "Processos transparentes. Você entende cada etapa do seu projeto.",
+    num: "03",
+    text: "Equipes que querem mais autonomia e menos retrabalho no dia a dia",
   },
 ];
 
 export default function ConceptSection() {
   return (
-    <section id="conceito" className="relative py-32 overflow-hidden">
+    <section className="py-20 border-t border-border/40">
       <div className="max-w-7xl mx-auto px-6">
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
-          className="mb-20"
-        >
-          <span className="text-sm font-medium text-primary tracking-widest uppercase">
-            Princípios
-          </span>
-          <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold mt-4">
-            Tecnologia, eficiência e estratégia no desenvolvimento digital
-          </h2>
-        </motion.div>
 
-        <div className="grid md:grid-cols-3 gap-px bg-border/50 rounded-2xl overflow-hidden">
-          {concepts.map((item, i) => (
+        <span className="text-xs font-medium text-primary tracking-[0.2em] uppercase">
+          Para quem é
+        </span>
+
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="font-heading text-2xl sm:text-3xl font-bold mt-3 max-w-md leading-snug"
+        >
+          Feito para quem quer mais controle e menos dependência
+        </motion.h2>
+
+        <div className="mt-8 grid md:grid-cols-3 gap-px bg-border/40 rounded-2xl overflow-hidden">
+          {audience.map((a, i) => (
             <motion.div
-              key={item.title}
-              initial={{ opacity: 0, y: 30 }}
+              key={a.num}
+              initial={{ opacity: 0, y: 12 }}
               whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true, margin: "-80px" }}
-              transition={{ duration: 0.6, delay: i * 0.15 }}
-              className="bg-background p-10 lg:p-14 group hover:bg-card transition-colors duration-500"
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.07 }}
+              className="bg-background hover:bg-primary/[0.03] p-6 transition-colors duration-300"
             >
-              <div className="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center mb-8 group-hover:bg-primary/20 transition-colors duration-500">
-                <item.icon size={22} className="text-primary" />
-              </div>
-              <h3 className="font-heading text-xl font-semibold mb-3">{item.title}</h3>
-              <p className="text-muted-foreground text-sm leading-relaxed">
-                {item.desc}
+              <span className="text-xs font-medium text-primary/50 tracking-[0.15em] uppercase block mb-3">
+                {a.num}
+              </span>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {a.text}
               </p>
             </motion.div>
           ))}
         </div>
+
       </div>
     </section>
   );

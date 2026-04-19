@@ -1,62 +1,64 @@
 import { motion } from "framer-motion";
 
-const points = [
-  { num: "01", title: "Diagnóstico", desc: "Entendemos o problema antes de propor a solução." },
-  { num: "02", title: "Estratégia", desc: "Cada decisão é pensada com base em dados e objetivos claros." },
-  { num: "03", title: "Execução", desc: "Implementação ágil com qualidade de engenharia." },
-  { num: "04", title: "Evolução", desc: "Acompanhamento contínuo para resultados crescentes." },
+const steps = [
+  {
+    num: "01",
+    title: "Diagnóstico",
+    desc: "Entendemos o processo real antes de qualquer linha de código.",
+  },
+  {
+    num: "02",
+    title: "Estruturação",
+    desc: "Escopo claro, arquitetura definida, decisões justificadas.",
+  },
+  {
+    num: "03",
+    title: "Construção",
+    desc: "Desenvolvimento com foco em clareza, não em volume.",
+  },
+  {
+    num: "04",
+    title: "Evolução",
+    desc: "Ajustes contínuos conforme o negócio cresce — você no controle.",
+  },
 ];
 
 export default function DifferentiationSection() {
   return (
-    <section className="relative py-32 overflow-hidden">
-      {/* Background accent */}
-      <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-primary/3 to-transparent pointer-events-none" />
-
+    <section className="py-20 border-t border-border/40">
       <div className="max-w-7xl mx-auto px-6">
-        <div className="grid lg:grid-cols-5 gap-16 lg:gap-20 items-start">
-          {/* Left text - asymmetric */}
-          <motion.div
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true, margin: "-100px" }}
-            transition={{ duration: 0.7 }}
-            className="lg:col-span-2"
-          >
-            <span className="text-sm font-medium text-primary tracking-widest uppercase">
-              Diferencial
-            </span>
-            <h2 className="font-heading text-3xl sm:text-4xl lg:text-5xl font-bold">
-            Soluções digitais com estratégia, não apenas execução
-          </h2>
 
-          <p className="mt-6 text-muted-foreground">
-            Desenvolvemos sites, sistemas e automações com foco em resultado e crescimento real para empresas.
-          </p>
-          </motion.div>
+        <span className="text-xs font-medium text-primary tracking-[0.2em] uppercase">
+          Nossa estrutura colaborativa
+        </span>
+        <motion.h2
+          initial={{ opacity: 0, y: 16 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          className="font-heading text-2xl sm:text-3xl font-bold mt-3 max-w-sm leading-snug"
+        >
+          Como trabalhamos juntos
+        </motion.h2>
 
-          {/* Right steps - broken grid */}
-          <div className="lg:col-span-3 space-y-0">
-            {points.map((p, i) => (
-              <motion.div
-                key={p.num}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-60px" }}
-                transition={{ duration: 0.5, delay: i * 0.12 }}
-                className="group flex gap-6 py-8 border-b border-border/50 last:border-0 hover:pl-4 transition-all duration-500"
-              >
-                <span className="font-heading text-3xl font-bold text-primary/20 group-hover:text-primary/50 transition-colors duration-500 shrink-0">
-                  {p.num}
-                </span>
-                <div>
-                  <h3 className="font-heading text-lg font-semibold mb-1">{p.title}</h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
+        <div className="mt-8 grid grid-cols-2 md:grid-cols-4 divide-x divide-border/40 border border-border/40 rounded-2xl overflow-hidden">
+          {steps.map((s, i) => (
+            <motion.div
+              key={s.num}
+              initial={{ opacity: 0, y: 10 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.07 }}
+              className="p-6 bg-background hover:bg-primary/[0.03] transition-colors duration-300"
+            >
+              <span className="text-xs font-medium text-primary tracking-[0.12em] uppercase block mb-3">
+                {s.num}
+              </span>
+              <h3 className="font-heading text-sm font-semibold mb-2">{s.title}</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">{s.desc}</p>
+            </motion.div>
+          ))}
         </div>
+
       </div>
     </section>
   );

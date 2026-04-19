@@ -1,10 +1,8 @@
-// arquivo: src/pages/Contato.jsx
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-import CtaSection from "../components/home/CtaSection";
-import { Mail, MapPin, Phone, Send, MessageCircle, Linkedin, Instagram } from "lucide-react";
+import { Send, MessageCircle, Linkedin, Instagram, Mail, ArrowRight } from "lucide-react";
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },
@@ -25,206 +23,189 @@ export default function Contato() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Aqui você pode integrar com um serviço de e-mail ou apenas exibir um alerta
-    alert("Mensagem enviada! (simulação)");
+    alert("Iniciando conexão... (Simulação)");
     setFormData({ nome: "", email: "", mensagem: "" });
   };
 
   const socialLinks = {
-    whatsapp: "https://wa.me/5521987881633", // substitua pelo número real
+    whatsapp: "https://wa.me/5521987881633",
     linkedin: "https://linkedin.com/company/brototec",
-    instagram: "https://instagram.com/brototecbr",
+    instagram: "https://instagram.com/brototec.br",
   };
 
   return (
-    <div className="min-h-screen bg-background text-foreground bg-noise">
+    <div className="min-h-screen bg-background text-foreground bg-noise selection:bg-primary/10 selection:text-primary">
       <Navbar />
 
-      {/* HERO */}
-      <section className="relative pt-44 pb-32 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-radial pointer-events-none opacity-50" />
-        <div className="absolute top-1/2 left-1/4 w-[500px] h-[500px] rounded-full bg-primary/5 blur-[140px] pointer-events-none" />
+      {/* HERO SECTION - Consistência com Home e Privacidade */}
+      <section className="relative pt-44 pb-24 overflow-hidden">
+        {/* Luz Solar Solarpunk */}
+        <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] opacity-10 pointer-events-none">
+          <div className="absolute inset-0 bg-gradient-radial from-primary/60 to-transparent blur-[120px] translate-x-1/4 -translate-y-1/4" />
+        </div>
 
         <div className="relative max-w-7xl mx-auto px-6">
           <motion.span
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            transition={{ duration: 0.8 }}
-            className="inline-block text-sm font-medium text-primary tracking-widest uppercase mb-8"
+            className="inline-block text-[10px] font-bold text-primary tracking-[0.4em] uppercase mb-8"
           >
-            Contato
+            Conexão
           </motion.span>
 
           <motion.h1
-            initial={{ opacity: 0, y: 40 }}
+            initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.9, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading text-5xl sm:text-6xl lg:text-8xl font-bold leading-[1.0] tracking-tight max-w-4xl"
+            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
+            className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight max-w-4xl"
           >
-            Vamos construir algo{" "}
-            <span className="text-gradient-green">juntos.</span>
+            Vamos cultivar sua <br />
+            <span className="text-gradient-green italic">próxima ideia.</span>
           </motion.h1>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.3 }}
-            className="text-lg sm:text-xl text-muted-foreground mt-6 max-w-2xl"
+            transition={{ duration: 0.7, delay: 0.2 }}
+            className="text-base text-muted-foreground mt-8 max-w-xl leading-relaxed"
           >
-            Conte-nos sobre seu projeto, sua ideia ou apenas diga olá.
-            Responderemos em até 24h.
+            Seja para Landing Pages de alta conversão ou sites institucionais, entregamos um <span className="text-foreground font-medium">painel de controle exclusivo</span> e automações estratégicas para que você mesmo gerencie seu conteúdo com <span className="text-foreground font-medium">total liberdade</span> após o lançamento.
           </motion.p>
 
           <motion.div
             initial={{ scaleX: 0 }}
             animate={{ scaleX: 1 }}
-            transition={{ duration: 1, delay: 0.5, ease: "easeOut" }}
-            className="mt-20 h-px bg-gradient-to-r from-primary/60 via-primary/20 to-transparent origin-left"
+            transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
+            className="mt-16 h-px bg-gradient-to-r from-primary/50 via-primary/10 to-transparent origin-left"
           />
         </div>
       </section>
 
-      {/* FORMULÁRIO + INFOS */}
-      <section className="py-16">
+      {/* CONTEÚDO PRINCIPAL */}
+      <section className="pb-32">
         <div className="max-w-7xl mx-auto px-6">
-          <div className="grid lg:grid-cols-12 gap-12 lg:gap-16">
-            {/* Coluna do formulário */}
+          <div className="grid lg:grid-cols-12 gap-16 lg:gap-24">
+            
+            {/* FORMULÁRIO - Design Minimalista */}
             <motion.div
               {...fadeUp}
               transition={{ duration: 0.8 }}
               className="lg:col-span-7"
             >
-              <form onSubmit={handleSubmit} className="space-y-8">
-                <div>
-                  <label htmlFor="nome" className="block text-sm font-medium text-foreground/80 mb-2">
-                    Nome
-                  </label>
-                  <input
-                    type="text"
-                    id="nome"
-                    name="nome"
-                    value={formData.nome}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-4 bg-transparent border border-border/60 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all duration-300 text-foreground placeholder:text-muted-foreground/50"
-                    placeholder="Seu nome completo"
-                  />
+              <form onSubmit={handleSubmit} className="space-y-10">
+                <div className="grid sm:grid-cols-2 gap-10">
+                  <div className="relative group">
+                    <label className="text-[10px] font-bold text-primary uppercase tracking-widest mb-3 block">Seu Nome</label>
+                    <input
+                      type="text"
+                      name="nome"
+                      value={formData.nome}
+                      onChange={handleChange}
+                      required
+                      placeholder="Como podemos te chamar?"
+                      className="w-full bg-transparent border-b border-border/60 py-3 focus:outline-none focus:border-primary transition-colors placeholder:text-muted-foreground/30 text-lg"
+                    />
+                  </div>
+                  <div className="relative group">
+                    <label className="text-[10px] font-bold text-primary uppercase tracking-widest mb-3 block">Seu E-mail</label>
+                    <input
+                      type="email"
+                      name="email"
+                      value={formData.email}
+                      onChange={handleChange}
+                      required
+                      placeholder="seu@email.com"
+                      className="w-full bg-transparent border-b border-border/60 py-3 focus:outline-none focus:border-primary transition-colors placeholder:text-muted-foreground/30 text-lg"
+                    />
+                  </div>
                 </div>
-                <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground/80 mb-2">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    value={formData.email}
-                    onChange={handleChange}
-                    required
-                    className="w-full px-4 py-4 bg-transparent border border-border/60 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all duration-300 text-foreground placeholder:text-muted-foreground/50"
-                    placeholder="seu@email.com"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="mensagem" className="block text-sm font-medium text-foreground/80 mb-2">
-                    Mensagem
-                  </label>
+
+                <div className="relative group">
+                  <label className="text-[10px] font-bold text-primary uppercase tracking-widest mb-3 block">O Projeto</label>
                   <textarea
-                    id="mensagem"
                     name="mensagem"
-                    rows="5"
+                    rows={4}
                     value={formData.mensagem}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-4 bg-transparent border border-border/60 rounded-lg focus:outline-none focus:ring-2 focus:ring-primary/50 focus:border-transparent transition-all duration-300 text-foreground placeholder:text-muted-foreground/50 resize-none"
-                    placeholder="Conte-nos mais sobre o que você precisa..."
+                    placeholder="Conte-nos brevemente sobre o que deseja construir..."
+                    className="w-full bg-transparent border-b border-border/60 py-3 focus:outline-none focus:border-primary transition-colors placeholder:text-muted-foreground/30 text-lg resize-none"
                   />
                 </div>
+
                 <motion.button
-                  whileHover={{ scale: 1.02 }}
-                  whileTap={{ scale: 0.98 }}
+                  whileHover={{ gap: "20px" }}
                   type="submit"
-                  className="group relative inline-flex items-center justify-center gap-3 px-8 py-4 bg-primary text-primary-foreground font-medium rounded-full overflow-hidden transition-all duration-500 shadow-lg shadow-primary/20 hover:shadow-primary/40"
+                  className="inline-flex items-center gap-3 text-xs font-bold text-primary uppercase tracking-[0.3em] group transition-all"
                 >
-                  <span className="relative z-10 flex items-center gap-2">
-                    Enviar mensagem <Send size={18} />
-                  </span>
-                  <div className="absolute inset-0 bg-gradient-to-r from-transparent via-white/20 to-transparent -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out" />
+                  Enviar Mensagem <ArrowRight size={16} className="group-hover:translate-x-1 transition-transform" />
                 </motion.button>
               </form>
             </motion.div>
 
-            {/* Coluna de informações e botões sociais */}
+            {/* INFO E LINKS SOCIAIS - Estilo Estúdio */}
             <motion.div
               {...fadeUp}
-              transition={{ duration: 0.8, delay: 0.15 }}
-              className="lg:col-span-5 space-y-10"
+              transition={{ duration: 0.8, delay: 0.2 }}
+              className="lg:col-span-5 space-y-12"
             >
               <div>
-                <h3 className="font-heading text-2xl font-bold mb-6">Fale diretamente</h3>
+                <h3 className="font-heading text-sm font-bold uppercase tracking-widest mb-8 text-primary/60">Canais Diretos</h3>
                 <div className="space-y-4">
                   <a
                     href={socialLinks.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-4 p-5 border border-border/40 rounded-xl bg-card/30 backdrop-blur-sm hover:bg-primary/5 hover:border-primary/40 transition-all duration-300"
+                    className="group flex items-center justify-between p-6 rounded-2xl border border-border/40 bg-white/50 hover:border-primary/40 transition-all duration-500"
                   >
-                    <div className="w-12 h-12 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 group-hover:scale-110 transition-transform duration-300">
-                      <MessageCircle size={24} />
+                    <div className="flex items-center gap-4">
+                      <MessageCircle size={20} className="text-primary" />
+                      <span className="font-medium">WhatsApp</span>
                     </div>
-                    <div>
-                      <p className="font-medium text-foreground">WhatsApp</p>
-                      <p className="text-sm text-muted-foreground">Resposta rápida</p>
-                    </div>
+                    <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                   </a>
 
                   <a
                     href={socialLinks.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-4 p-5 border border-border/40 rounded-xl bg-card/30 backdrop-blur-sm hover:bg-primary/5 hover:border-primary/40 transition-all duration-300"
+                    className="group flex items-center justify-between p-6 rounded-2xl border border-border/40 bg-white/50 hover:border-primary/40 transition-all duration-500"
                   >
-                    <div className="w-12 h-12 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:scale-110 transition-transform duration-300">
-                      <Linkedin size={24} />
+                    <div className="flex items-center gap-4">
+                      <Linkedin size={20} className="text-primary" />
+                      <span className="font-medium">LinkedIn</span>
                     </div>
-                    <div>
-                      <p className="font-medium text-foreground">LinkedIn</p>
-                      <p className="text-sm text-muted-foreground">Conecte-se conosco</p>
-                    </div>
+                    <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                   </a>
 
                   <a
                     href={socialLinks.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center gap-4 p-5 border border-border/40 rounded-xl bg-card/30 backdrop-blur-sm hover:bg-primary/5 hover:border-primary/40 transition-all duration-300"
+                    className="group flex items-center justify-between p-6 rounded-2xl border border-border/40 bg-white/50 hover:border-primary/40 transition-all duration-500"
                   >
-                    <div className="w-12 h-12 rounded-full bg-pink-500/10 flex items-center justify-center text-pink-500 group-hover:scale-110 transition-transform duration-300">
-                      <Instagram size={24} />
+                    <div className="flex items-center gap-4">
+                      <Instagram size={20} className="text-primary" />
+                      <span className="font-medium">Instagram</span>
                     </div>
-                    <div>
-                      <p className="font-medium text-foreground">Instagram</p>
-                      <p className="text-sm text-muted-foreground">Acompanhe nosso dia a dia</p>
-                    </div>
+                    <ArrowRight size={14} className="opacity-0 group-hover:opacity-100 -translate-x-2 group-hover:translate-x-0 transition-all" />
                   </a>
                 </div>
               </div>
 
-              {/* Informações de contato tradicionais (opcional) */}
-              <div className="pt-8 border-t border-border/40">
-                <h3 className="font-heading text-xl font-semibold mb-5">Outros canais</h3>
-                <ul className="space-y-4 text-muted-foreground">
-                  <li className="flex items-center gap-3">
-                    <Mail size={18} className="text-primary/70" />
-                    <span>brototec@zohomail.com</span>
-                  </li>
-                  <li className="flex items-center gap-3">
-                    <Phone size={18} className="text-primary/70" />
-                    <span>+55 (21) 98788-1633</span>
-                  </li>
-                </ul>
+              <div className="pt-10 border-t border-border/40">
+                <div className="space-y-4">
+                  <div className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors cursor-default">
+                    <Mail size={16} />
+                    <span className="text-sm font-medium">brototec@zohomail.com</span>
+                  </div>
+                  <p className="text-[10px] text-muted-foreground/60 leading-relaxed max-w-xs uppercase tracking-widest">
+                    Localizado no Rio de Janeiro, disponível para o mundo.
+                  </p>
+                </div>
               </div>
             </motion.div>
+
           </div>
         </div>
       </section>

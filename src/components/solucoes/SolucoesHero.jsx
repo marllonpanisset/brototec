@@ -3,45 +3,54 @@ import { motion } from "framer-motion";
 export default function SolucoesHero() {
   return (
     <section className="relative pt-40 pb-24 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-radial pointer-events-none opacity-70" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full bg-primary/6 blur-[120px] pointer-events-none" />
+      <div className="absolute inset-0 bg-gradient-radial pointer-events-none opacity-40" />
 
       <div className="relative max-w-7xl mx-auto px-6">
         <motion.span
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="inline-block text-sm font-medium text-primary tracking-widest uppercase mb-6"
+          className="inline-block text-xs font-medium text-primary tracking-[0.2em] uppercase mb-8"
         >
-          O que entregamos
+          Soluções
         </motion.span>
 
         <motion.h1
-          initial={{ opacity: 0, y: 30 }}
+          initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.1 }}
-          className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight max-w-3xl"
+          transition={{ duration: 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight max-w-4xl"
         >
-          Soluções que{" "}
-          <span className="text-gradient-green">transformam</span>{" "}
-          negócios.
+          Menos ferramentas.{" "}
+          <span className="text-gradient-green">
+            Mais clareza operacional.
+          </span>
         </motion.h1>
 
         <motion.p
-          initial={{ opacity: 0, y: 20 }}
+          initial={{ opacity: 0, y: 16 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.7, delay: 0.25 }}
-          className="mt-6 text-lg text-muted-foreground max-w-xl leading-relaxed"
+          transition={{ duration: 0.6, delay: 0.25 }}
+          className="mt-6 text-base text-muted-foreground max-w-lg leading-relaxed"
         >
-          Cada serviço foi desenhado para gerar resultados reais — com estratégia, tecnologia e execução de alto nível.
+          Tecnologia que liberta — não que aprisiona. Construímos junto com sua
+          equipe, com escopo claro e autonomia real para evoluir.
         </motion.p>
 
-        {/* Divider */}
+        <motion.p
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-3 text-sm text-muted-foreground/70 max-w-md"
+        >
+          Para empresas que querem crescer sem depender de terceiros para cada mudança.
+        </motion.p>
+
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
-          transition={{ duration: 0.8, delay: 0.4, ease: "easeOut" }}
-          className="mt-16 h-px bg-gradient-to-r from-primary/60 via-primary/20 to-transparent origin-left"
+          transition={{ duration: 1.2, delay: 0.5, ease: "easeOut" }}
+          className="mt-16 h-px bg-gradient-to-r from-primary/50 via-primary/15 to-transparent origin-left"
         />
       </div>
     </section>

@@ -1,4 +1,4 @@
-import { Code, Megaphone, Share2, TrendingUp } from "lucide-react";
+import { Monitor, Zap } from "lucide-react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import CtaSection from "../components/home/CtaSection";
@@ -6,57 +6,32 @@ import SolucoesHero from "../components/solucoes/SolucoesHero";
 import ServiceDetail from "../components/solucoes/ServiceDetail";
 import ExplanationBlocks from "../components/solucoes/ExplanationBlocks";
 
+
 const services = [
   {
-    icon: Code,
-    title: "Desenvolvimento Web",
-    tagline: "Produtos digitais de alta performance.",
+    icon: Monitor,
+    title: "Interfaces Estratégicas",
+    tagline: "Sua operação começa na interface.",
     description:
-      "Criamos sites, plataformas e aplicações sob medida com foco em velocidade, escalabilidade e experiência do usuário. Do design à infraestrutura, entregamos tecnologia que funciona.",
+      "Desenvolvemos sites e landing pages que não são apenas 'bonitos', mas ferramentas de venda. O diferencial? Você ganha um painel administrativo exclusivo, feito sob medida, para atualizar seu conteúdo em segundos, sem precisar de código ou de nós.",
     items: [
-      "Landing pages e sites institucionais",
-      "Plataformas e aplicações web",
-      "E-commerce e lojas virtuais",
-      "Integrações e APIs personalizadas",
+      "Sites institucionais focados em autoridade",
+      "Landing pages de alta conversão para tráfego pago",
+      "Painel Administrativo (CMS) personalizado e simplificado",
+      "Arquitetura focada em velocidade e SEO orgânico",
     ],
   },
   {
-    icon: Megaphone,
-    title: "Marketing Digital",
-    tagline: "Crescimento previsível e escalável.",
+    icon: Zap,
+    title: "Eficiência Digital",
+    tagline: "Elimine o trabalho manual que trava sua equipe.",
     description:
-      "Desenvolvemos estratégias de marketing orientadas por dados para aumentar a visibilidade, atrair clientes certos e converter com consistência.",
+      "Mapeamos os processos repetitivos do seu dia a dia e criamos automações que conectam suas ferramentas. O objetivo é um só: fazer a tecnologia trabalhar para você, e não o contrário.",
     items: [
-      "Estratégia de conteúdo",
-      "SEO técnico e editorial",
-      "E-mail marketing e automação",
-      "Análise e relatórios de performance",
-    ],
-  },
-  {
-    icon: Share2,
-    title: "Redes Sociais",
-    tagline: "Presença digital que conecta e converte.",
-    description:
-      "Gerenciamos sua presença nas principais redes sociais com identidade visual consistente, linguagem autêntica e estratégias que criam comunidade e geram vendas.",
-    items: [
-      "Gestão de Instagram, LinkedIn e TikTok",
-      "Criação de conteúdo visual e textual",
-      "Calendário editorial estratégico",
-      "Monitoramento de métricas e engajamento",
-    ],
-  },
-  {
-    icon: TrendingUp,
-    title: "Tráfego Pago",
-    tagline: "Cada real investido, maximizado.",
-    description:
-      "Criamos e otimizamos campanhas pagas no Google, Meta e outros canais para gerar leads qualificados e vendas com o melhor custo por resultado possível.",
-    items: [
-      "Campanhas Google Ads e Meta Ads",
-      "Remarketing e audiências personalizadas",
-      "Testes A/B e otimização contínua",
-      "Relatórios de ROI transparentes",
+      "Automação de fluxos de trabalho e notificações",
+      "Dashboards para visualização clara de métricas",
+      "Sistemas internos simples para organização de dados",
+      "Conexão inteligente entre suas ferramentas atuais",
     ],
   },
 ];
@@ -66,9 +41,16 @@ export default function Solucoes() {
     <div className="min-h-screen bg-background text-foreground bg-noise">
       <Navbar />
       <SolucoesHero />
+
       {services.map((service, i) => (
-        <ServiceDetail key={service.title} index={i} flipped={i % 2 !== 0} {...service} />
+        <ServiceDetail
+          key={service.title}
+          index={i}
+          flipped={i % 2 !== 0}
+          {...service}
+        />
       ))}
+
       <ExplanationBlocks />
       <CtaSection />
       <Footer />

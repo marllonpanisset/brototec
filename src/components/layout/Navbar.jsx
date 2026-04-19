@@ -39,7 +39,7 @@ export default function Navbar() {
             href="/contato"
             className="text-sm font-medium bg-primary text-primary-foreground px-5 py-2 rounded-full hover:opacity-90 transition-opacity"
           >
-            Fale conosco
+            Iniciar projeto
           </a>
         </div>
 
@@ -73,11 +73,11 @@ export default function Navbar() {
                 </a>
               ))}
               <a
-                href="#cta"
+                href="/contato"
                 onClick={() => setOpen(false)}
                 className="text-sm font-medium bg-primary text-primary-foreground px-5 py-2.5 rounded-full text-center hover:opacity-90 transition-opacity mt-2"
               >
-                Começar
+                Iniciar projeto
               </a>
             </div>
           </motion.div>

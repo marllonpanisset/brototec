@@ -10,7 +10,7 @@ import Footer from "../components/layout/Footer";
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-background text-foreground bg-noise">
+    <div className="min-h-screen bg-background text-foreground bg-noise selection:bg-primary/10 selection:text-primary">
       <Navbar />
       <HeroSection />
       <ConceptSection />
@@ -18,7 +18,14 @@ export default function Home() {
       <DifferentiationSection />
       <ImpactSection />
       <ProjectsSection />
-      <CtaSection />
+      
+      {/* CTA Section com Copy atualizada para Autonomia */}
+      <CtaSection 
+        heading="Pronto para ter soberania digital?"
+        body="Construímos o sistema que você controla, não o sistema que controla você. Vamos conversar?"
+        cta="Iniciar Conversa"
+      />
+      
       <Footer />
     </div>
   );
