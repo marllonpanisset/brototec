@@ -8,7 +8,7 @@ import CaseCard from "../components/projetos/CaseCard"; // Importando o CaseCard
 // IMPORTANTE: Importando da fonte única de dados que contém 'cover' e 'thumbnail'
 import { cases } from "../data/cases"; 
 
-export default function Projetos() {
+export default function Laboratorio() {
   return (
     <div className="min-h-screen bg-background text-foreground bg-noise">
       <Navbar />

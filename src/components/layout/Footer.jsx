@@ -95,7 +95,7 @@ const Footer = () => {
               </a>
               <div className="flex items-center gap-3 text-sm text-muted-foreground">
                 <MapPin size={16} className="text-primary/70 flex-shrink-0" />
-                <span>Rio de Janeiro, RJ — Brasil</span>
+                <span>Operação Global — Remoto</span>
               </div>
             </div>
           </div>

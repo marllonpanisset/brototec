@@ -12,7 +12,7 @@ export default function SolucoesHero() {
           transition={{ duration: 0.6 }}
           className="inline-block text-xs font-medium text-primary tracking-[0.2em] uppercase mb-8"
         >
-          Soluções
+          Laboratório
         </motion.span>
 
         <motion.h1

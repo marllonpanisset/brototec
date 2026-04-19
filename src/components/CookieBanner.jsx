@@ -1,5 +1,6 @@
 // src/components/CookieBanner.jsx
 import React, { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion'; // Recomendo usar framer para ser suave
 
 const CookieBanner = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -7,49 +8,58 @@ const CookieBanner = () => {
   useEffect(() => {
     const consent = localStorage.getItem('cookieConsent');
     if (!consent) {
-      setIsVisible(true);
+      // Pequeno delay para não assustar o usuário assim que ele abre o site
+      const timer = setTimeout(() => setIsVisible(true), 2000);
+      return () => clearTimeout(timer);
     }
   }, []);
 
   const handleAccept = () => {
     localStorage.setItem('cookieConsent', 'accepted');
     setIsVisible(false);
-    console.log('Cookies aceitos. Scripts de análise podem ser carregados.');
   };
 
   const handleReject = () => {
     localStorage.setItem('cookieConsent', 'rejected');
     setIsVisible(false);
-    console.log('Cookies rejeitados. Nenhum script de análise será carregado.');
   };
 
-  if (!isVisible) return null;
-
   return (
-    <div className="fixed bottom-0 left-0 right-0 bg-background border-t border-border/40 shadow-lg p-4 md:p-6 z-50">
-      <div className="max-w-7xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p className="text-sm text-muted-foreground text-center sm:text-left">
-          Nós usamos cookies para melhorar sua experiência de navegação. Ao continuar, você concorda com nossa{' '}
-          <a href="/politica-de-privacidade#cookies" className="text-primary hover:underline">
-            Política de Privacidade
-          </a>.
-        </p>
-        <div className="flex gap-3">
-          <button
-            onClick={handleReject}
-            className="px-5 py-2 text-sm font-medium text-foreground border border-border rounded-full hover:bg-muted transition-colors duration-200"
-          >
-            Rejeitar
-          </button>
-          <button
-            onClick={handleAccept}
-            className="px-5 py-2 text-sm font-medium text-primary-foreground bg-primary rounded-full hover:bg-primary/90 transition-colors duration-200 shadow-md"
-          >
-            Aceitar
-          </button>
-        </div>
-      </div>
-    </div>
+    <AnimatePresence>
+      {isVisible && (
+        <motion.div 
+          initial={{ y: 100, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 100, opacity: 0 }}
+          className="fixed bottom-6 left-6 right-6 md:left-auto md:max-w-xl bg-white/80 backdrop-blur-xl border border-border/40 shadow-2xl p-6 z-[9999] rounded-[2rem]"
+        >
+          <div className="flex flex-col gap-6">
+            <div className="space-y-2">
+              <h4 className="font-heading font-bold text-foreground tracking-tight">Privacidade & Experiência</h4>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Nós usamos cookies para entender como você interage com a nossa filosofia digital e melhorar sua navegação. 
+                Consulte nossa <a href="/politica-de-privacidade" className="text-primary hover:underline font-medium">Política de Privacidade</a>.
+              </p>
+            </div>
+            
+            <div className="flex items-center justify-end gap-3">
+              <button
+                onClick={handleReject}
+                className="px-6 py-2.5 text-xs font-bold uppercase tracking-widest text-muted-foreground hover:text-foreground transition-colors"
+              >
+                Recusar
+              </button>
+              <button
+                onClick={handleAccept}
+                className="px-8 py-2.5 text-xs font-bold uppercase tracking-widest text-white bg-primary rounded-full hover:bg-primary/90 transition-all shadow-lg shadow-primary/20"
+              >
+                Aceitar Cookies
+              </button>
+            </div>
+          </div>
+        </motion.div>
+      )}
+    </AnimatePresence>
   );
 };
 
