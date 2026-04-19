@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-import { Send, MessageCircle, Linkedin, Instagram, Mail, ArrowRight } from "lucide-react";
+import { MessageCircle, Linkedin, Instagram, Mail, ArrowRight } from "lucide-react";
 
 const fadeUp = {
   initial: { opacity: 0, y: 24 },

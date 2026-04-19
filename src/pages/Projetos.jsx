@@ -3,7 +3,7 @@ import { ArrowUpRight } from "lucide-react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import CtaSection from "../components/home/CtaSection";
-import CaseCard from "../components/projetos/CaseCard";
+import CaseCard from "../components/projetos/CaseCard"; // Importando o CaseCard para exibir os projetos
 
 // IMPORTANTE: Importando da fonte única de dados que contém 'cover' e 'thumbnail'
 import { cases } from "../data/cases"; 

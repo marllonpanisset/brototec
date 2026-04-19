@@ -15,7 +15,7 @@ export default function CaseCard({
   return (
     <Link
       to={`/projetos/${slug}`}
-      className="group block border border-border/40 rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-500 bg-background hover:-translate-y-2 shadow-sm hover:shadow-xl hover:shadow-primary/5"
+      className={`group block border border-border/40 rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-500 bg-background hover:-translate-y-2 shadow-sm hover:shadow-xl hover:shadow-primary/5 ${wide ? "md:col-span-2" : ""}`}
     >
       {/* Container da Imagem usando object-cover para Prints */}
       <div className={`relative overflow-hidden bg-secondary/20 ${wide ? "h-64" : "h-56"}`}>

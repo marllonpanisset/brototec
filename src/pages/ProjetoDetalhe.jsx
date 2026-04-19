@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { motion } from "framer-motion";
-import { ArrowLeft, CheckCircle2, Globe, Code2, Layout, ArrowUpRight } from "lucide-react";
+import { ArrowLeft, CheckCircle2, Globe, Code2, Layout } from "lucide-react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import { cases } from "../data/cases";
