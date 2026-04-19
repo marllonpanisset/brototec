@@ -27,11 +27,14 @@ export default function CaseCard({
             className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
         />
         
+        {/* Dentro do CaseCard.jsx, na parte da Badge de Status */}
         <div className="absolute top-4 left-4 z-20">
-          <span className="flex items-center gap-1.5 text-[10px] font-bold text-white bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full uppercase tracking-widest border border-white/10">
-            <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
+        <span className="flex items-center gap-1.5 text-[10px] font-bold text-white bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full uppercase tracking-widest border border-white/10">
+            <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${
+            status === "Em Desenvolvimento" ? "bg-amber-400" : "bg-primary"
+            }`} />
             {status}
-          </span>
+        </span>
         </div>
       </div>
 

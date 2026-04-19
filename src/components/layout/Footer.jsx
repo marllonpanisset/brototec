@@ -66,8 +66,8 @@ const Footer = () => {
           <div className="lg:col-span-2 space-y-8">
             <h4 className="text-[10px] font-bold text-primary uppercase tracking-[0.3em]">Explorar</h4>
             <ul className="space-y-4">
-              <li><Link to="/" className="text-sm text-muted-foreground hover:text-primary transition-colors">Home</Link></li>
-              <li><Link to="/projetos" className="text-sm text-muted-foreground hover:text-primary transition-colors">Projetos</Link></li>
+              <li><Link to="/ecossistema" className="text-sm text-muted-foreground hover:text-primary transition-colors">Ecossistema</Link></li>
+              <li><Link to="/laboratorio" className="text-sm text-muted-foreground hover:text-primary transition-colors">Laboratório</Link></li>
               <li><Link to="/contato" className="text-sm text-muted-foreground hover:text-primary transition-colors">Contato</Link></li>
             </ul>
           </div>
