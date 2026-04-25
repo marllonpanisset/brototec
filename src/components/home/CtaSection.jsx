@@ -2,10 +2,10 @@ import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function CtaSection({
-  heading = "Pare de depender de terceiros para atualizar seu site",
-  body = "Tenha um site profissional com controle total nas suas mãos. Atualize quando quiser, sem complicação.",
-  cta = "Criar meu site",
-  hint = "Sem dependência • Sem complicação • Feito para você evoluir",
+  heading = "Pronto para ter soberania digital?",
+  body = "Construímos o sistema que você controla, não o sistema que controla você. Vamos conversar?",
+  cta = "Conversar sobre meu projeto",
+  hint = "Respondemos em até 24h. Sem enrolação.",
 }) {
   return (
     <section className="py-32 border-t border-border/40 text-center">
@@ -27,6 +27,10 @@ export default function CtaSection({
 
         <p className="mt-4 text-xs text-muted-foreground/60">
           {hint}
+        </p>
+
+        <p className="mt-6 text-[10px] text-muted-foreground/40 tracking-widest uppercase">
+          Sem dependência • Sem complicação • Feito para você evoluir
         </p>
       </div>
     </section>
