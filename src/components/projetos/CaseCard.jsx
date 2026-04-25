@@ -2,14 +2,14 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 
 export default function CaseCard({
-  slug, 
-  title, 
-  subtitle, 
-  tags, 
-  challenge, 
-  vision, 
-  status, 
-  cover, // Recebendo cover (print) do data/cases.js
+  slug,
+  title,
+  subtitle,
+  tags,
+  challenge,
+  vision,
+  status,
+  cover,
   wide,
 }) {
   return (
@@ -17,24 +17,23 @@ export default function CaseCard({
       to={`/projetos/${slug}`}
       className={`group block border border-border/40 rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-500 bg-background hover:-translate-y-2 shadow-sm hover:shadow-xl hover:shadow-primary/5 ${wide ? "md:col-span-2" : ""}`}
     >
-      {/* Container da Imagem usando object-cover para Prints */}
+      {/* Imagem */}
       <div className={`relative overflow-hidden bg-secondary/20 ${wide ? "h-64" : "h-56"}`}>
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10 opacity-60" />
-        
-        <img 
-            src={cover} 
-            alt={title} 
-            className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+        <img
+          src={cover}
+          alt={title}
+          className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
         />
-        
-        {/* Dentro do CaseCard.jsx, na parte da Badge de Status */}
         <div className="absolute top-4 left-4 z-20">
-        <span className="flex items-center gap-1.5 text-[10px] font-bold text-white bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full uppercase tracking-widest border border-white/10">
-            <span className={`w-1.5 h-1.5 rounded-full animate-pulse ${
-            status === "Em Desenvolvimento" ? "bg-amber-400" : "bg-primary"
-            }`} />
+          <span className="flex items-center gap-1.5 text-[10px] font-bold text-white bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full uppercase tracking-widest border border-white/10">
+            <span
+              className={`w-1.5 h-1.5 rounded-full animate-pulse ${
+                status === "Em Desenvolvimento" ? "bg-amber-400" : "bg-primary"
+              }`}
+            />
             {status}
-        </span>
+          </span>
         </div>
       </div>
 
