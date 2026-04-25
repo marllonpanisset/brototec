@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Monitor, Zap } from "lucide-react";
+import { Monitor, Zap, Eye } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const services = [
@@ -16,6 +16,13 @@ const services = [
     title: "Automação e eficiência",
     tagline: "Menos retrabalho, mais resultado.",
     desc: "Conectamos suas ferramentas e automatizamos processos para sua equipe ganhar tempo e focar no que realmente importa.",
+  },
+  {
+    icon: Eye,
+    num: "03",
+    title: "Transparência total",
+    tagline: "Sem caixa-preta. Sem surpresa.",
+    desc: "Você acompanha cada etapa, entende cada decisão e sai do projeto com tudo em mãos — código, infra e documentação. Nunca refém de fornecedor.",
   },
 ];
 
@@ -37,7 +44,7 @@ export default function ServicesSection() {
           O que você ganha ao trabalhar com a gente
         </motion.h2>
 
-        <div className="mt-12 grid md:grid-cols-2 gap-px bg-border/40 rounded-3xl overflow-hidden border border-border/40">
+        <div className="mt-12 grid md:grid-cols-3 gap-px bg-border/40 rounded-3xl overflow-hidden border border-border/40">
           {services.map((s, i) => (
             <motion.div
               key={s.title}
