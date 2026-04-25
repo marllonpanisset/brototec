@@ -13,6 +13,11 @@ const audience = [
     num: "03",
     text: "Equipes que querem mais autonomia e menos retrabalho no dia a dia",
   },
+  {
+    num: "04",
+    text: "Não trabalhamos com projetos que aprisionam dados, criam dependência artificial ou precisam de obscuridade pra funcionar.",
+    negative: true,
+  },
 ];
 
 export default function ConceptSection() {
@@ -33,7 +38,7 @@ export default function ConceptSection() {
           Feito para quem quer mais controle e menos dependência
         </motion.h2>
 
-        <div className="mt-8 grid md:grid-cols-3 gap-px bg-border/40 rounded-2xl overflow-hidden">
+        <div className="mt-8 grid md:grid-cols-4 gap-px bg-border/40 rounded-2xl overflow-hidden">
           {audience.map((a, i) => (
             <motion.div
               key={a.num}
@@ -41,12 +46,26 @@ export default function ConceptSection() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.07 }}
-              className="bg-background hover:bg-primary/[0.03] p-6 transition-colors duration-300"
+              className={`p-6 transition-colors duration-300 ${
+                a.negative
+                  ? "bg-muted/40 hover:bg-muted/60"
+                  : "bg-background hover:bg-primary/[0.03]"
+              }`}
             >
-              <span className="text-xs font-medium text-primary/50 tracking-[0.15em] uppercase block mb-3">
+              <span
+                className={`text-xs font-medium tracking-[0.15em] uppercase block mb-3 ${
+                  a.negative ? "text-muted-foreground/40" : "text-primary/50"
+                }`}
+              >
                 {a.num}
               </span>
-              <p className="text-sm text-muted-foreground leading-relaxed">
+              <p
+                className={`text-sm leading-relaxed ${
+                  a.negative
+                    ? "text-muted-foreground/60 italic"
+                    : "text-muted-foreground"
+                }`}
+              >
                 {a.text}
               </p>
             </motion.div>
