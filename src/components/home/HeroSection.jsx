@@ -11,7 +11,7 @@ export default function HeroSection() {
 
       <div className="relative max-w-7xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           <div className="order-1">
             <motion.span
               initial={{ opacity: 0 }}
@@ -46,20 +46,27 @@ export default function HeroSection() {
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.45 }}
-              className="mt-10 flex items-center gap-4 flex-wrap"
+              className="mt-10 flex flex-col gap-4"
             >
-              <Link
-                to="/contato"
-                className="inline-flex items-center gap-2 bg-primary text-primary-foreground text-sm font-semibold px-7 py-3.5 rounded-xl hover:shadow-lg transition-all"
-              >
-                Criar meu site <ArrowRight size={15} />
-              </Link>
-              <Link
-                to="/projetos"
-                className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-3.5"
-              >
-                Ver como funciona
-              </Link>
+              <div className="flex items-center gap-4 flex-wrap">
+                <Link
+                  to="/contato"
+                  className="inline-flex items-center gap-2 bg-primary text-primary-foreground text-sm font-semibold px-7 py-3.5 rounded-xl hover:shadow-lg transition-all"
+                >
+                  Criar meu site <ArrowRight size={15} />
+                </Link>
+                <Link
+                  to="/projetos"
+                  className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-3.5"
+                >
+                  Ver como funciona
+                </Link>
+              </div>
+
+              {/* Linha de confiança */}
+              <p className="text-[11px] text-muted-foreground/60 tracking-wide leading-relaxed">
+                🌱 Projeto piloto aberto para os primeiros parceiros — sem burocracia, com contrato claro.
+              </p>
             </motion.div>
           </div>
 
