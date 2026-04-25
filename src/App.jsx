@@ -4,7 +4,7 @@ import { queryClientInstance } from '@/lib/query-client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import Home from './pages/Home';
-import Ecossistema from './pages/Ecossistema';
+import Solucoes from './pages/Solucoes';
 import Laboratorio from './pages/Laboratorio';
 import Manifesto from './pages/Manifesto';
 import Contato from './pages/Contato';
@@ -21,7 +21,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/ecossistema" element={<Ecossistema />} />
+          <Route path="/solucoes" element={<Solucoes />} />
           <Route path="/laboratorio" element={<Laboratorio />} />
           <Route path="/laboratorio/:slug" element={<ProjetoDetalhe />} />
           <Route path="/manifesto" element={<Manifesto />} />
