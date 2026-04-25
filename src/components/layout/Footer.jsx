@@ -22,7 +22,7 @@ const Footer = () => {
           <div className="lg:col-span-4">
             <Link to="/" className="inline-block">
               <span className="font-heading text-2xl font-bold tracking-tight text-foreground">
-                broto<span className="text-primary italic">tec</span>
+                broto<span className="text-primary">tec</span>
               </span>
             </Link>
 

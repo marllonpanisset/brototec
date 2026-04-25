@@ -45,7 +45,7 @@ export default function Navbar() {
             className="font-heading font-bold text-2xl tracking-tight text-foreground group z-10"
           >
             broto
-            <span className="text-primary italic group-hover:text-primary/80 transition-colors">
+            <span className="text-primary group-hover:text-primary/80 transition-colors">
               tec
             </span>
           </Link>
