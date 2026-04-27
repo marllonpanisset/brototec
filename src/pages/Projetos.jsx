@@ -87,15 +87,15 @@ export default function Projetos() {
       </section>
 
       {/* CASES */}
-      <section className="pb-32">
-        <div className="max-w-7xl mx-auto px-6">
-          <div className="grid md:grid-cols-2 gap-8">
-            {cases.map((c, i) => (
-              <CaseCard key={c.slug} {...c} wide={i === 0} />
-            ))}
-          </div>
-        </div>
-      </section>
+<section className="pb-32">
+  <div className="max-w-7xl mx-auto px-6">
+    <div className="grid md:grid-cols-2 gap-10">
+      {cases.map((c) => (
+        <CaseCard key={c.slug} {...c} />
+      ))}
+    </div>
+  </div>
+</section>
 
       {/* BUILD IN PUBLIC */}
       <section className="py-24 border-t border-border/40 bg-eco/30">

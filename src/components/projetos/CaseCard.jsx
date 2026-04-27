@@ -10,26 +10,33 @@ export default function CaseCard({
   vision,
   status,
   cover,
-  wide,
+  autonomy,
 }) {
   return (
     <Link
       to={`/projetos/${slug}`}
-      className={`group block border border-border/40 rounded-2xl overflow-hidden hover:border-primary/30 transition-all duration-500 bg-background hover:-translate-y-2 shadow-sm hover:shadow-xl hover:shadow-primary/5 ${wide ? "md:col-span-2" : ""}`}
+      className="group block border border-border/40 rounded-2xl overflow-hidden 
+      hover:border-primary/30 transition-all duration-500 bg-background 
+      hover:-translate-y-2 shadow-sm hover:shadow-xl hover:shadow-primary/5"
     >
-      {/* Imagem */}
-      <div className={`relative overflow-hidden bg-secondary/20 ${wide ? "h-64" : "h-56"}`}>
+      {/* IMAGEM */}
+      <div className="relative h-56 overflow-hidden bg-secondary/20">
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10 opacity-60" />
+
         <img
           src={cover}
           alt={title}
           className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
         />
+
+        {/* STATUS */}
         <div className="absolute top-4 left-4 z-20">
           <span className="flex items-center gap-1.5 text-[10px] font-bold text-white bg-black/40 backdrop-blur-md px-3 py-1.5 rounded-full uppercase tracking-widest border border-white/10">
             <span
               className={`w-1.5 h-1.5 rounded-full animate-pulse ${
-                status === "Em Desenvolvimento" ? "bg-amber-400" : "bg-primary"
+                status === "Em Desenvolvimento"
+                  ? "bg-amber-400"
+                  : "bg-primary"
               }`}
             />
             {status}
@@ -37,7 +44,9 @@ export default function CaseCard({
         </div>
       </div>
 
+      {/* CONTEÚDO */}
       <div className="p-8">
+        {/* STACK */}
         <div className="flex flex-wrap gap-2 mb-5">
           {tags?.map((t) => (
             <span
@@ -49,28 +58,57 @@ export default function CaseCard({
           ))}
         </div>
 
+        {/* TÍTULO */}
         <h2 className="font-heading text-2xl font-bold tracking-tight mb-2 group-hover:text-primary transition-colors">
           {title}
         </h2>
-        <p className="text-sm text-muted-foreground mb-6 font-medium">{subtitle}</p>
+
+        {/* SUB */}
+        <p className="text-sm text-muted-foreground mb-6 font-medium">
+          {subtitle}
+        </p>
 
         <div className="w-12 h-px bg-primary/30 mb-6" />
 
+        {/* NARRATIVA */}
         <div className="space-y-6">
+          {/* PROBLEMA */}
           <div className="space-y-2">
-            <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-primary/60">O desafio</p>
-            <p className="text-sm text-muted-foreground leading-relaxed">{challenge}</p>
+            <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-primary/60">
+              Problema
+            </p>
+            <p className="text-sm text-muted-foreground leading-relaxed">
+              {challenge}
+            </p>
           </div>
 
+          {/* SOLUÇÃO */}
           <div className="p-5 rounded-xl bg-secondary/30 border border-border/40 space-y-2">
-            <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-primary">A visão Brototec</p>
-            <p className="text-sm text-foreground leading-relaxed italic font-heading">"{vision}"</p>
+            <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-primary">
+              Estratégia
+            </p>
+            <p className="text-sm text-foreground leading-relaxed italic font-heading">
+              "{vision}"
+            </p>
           </div>
+
+          {/* DIFERENCIAL (AUTONOMIA) */}
+          {autonomy && (
+            <div className="p-5 rounded-xl border border-primary/20 bg-primary/[0.04] space-y-2">
+              <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-primary">
+                Autonomia do cliente
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {autonomy}
+              </p>
+            </div>
+          )}
         </div>
 
+        {/* CTA */}
         <div className="mt-8 pt-6 border-t border-border/40 flex items-center justify-end">
           <div className="flex items-center gap-2 text-xs font-bold uppercase tracking-widest text-primary opacity-0 group-hover:opacity-100 transition-all translate-x-4 group-hover:translate-x-0">
-            Explorar caso <ArrowUpRight size={16} />
+            Ver projeto <ArrowUpRight size={16} />
           </div>
         </div>
       </div>

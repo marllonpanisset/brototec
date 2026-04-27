@@ -5,7 +5,7 @@ export const cases = [
     title: "Schio Consultoria",
     category: "Site Institucional",
     subtitle: "Presença digital clara e estratégica para consultoria empresarial.",
-    tags: ["WordPress", "Tema Sob Medida", "UI/UX"],
+    tags: ["WordPress", "Tema Sob Medida", "UI/UX", "Gestão de Conteúdo"],
     challenge:
       "Transformar um serviço consultivo complexo em uma comunicação simples, direta e profissional, capaz de gerar confiança e facilitar o contato.",
     vision:
@@ -15,13 +15,15 @@ export const cases = [
       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
     cover:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
+    autonomy:
+      "Interface administrativa simples que permite ao cliente atualizar textos, imagens e seções do site sem depender de desenvolvedor.",
   },
   {
     slug: "tais-salles",
     title: "Portfólio Taís Salles",
     category: "Portfólio Profissional",
     subtitle: "Identidade digital pessoal com foco em posicionamento e autenticidade.",
-    tags: ["WordPress", "Layout Personalizado", "UI/UX"],
+    tags: ["WordPress", "Layout Personalizado", "UI/UX", "Gestão de Conteúdo"],
     challenge:
       "Criar uma presença digital que represente personalidade, estética e trajetória profissional de forma autêntica e estratégica.",
     vision:
@@ -31,5 +33,7 @@ export const cases = [
       "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=800",
     cover:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200",
+    autonomy:
+      "Painel intuitivo para gerenciamento de projetos e conteúdos, permitindo total autonomia na atualização do portfólio.",
   },
 ];
