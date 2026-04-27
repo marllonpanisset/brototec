@@ -1,26 +1,26 @@
 import { motion } from "framer-motion";
-import { Users, ShieldCheck, Clock, TrendingUp } from "lucide-react";
+import { ShieldCheck, UserCheck, Settings, Repeat } from "lucide-react";
 
 const blocks = [
   {
-    icon: Users,
-    title: "Crescimento coletivo",
-    desc: "Não terceirizamos decisões. Trabalhamos junto com sua equipe para construir autonomia digital real.",
-  },
-  {
     icon: ShieldCheck,
-    title: "Autonomia digital",
-    desc: "O código é seu. A infra é sua. Você não fica refém de fornecedor para mudar o próprio site.",
+    title: "Você é dono do sistema",
+    desc: "O site é seu. Código, acesso e estrutura ficam com você — sem dependência futura.",
   },
   {
-    icon: Clock,
-    title: "Tecnologia com intenção",
-    desc: "Nada é construído sem clareza do impacto na operação. Cada decisão técnica é justificada.",
+    icon: UserCheck,
+    title: "Autonomia total",
+    desc: "Você aprende a usar. Entregamos o projeto com treinamento para você mesmo gerenciar conteúdo e estrutura.",
   },
   {
-    icon: TrendingUp,
-    title: "Preparado para escalar",
-    desc: "Arquitetura que cresce com o negócio — sem refazer tudo do zero quando a demanda aumentar.",
+    icon: Settings,
+    title: "Sem manutenção recorrente",
+    desc: "Não trabalhamos com mensalidade de manutenção. O projeto é entregue completo e funcional para você operar sozinho.",
+  },
+  {
+    icon: Repeat,
+    title: "Estrutura simples e editável",
+    desc: "Nada de sistemas complexos. Tudo é pensado para ser fácil de entender, atualizar e evoluir com o tempo.",
   },
 ];
 
@@ -38,13 +38,15 @@ export default function ExplanationBlocks() {
           <span className="text-xs font-medium text-primary tracking-[0.2em] uppercase">
             Como trabalhamos
           </span>
+
           <h2 className="font-heading text-3xl sm:text-4xl font-bold mt-4 leading-tight">
-            Crescimento coletivo.
-            <br />Tecnologia com intenção.
+            Você não depende da gente.
+            <br />E isso é intencional.
           </h2>
+
           <p className="mt-5 text-muted-foreground text-sm leading-relaxed">
-            Nossa estrutura colaborativa garante que cada decisão técnica seja
-            clara, justificada e alinhada ao contexto real do seu negócio.
+            Nosso trabalho não é te prender — é te entregar controle.
+            Você recebe um sistema completo, funcional e simples de gerenciar.
           </p>
         </motion.div>
 
@@ -61,9 +63,11 @@ export default function ExplanationBlocks() {
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
                 <b.icon size={16} className="text-primary" />
               </div>
+
               <h3 className="font-heading text-sm font-semibold mb-2">
                 {b.title}
               </h3>
+
               <p className="text-xs text-muted-foreground leading-relaxed">
                 {b.desc}
               </p>
