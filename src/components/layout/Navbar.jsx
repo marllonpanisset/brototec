@@ -26,7 +26,7 @@ export default function Navbar() {
 
   const links = [
     { label: "Soluções", href: "/solucoes", description: "O que construímos" },
-    { label: "Laboratório", href: "/laboratorio", description: "Projetos e processo" },
+    { label: "Projetos", href: "/projetos", description: "Projetos e processo" },
     { label: "Manifesto", href: "/manifesto", description: "Como pensamos" },
   ];
 

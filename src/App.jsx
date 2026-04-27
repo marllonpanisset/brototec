@@ -5,7 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import PageNotFound from './lib/PageNotFound';
 import Home from './pages/Home';
 import Solucoes from './pages/Solucoes';
-import Laboratorio from './pages/Laboratorio';
+import Projetos from './pages/Projetos';
 import Manifesto from './pages/Manifesto';
 import Contato from './pages/Contato';
 import PoliticaPrivacidade from './pages/PoliticaDePrivacidade';
@@ -22,8 +22,8 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/solucoes" element={<Solucoes />} />
-          <Route path="/laboratorio" element={<Laboratorio />} />
-          <Route path="/laboratorio/:slug" element={<ProjetoDetalhe />} />
+          <Route path="/projetos" element={<Projetos />} />
+          <Route path="/projetos/:slug" element={<ProjetoDetalhe />} />
           <Route path="/manifesto" element={<Manifesto />} />
           <Route path="/contato" element={<Contato />} />
           
