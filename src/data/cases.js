@@ -1,27 +1,35 @@
 // src/data/cases.js
 export const cases = [
   {
-    slug: "broto-cms",
-    title: "Broto CMS",
-    category: "Produto Próprio",
-    subtitle: "Gestão de conteúdo focado em autonomia.",
-    tags: ["React", "Supabase", "Node.js"],
-    challenge: "Eliminar a necessidade de um desenvolvedor para cada pequena alteração de texto ou imagem em sites institucionais.",
-    vision: "Uma interface administrativa tão simples que qualquer pessoa da equipe consiga gerenciar o site sozinha.",
+    slug: "schio-consultoria",
+    title: "Schio Consultoria",
+    category: "Site Institucional",
+    subtitle: "Presença digital clara e estratégica para consultoria empresarial.",
+    tags: ["WordPress", "Tema Sob Medida", "UI/UX"],
+    challenge:
+      "Transformar um serviço consultivo complexo em uma comunicação simples, direta e profissional, capaz de gerar confiança e facilitar o contato.",
+    vision:
+      "Um site institucional objetivo, com estrutura pensada para clareza de serviços, autoridade e geração de oportunidades comerciais.",
     status: "Em Desenvolvimento",
-    thumbnail: "/images/home/cms-thumb.png",
-    cover: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=1200", 
+    thumbnail:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    cover:
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
   },
   {
-    slug: "brototec-digital",
-    title: "Brototec v1.0",
-    category: "Interface & Brand",
-    subtitle: "Nossa própria infraestrutura digital.",
-    tags: ["Next.js", "Tailwind", "Framer Motion"],
-    challenge: "Criar uma presença digital que transmita tecnologia de ponta sem perder a essência orgânica e humana da marca.",
-    vision: "Aplicação de design minimalista e performance máxima para servir de portfólio vivo das nossas capacidades técnicas.",
-    status: "Em Produção", // Este já está no ar!
-    thumbnail: "/images/home/automacao-thumb.png",
-    cover: "https://images.unsplash.com/photo-1497215728101-856f4ea42174?auto=format&fit=crop&q=80&w=1200",
-  }
+    slug: "tais-salles",
+    title: "Portfólio Taís Salles",
+    category: "Portfólio Profissional",
+    subtitle: "Identidade digital pessoal com foco em posicionamento e autenticidade.",
+    tags: ["WordPress", "Layout Personalizado", "UI/UX"],
+    challenge:
+      "Criar uma presença digital que represente personalidade, estética e trajetória profissional de forma autêntica e estratégica.",
+    vision:
+      "Um portfólio leve e visual, com navegação fluida e foco em destacar projetos, reforçar identidade e gerar conexão com o público.",
+    status: "Em Desenvolvimento",
+    thumbnail:
+      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=800",
+    cover:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200",
+  },
 ];
