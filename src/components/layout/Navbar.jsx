@@ -32,12 +32,7 @@ export default function Navbar() {
 
   return (
     <>
-      <motion.nav
-        initial={{ y: -20, opacity: 0 }}
-        animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.6, ease: "easeOut" }}
-        className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-xl border-b border-border/50"
-      >
+      <nav className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           {/* Logo */}
           <Link
@@ -104,7 +99,7 @@ export default function Navbar() {
             </AnimatePresence>
           </button>
         </div>
-      </motion.nav>
+      </nav>
 
       {/* Mobile menu — painel lateral direito */}
       <AnimatePresence>
