@@ -4,15 +4,35 @@ import { Link } from "react-router-dom";
 
 export default function HeroSection() {
   return (
-    <section className="relative min-h-[90vh] flex items-center pt-20 pb-24 overflow-hidden">
-      <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] opacity-10 pointer-events-none">
-        <div className="absolute inset-0 bg-gradient-radial from-primary/60 to-transparent blur-[120px] translate-x-1/4 -translate-y-1/4" />
+    <section
+      className="relative min-h-[90vh] flex items-center pt-20 pb-24 overflow-hidden"
+      style={{
+        backgroundImage: "url('/images/home/hero-bg.png')",
+        backgroundSize: "cover",
+        backgroundPosition: "70% center", // ajuste fino da arte
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+
+      {/* OVERLAY SYSTEM (nível Stripe) */}
+
+      {/* 1. BASE - legibilidade */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-r from-background via-background/80 to-background/20" />
+
+      {/* 2. LIGHT BLOOM - luz orgânica */}
+      <div className="absolute inset-0 z-10 pointer-events-none">
+        <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-primary/10 blur-[120px] rounded-full" />
       </div>
 
-      <div className="relative max-w-7xl mx-auto px-6 w-full">
+      {/* 3. DEPTH FADE - integração */}
+      <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-background/60" />
+
+      {/* CONTEÚDO */}
+      <div className="relative z-20 max-w-7xl mx-auto px-6 w-full">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
 
-          <div className="order-1">
+          {/* TEXTO */}
+          <div>
             <motion.span
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -39,7 +59,9 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.25 }}
               className="mt-6 text-base text-muted-foreground max-w-lg leading-relaxed"
             >
-              Criamos sites e landing pages profissionais com um painel simples para você editar conteúdo, publicar mudanças e evoluir seu projeto quando quiser.
+              Criamos sites e landing pages profissionais com um painel simples
+              para você editar conteúdo, publicar mudanças e evoluir seu projeto
+              quando quiser.
             </motion.p>
 
             <motion.div
@@ -55,6 +77,7 @@ export default function HeroSection() {
                 >
                   Criar meu site <ArrowRight size={15} />
                 </Link>
+
                 <Link
                   to="/projetos"
                   className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-3.5"
@@ -63,30 +86,35 @@ export default function HeroSection() {
                 </Link>
               </div>
 
-              {/* Linha de confiança */}
-              <p className="text-[11px] text-muted-foreground/60 tracking-wide leading-relaxed">
-                🌱 Projeto piloto aberto para os primeiros parceiros — sem burocracia, com contrato claro.
+              <p className="text-[11px] text-muted-foreground/70 tracking-wide leading-relaxed">
+                🌱 Projeto piloto aberto para os primeiros parceiros — sem
+                burocracia, com contrato claro.
               </p>
             </motion.div>
           </div>
 
+          {/* VISUAL DIREITA */}
           <motion.div
             initial={{ opacity: 0, scale: 0.95 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.4 }}
-            className="hidden lg:flex order-2 justify-center lg:justify-end"
+            className="hidden lg:flex justify-center lg:justify-end"
           >
             <div className="relative w-[460px] h-[460px]">
-              <div className="absolute inset-0 rounded-full bg-primary/5 blur-[80px] animate-pulse" />
+
+              {/* Glow integrado */}
+              <div className="absolute inset-0 rounded-full bg-primary/10 blur-[100px]" />
+
               <img
                 src="/images/home/brototec.svg"
                 alt="Brototec"
-                className="relative w-full h-full object-contain mix-blend-multiply drop-shadow-2xl animate-float"
+                className="relative w-full h-full object-contain drop-shadow-2xl animate-float"
               />
             </div>
           </motion.div>
         </div>
 
+        {/* DIVISOR */}
         <motion.div
           initial={{ scaleX: 0 }}
           animate={{ scaleX: 1 }}
