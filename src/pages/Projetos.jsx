@@ -7,7 +7,7 @@ import CtaSection from "../components/home/CtaSection";
 import CaseCard from "../components/projetos/CaseCard";
 import { cases } from "../data/cases";
 
-export default function Laboratorio() {
+export default function Projetos() {
   return (
     <div className="min-h-screen bg-background text-foreground bg-noise">
       <Navbar />

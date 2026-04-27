@@ -69,13 +69,13 @@ const Footer = () => {
             <h4 className="text-[10px] font-bold text-primary uppercase tracking-[0.3em]">Explorar</h4>
             <ul className="space-y-4">
               <li>
-                <Link to="/ecossistema" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                <Link to="/solucoes" className="text-sm text-muted-foreground hover:text-primary transition-colors">
                   Soluções
                 </Link>
               </li>
               <li>
-                <Link to="/laboratorio" className="text-sm text-muted-foreground hover:text-primary transition-colors">
-                  Laboratório
+                <Link to="/projetos" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  Projetos
                 </Link>
               </li>
               <li>
