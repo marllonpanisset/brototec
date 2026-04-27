@@ -25,11 +25,11 @@ export default function CtaSection({
           {cta} <ArrowRight size={16} />
         </Link>
 
-        <p className="mt-4 text-xs text-muted-foreground/60">
+        <p className="mt-4 text-sm text-muted-foreground">
           {hint}
         </p>
 
-        <p className="mt-6 text-[10px] text-muted-foreground/40 tracking-widest uppercase">
+        <p className="mt-5 text-xs text-muted-foreground/70">
           Sem dependência • Sem complicação • Feito para você evoluir
         </p>
       </div>
