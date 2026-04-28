@@ -5,7 +5,7 @@ export default function SolucoesHero() {
     <section
       className="relative pt-40 pb-28 overflow-hidden"
       style={{
-        backgroundImage: "url('/images/solucoes/solucoes-hero.png')",
+        backgroundImage: "url('/images/solucoes/solucoes-hero.webp')",
         backgroundSize: "cover",
         backgroundPosition: "75% center", // puxa arte pra direita
         backgroundRepeat: "no-repeat",

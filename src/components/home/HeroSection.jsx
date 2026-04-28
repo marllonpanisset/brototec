@@ -7,7 +7,7 @@ export default function HeroSection() {
     <section
       className="relative min-h-[90vh] flex items-center pt-20 pb-24 overflow-hidden"
       style={{
-        backgroundImage: "url('/images/home/hero-bg.png')",
+        backgroundImage: "url('/images/home/hero-bg.webp')",
         backgroundSize: "cover",
         backgroundPosition: "70% center", // ajuste fino da arte
         backgroundRepeat: "no-repeat",
