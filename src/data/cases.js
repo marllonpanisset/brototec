@@ -11,10 +11,15 @@ export const cases = [
     vision:
       "Um site institucional objetivo, com estrutura pensada para clareza de serviços, autoridade e geração de oportunidades comerciais.",
     status: "Em Desenvolvimento",
+
+    // 🔥 THUMB QUADRADA (574x574)
     thumbnail:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=574&h=574&crop=entropy",
+
+    // cover pode continuar maior
     cover:
       "https://images.unsplash.com/photo-1551434678-e076c223a692?auto=format&fit=crop&q=80&w=1200",
+
     autonomy:
       "Interface administrativa simples que permite ao cliente atualizar textos, imagens e seções do site sem depender de desenvolvedor.",
   },
@@ -29,10 +34,13 @@ export const cases = [
     vision:
       "Um portfólio leve e visual, com navegação fluida e foco em destacar projetos, reforçar identidade e gerar conexão com o público.",
     status: "Em Desenvolvimento",
+
     thumbnail:
-      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=800",
+      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=574&h=574&crop=entropy",
+
     cover:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200",
+
     autonomy:
       "Painel intuitivo para gerenciamento de projetos e conteúdos, permitindo total autonomia na atualização do portfólio.",
   },

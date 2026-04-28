@@ -3,10 +3,31 @@ export function createPageUrl(pageName: string) {
     '/' +
     pageName
       .toLowerCase()
-      .normalize('NFD') // remove acentos
+      .normalize('NFD')
       .replace(/[\u0300-\u036f]/g, '')
-      .replace(/[^a-z0-9\s-]/g, '') // remove especiais
+      .replace(/[^a-z0-9\s-]/g, '')
       .trim()
       .replace(/\s+/g, '-')
   );
+}
+
+// 👇 MENU CENTRAL (SEO + NAV + ROUTES sincronizados)
+export function getMenu() {
+  return [
+    {
+      label: "Soluções",
+      href: "/solucoes",
+      description: "O que construímos",
+    },
+    {
+      label: "Projetos",
+      href: "/projetos",
+      description: "Projetos e processo",
+    },
+    {
+      label: "Manifesto",
+      href: "/manifesto",
+      description: "Como pensamos",
+    },
+  ];
 }
