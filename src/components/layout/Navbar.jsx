@@ -26,12 +26,67 @@ export default function Navbar() {
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/60 backdrop-blur-xl border-b border-border/50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           
-          {/* Logo */}
+          {/* Logo 
           <Link to="/" className="font-heading font-bold text-2xl text-foreground group">
             broto
             <span className="text-primary group-hover:text-primary/80 transition-colors">
               tec
             </span>
+          </Link>
+          */}
+
+          <Link to="/" className="flex items-center gap-2 font-heading font-bold text-2xl text-foreground group">
+
+            {/* Icon */}
+            <svg width="28" height="28" viewBox="0 0 56 56" className="shrink-0">
+              <rect x="4" y="4" width="48" height="48" rx="12"
+                fill="hsl(0 0% 100%)"
+                stroke="hsl(142 45% 32%)"
+                stroke-width="1.5"
+              />
+
+              <rect x="16" y="16" width="10" height="10" rx="2"
+                fill="hsl(142 45% 32%)"
+              />
+
+              <rect x="30" y="16" width="10" height="10" rx="2"
+                fill="hsl(142 45% 32%)"
+                opacity="0.45"
+              />
+
+              <rect x="16" y="30" width="10" height="10" rx="2"
+                fill="hsl(142 45% 32%)"
+                opacity="0.35"
+              />
+
+              <rect x="30" y="30" width="10" height="10" rx="2"
+                fill="hsl(142 45% 32%)"
+                opacity="0.18"
+              />
+
+              <line x1="26" y1="21" x2="30" y2="21"
+                stroke="hsl(142 35% 25%)"
+                stroke-width="1"
+                stroke-linecap="round"
+                opacity="0.6"
+              />
+
+              <line x1="21" y1="26" x2="21" y2="30"
+                stroke="hsl(142 35% 25%)"
+                stroke-width="1"
+                stroke-linecap="round"
+                opacity="0.6"
+              />
+            </svg>
+
+            {/* Wordmark */}
+            <span className="font-heading font-bold text-2xl text-foreground tracking-tight">
+              broto
+              <span className="text-primary group-hover:opacity-80 transition-colors">
+                tec
+              </span>
+            </span>
+
           </Link>
 
           {/* Desktop */}

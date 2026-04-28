@@ -1,0 +1,49 @@
+<svg width="1080" height="1080" viewBox="0 0 1080 1080" xmlns="http://www.w3.org/2000/svg">
+
+  <!-- Background -->
+  <rect width="1080" height="1080" fill="hsl(140 10% 96%)"/>
+
+  <!-- MASTER CENTER -->
+  <g transform="translate(540 540) scale(1.35)">
+
+    <!-- ICON -->
+    <g transform="translate(-165 -28)">
+      <rect x="0" y="0" width="56" height="56" rx="12"
+        fill="none"
+        stroke="hsl(142 45% 32%)"
+        stroke-width="1.5"
+      />
+      <rect x="14" y="14" width="10" height="10" rx="2"
+        fill="hsl(142 45% 32%)"
+      />
+      <rect x="32" y="14" width="10" height="10" rx="2"
+        fill="hsl(142 45% 32%)"
+        opacity="0.45"
+      />
+      <rect x="14" y="32" width="10" height="10" rx="2"
+        fill="hsl(142 45% 32%)"
+        opacity="0.35"
+      />
+      <rect x="32" y="32" width="10" height="10" rx="2"
+        fill="hsl(142 45% 32%)"
+        opacity="0.18"
+      />
+    </g>
+
+    <!-- WORDMARK -->
+    <text
+      x="-89"
+      y="0"
+      font-family="Space Grotesk, sans-serif"
+      font-size="64"
+      font-weight="700"
+      letter-spacing="-0.03em"
+      dominant-baseline="central"
+    >
+      <tspan fill="hsl(140 10% 8%)">broto</tspan>
+      <tspan x="70" fill="hsl(142 45% 32%)">tec</tspan>
+    </text>
+
+  </g>
+
+</svg>
