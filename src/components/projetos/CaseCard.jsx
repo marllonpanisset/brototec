@@ -20,13 +20,15 @@ export default function CaseCard({
       hover:-translate-y-2 shadow-sm hover:shadow-xl hover:shadow-primary/5"
     >
       {/* IMAGEM */}
-      <div className="relative h-56 overflow-hidden bg-secondary/20">
+      <div className="relative aspect-square overflow-hidden bg-secondary/20">
+
+        {/* overlay de leitura */}
         <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10 opacity-60" />
 
         <img
           src={cover}
           alt={title}
-          className="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700"
+          className="w-full h-full object-cover object-top opacity-90 group-hover:scale-105 transition-transform duration-700"
         />
 
         {/* STATUS */}

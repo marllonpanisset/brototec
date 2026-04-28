@@ -66,7 +66,7 @@ export default function ProjetoDetalhe() {
             <img 
               src={projeto.cover} 
               alt={projeto.title} 
-              className="w-full h-full object-cover" 
+              className="w-full h-full object-cover object-[50%_20%] scale-[1.02]" 
             />
             <div className="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent" />
           </div>
