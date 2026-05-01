@@ -9,22 +9,15 @@ export default function HeroSection() {
       style={{
         backgroundImage: "url('/images/home/hero-bg.webp')",
         backgroundSize: "cover",
-        backgroundPosition: "70% center", // ajuste fino da arte
+        backgroundPosition: "70% center",
         backgroundRepeat: "no-repeat",
       }}
     >
-
-      {/* OVERLAY SYSTEM (nível Stripe) */}
-
-      {/* 1. BASE - legibilidade */}
+      {/* OVERLAY SYSTEM */}
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-background via-background/80 to-background/20" />
-
-      {/* 2. LIGHT BLOOM - luz orgânica */}
       <div className="absolute inset-0 z-10 pointer-events-none">
         <div className="absolute top-[-10%] left-[-10%] w-[600px] h-[600px] bg-primary/10 blur-[120px] rounded-full" />
       </div>
-
-      {/* 3. DEPTH FADE - integração */}
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-background/60" />
 
       {/* CONTEÚDO */}
@@ -38,7 +31,7 @@ export default function HeroSection() {
               animate={{ opacity: 1 }}
               className="inline-block text-[10px] font-bold text-primary tracking-[0.3em] uppercase mb-6"
             >
-              Tecnologia que liberta
+              Soberania Digital & Autonomia
             </motion.span>
 
             <motion.h1
@@ -47,9 +40,9 @@ export default function HeroSection() {
               transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="font-heading text-5xl lg:text-6xl font-bold leading-[1.06] tracking-tight"
             >
-              Controle total do seu site. <br />
+              Seu sistema, seu patrimônio. <br />
               <span className="text-gradient-green italic">
-                Sem depender de ninguém.
+                Sem aluguel de software.
               </span>
             </motion.h1>
 
@@ -59,9 +52,8 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.25 }}
               className="mt-6 text-base text-muted-foreground max-w-lg leading-relaxed"
             >
-              Criamos sites e landing pages profissionais com um painel simples
-              para você editar conteúdo, publicar mudanças e evoluir seu projeto
-              quando quiser.
+              Construímos sistemas de gestão, sites e landing pages de alto padrão em Flask e React. 
+              Entregamos o controle total e a propriedade do código para o seu negócio — sem taxas de licença abusivas.
             </motion.p>
 
             <motion.div
@@ -75,20 +67,20 @@ export default function HeroSection() {
                   to="/contato"
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground text-sm font-semibold px-7 py-3.5 rounded-xl hover:shadow-lg transition-all"
                 >
-                  Criar meu site <ArrowRight size={15} />
+                  Construir minha solução <ArrowRight size={15} />
                 </Link>
 
                 <Link
-                  to="/projetos"
+                  to="/solucoes"
                   className="text-sm font-medium text-muted-foreground hover:text-primary transition-colors py-3.5"
                 >
-                  Ver como funciona
+                  Conhecer o modelo Brototec
                 </Link>
               </div>
 
-              <p className="text-[11px] text-muted-foreground/70 tracking-wide leading-relaxed">
-                🌱 Projeto piloto aberto para os primeiros parceiros — sem
-                burocracia, com contrato claro.
+              <p className="text-[11px] text-muted-foreground/70 tracking-wide leading-relaxed flex items-center gap-2">
+                <span className="text-primary text-lg">🌱</span> 
+                Economia solidária: foco em transparência, propriedade do cliente e impacto real.
               </p>
             </motion.div>
           </div>
@@ -101,13 +93,10 @@ export default function HeroSection() {
             className="hidden lg:flex justify-center lg:justify-end"
           >
             <div className="relative w-[460px] h-[460px]">
-
-              {/* Glow integrado */}
               <div className="absolute inset-0 rounded-full bg-primary/10 blur-[100px]" />
-
               <img
                 src="/images/home/brototec.svg"
-                alt="Brototec"
+                alt="Brototec Logo"
                 className="relative w-full h-full object-contain drop-shadow-2xl animate-float"
               />
             </div>

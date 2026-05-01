@@ -5,7 +5,9 @@ import {
   Globe,
   Code2,
   Layout,
-  MessageCircle
+  MessageCircle,
+  Zap,
+  Shield
 } from "lucide-react";
 
 import Navbar from "../components/layout/Navbar";
@@ -13,20 +15,22 @@ import Footer from "../components/layout/Footer";
 import { cases } from "../data/cases";
 
 /* ---------------------------
-   SECTION BASE (SAFE)
+   SECTION BASE (Corrigido)
 ----------------------------*/
-
-function Section({ title, icon: Icon, children }) {
+// Adicionamos icon=null para torná-lo opcional e evitar o erro do VS Code
+function Section({ title, icon: Icon = null, children }) {
   if (!children) return null;
 
   return (
     <section className="max-w-4xl mx-auto px-6 mb-24">
-      <h2 className="text-2xl font-bold mb-6 flex items-center gap-2">
-        {Icon && <Icon size={20} className="text-primary" />}
-        {title}
-      </h2>
+      <div className="flex items-center gap-3 mb-6">
+        {Icon && <Icon size={18} className="text-primary" />}
+        <h2 className="text-[10px] font-bold uppercase tracking-[0.3em] text-primary">
+          {title}
+        </h2>
+      </div>
 
-      <div className="text-muted-foreground leading-relaxed text-lg">
+      <div className="text-foreground leading-relaxed text-xl sm:text-2xl font-medium tracking-tight">
         {children}
       </div>
     </section>
@@ -42,21 +46,20 @@ function HighlightBlock({ highlights }) {
 
   return (
     <section className="max-w-5xl mx-auto px-6 mb-28">
-      <div className="bg-[#fcfcfc] border border-border/60 rounded-3xl p-10 md:p-16 relative overflow-hidden">
-
-        <div className="absolute top-0 right-0 p-8 opacity-5">
-          <Globe size={140} />
+      <div className="bg-primary/[0.02] border border-primary/10 rounded-[2.5rem] p-10 md:p-16 relative overflow-hidden">
+        <div className="absolute -top-10 -right-10 p-8 opacity-[0.03] rotate-12">
+          <Zap size={240} />
         </div>
 
-        <h2 className="font-heading text-3xl font-bold mb-10">
-          Entrega de Valor
-        </h2>
+        <h2 className="font-heading text-3xl font-bold mb-10">Entrega de Valor</h2>
 
-        <div className="grid sm:grid-cols-2 gap-6">
+        <div className="grid sm:grid-cols-2 gap-8">
           {highlights.map((item) => (
-            <div key={item} className="flex items-center gap-3">
-              <CheckCircle2 className="text-primary" size={18} />
-              <span className="text-sm text-muted-foreground font-medium">
+            <div key={item} className="flex items-start gap-4">
+              <div className="mt-1 w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center shrink-0">
+                <CheckCircle2 className="text-primary" size={12} />
+              </div>
+              <span className="text-base text-muted-foreground leading-snug">
                 {item}
               </span>
             </div>
@@ -72,38 +75,20 @@ function FAQBlock({ faq }) {
 
   return (
     <section className="max-w-4xl mx-auto px-6 mb-28">
-      <h2 className="text-2xl font-bold mb-10">Perguntas Frequentes</h2>
-
-      <div className="space-y-6">
+      <h2 className="text-2xl font-bold mb-10 font-heading">Perguntas Estratégicas</h2>
+      <div className="space-y-0 border-t border-border/60">
         {faq.map((item, i) => (
-          <div key={i} className="border-b border-border pb-6">
-            <h3 className="font-semibold mb-2">{item.question}</h3>
-            <p className="text-muted-foreground">{item.answer}</p>
-          </div>
+          <details key={i} className="group border-b border-border/60">
+            <summary className="flex justify-between items-center cursor-pointer py-6 list-none">
+              <span className="font-semibold text-lg pr-4">{item.question}</span>
+              <span className="text-primary transition-transform group-open:rotate-180">↓</span>
+            </summary>
+            <p className="text-muted-foreground pb-6 text-lg leading-relaxed">
+              {item.answer}
+            </p>
+          </details>
         ))}
       </div>
-    </section>
-  );
-}
-
-function CTASection({ cta }) {
-  return (
-    <section className="max-w-4xl mx-auto px-6 text-center">
-      <h2 className="text-3xl font-bold mb-6">
-        {cta || "Transformar complexidade em clareza é o que fazemos."}
-      </h2>
-
-      <p className="text-muted-foreground mb-10">
-        Cada projeto aqui é uma peça de estratégia aplicada — não só execução.
-      </p>
-
-      <a
-        href="https://wa.me/5521981035984"
-        className="inline-flex items-center gap-2 bg-primary text-white px-6 py-3 rounded-full font-semibold hover:opacity-90 transition"
-      >
-        <MessageCircle size={18} />
-        Quero um projeto assim
-      </a>
     </section>
   );
 }
@@ -115,34 +100,27 @@ function CTASection({ cta }) {
 const SectionRenderer = ({ type, projeto }) => {
   const map = {
     problem: (
-      <Section title="O Problema" icon={Code2}>
+      <Section title="O Desafio" icon={Code2}>
         {projeto.challenge}
       </Section>
     ),
-
     strategy: (
-      <Section title="A Estratégia" icon={Layout}>
+      <Section title="A Visão" icon={Layout}>
         {projeto.vision}
       </Section>
     ),
-
     context: projeto.about && (
-      <Section title="Contexto">
+      <Section title="Sobre o Cliente" icon={Globe}>
         {projeto.about}
       </Section>
     ),
-
     solution: projeto.solution && (
-      <Section title="A Solução">
+      <Section title="A Solução" icon={Shield}>
         {projeto.solution}
       </Section>
     ),
-
     highlights: <HighlightBlock highlights={projeto.highlights} />,
-
     faq: <FAQBlock faq={projeto.faq} />,
-
-    cta: <CTASection cta={projeto.cta} />
   };
 
   return map[type] || null;
@@ -159,19 +137,18 @@ export default function ProjetoDetalhe() {
   if (!projeto) {
     return (
       <div className="min-h-screen flex items-center justify-center">
-        <Link to="/projetos">Projeto não encontrado</Link>
+        <Link to="/projetos" className="text-primary hover:underline">Projeto não encontrado. Voltar.</Link>
       </div>
     );
   }
 
   const sections = projeto.sections || [
+    "context",
     "problem",
     "strategy",
-    "context",
     "solution",
     "highlights",
-    "faq",
-    "cta"
+    "faq"
   ];
 
   return (
@@ -179,43 +156,54 @@ export default function ProjetoDetalhe() {
       <Navbar />
 
       <main className="pt-32 pb-32">
-
         {/* HEADER */}
-        <section className="max-w-7xl mx-auto px-6 mb-20">
-          <Link to="/projetos" className="flex items-center gap-2 mb-10 text-muted-foreground">
-            <ArrowLeft size={16} />
-            Voltar
+        <section className="max-w-7xl mx-auto px-6 mb-16">
+          <Link to="/projetos" className="inline-flex items-center gap-2 mb-12 text-[10px] font-bold uppercase tracking-widest text-muted-foreground hover:text-primary transition-colors">
+            <ArrowLeft size={14} />
+            Voltar para Projetos
           </Link>
 
-          <h1 className="text-5xl md:text-7xl font-bold">
-            {projeto.title}
-          </h1>
-
-          <p className="text-lg text-muted-foreground mt-6 italic">
-            {projeto.subtitle}
-          </p>
+          <div className="max-w-4xl">
+            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.9]">
+              {projeto.title}
+            </h1>
+            <p className="text-xl md:text-2xl text-muted-foreground mt-8 font-medium leading-relaxed">
+              {projeto.subtitle}
+            </p>
+          </div>
         </section>
 
-        {/* HERO */}
-        <section className="max-w-7xl mx-auto px-6 mb-28">
-          <div className="h-[60vh] rounded-3xl overflow-hidden border">
+        {/* HERO IMAGE */}
+        <section className="max-w-7xl mx-auto px-6 mb-32">
+          <div className="aspect-video md:aspect-[21/9] rounded-[2.5rem] overflow-hidden border border-border/40 bg-muted shadow-2xl">
             <img
               src={projeto.cover}
               alt={projeto.title}
-              className="w-full h-full object-cover object-[50%_20%]"
+              className="w-full h-full object-cover"
             />
           </div>
         </section>
 
         {/* STORY ENGINE */}
-        {sections.map((section) => (
-          <SectionRenderer
-            key={section}
-            type={section}
-            projeto={projeto}
-          />
-        ))}
+        <div className="space-y-12">
+          {sections.map((section) => (
+            <SectionRenderer key={section} type={section} projeto={projeto} />
+          ))}
+        </div>
 
+        {/* CTA FINAL PERSONALIZADO */}
+        <section className="max-w-4xl mx-auto px-6 mt-32 text-center py-24 border-t border-border/40">
+           <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
+             {projeto.cta || "Pronto para ter um ativo digital assim?"}
+           </h2>
+           <Link
+             to="/contato"
+             className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded-2xl font-bold hover:scale-105 transition-all shadow-xl shadow-primary/20"
+           >
+             <MessageCircle size={20} />
+             Iniciar Consultoria
+           </Link>
+        </section>
       </main>
 
       <Footer />

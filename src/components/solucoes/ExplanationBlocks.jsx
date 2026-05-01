@@ -4,23 +4,23 @@ import { ShieldCheck, UserCheck, Settings, Repeat } from "lucide-react";
 const blocks = [
   {
     icon: ShieldCheck,
-    title: "Você é dono do sistema",
-    desc: "O site é seu. Código, acesso e estrutura ficam com você — sem dependência futura.",
+    title: "Soberania Digital",
+    desc: "O código e os dados são seus. Você não aluga o sucesso da sua empresa; você constrói um patrimônio digital próprio.",
   },
   {
     icon: UserCheck,
-    title: "Autonomia total",
-    desc: "Você aprende a usar. Entregamos o projeto com treinamento para você mesmo gerenciar conteúdo e estrutura.",
+    title: "Autonomia via Dashboard",
+    desc: "Gerencie textos, imagens e dados sem abrir chamados. Entregamos o controle total na sua mão através de um painel intuitivo.",
   },
   {
     icon: Settings,
-    title: "Sem manutenção recorrente",
-    desc: "Não trabalhamos com mensalidade de manutenção. O projeto é entregue completo e funcional para você operar sozinho.",
+    title: "Custeio Operacional",
+    desc: "Para sistemas, cobramos apenas a manutenção da infraestrutura (Hospedagem e Backup). Sem taxas de licença abusivas.",
   },
   {
     icon: Repeat,
-    title: "Estrutura simples e editável",
-    desc: "Nada de sistemas complexos. Tudo é pensado para ser fácil de entender, atualizar e evoluir com o tempo.",
+    title: "Evolução sob Demanda",
+    desc: "Seu sistema cresce com você. Novas funções são orçadas e integradas conforme sua necessidade, sem mensalidades infladas.",
   },
 ];
 
@@ -28,7 +28,6 @@ export default function ExplanationBlocks() {
   return (
     <section className="relative py-28 border-t border-border/40">
       <div className="max-w-7xl mx-auto px-6">
-
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -36,21 +35,18 @@ export default function ExplanationBlocks() {
           className="mb-16 max-w-xl"
         >
           <span className="text-xs font-medium text-primary tracking-[0.2em] uppercase">
-            Como trabalhamos
+            Tecnologia Regenerativa
           </span>
-
           <h2 className="font-heading text-3xl sm:text-4xl font-bold mt-4 leading-tight">
-            Você não depende da gente.
-            <br />E isso é intencional.
+            Software feito para libertar, <br />não para aprisionar.
           </h2>
-
           <p className="mt-5 text-muted-foreground text-sm leading-relaxed">
-            Nosso trabalho não é te prender — é te entregar controle.
-            Você recebe um sistema completo, funcional e simples de gerenciar.
+            Nosso modelo de Economia Solidária elimina a dependência de grandes plataformas. 
+            Você paga pelo desenvolvimento e mantém apenas o custo de operação.
           </p>
         </motion.div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border/40 rounded-2xl overflow-hidden">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-px bg-border/40 rounded-2xl overflow-hidden border border-border/40">
           {blocks.map((b, i) => (
             <motion.div
               key={b.title}
@@ -58,23 +54,16 @@ export default function ExplanationBlocks() {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ delay: i * 0.08, duration: 0.5 }}
-              className="bg-background hover:bg-primary/[0.03] p-8 transition-colors duration-300"
+              className="bg-background hover:bg-primary/[0.02] p-8 transition-colors duration-300"
             >
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
                 <b.icon size={16} className="text-primary" />
               </div>
-
-              <h3 className="font-heading text-sm font-semibold mb-2">
-                {b.title}
-              </h3>
-
-              <p className="text-xs text-muted-foreground leading-relaxed">
-                {b.desc}
-              </p>
+              <h3 className="font-heading text-sm font-semibold mb-2">{b.title}</h3>
+              <p className="text-xs text-muted-foreground leading-relaxed">{b.desc}</p>
             </motion.div>
           ))}
         </div>
-
       </div>
     </section>
   );

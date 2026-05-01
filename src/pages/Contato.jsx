@@ -35,7 +35,7 @@ export default function Contato() {
   const socialLinks = {
     whatsapp: "https://wa.me/5521991472417?text=Quero%20um%20site%20simples%2C%20rápido%20e%20que%20eu%20consiga%20editar%20sozinho(a).%20Pode%20me%20explicar%20como%20funciona%20e%20quanto%20custa%3F",
     linkedin: "https://linkedin.com/company/brototec",
-    instagram: "https://instagram.com/brototec.br",
+    instagram: "https://instagram.com/brototecbr",
   };
 
   return (

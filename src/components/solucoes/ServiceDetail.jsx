@@ -58,9 +58,15 @@ export default function ServiceDetail({
             </ul>
 
             {/* 🔥 gatilho high ticket */}
-            <p className="mt-6 text-xs text-muted-foreground/70 max-w-sm">
-              Projetos conduzidos com escopo claro, etapas definidas e foco em resultado.
-            </p>
+            {/* 🔥 gatilho high ticket */}
+            <div className="mt-6 p-4 rounded-xl bg-primary/5 border border-primary/10 max-w-sm">
+              <p className="text-[10px] uppercase tracking-wider font-bold text-primary mb-1">
+                Compromisso Brototec
+              </p>
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                Este projeto não possui mensalidade de licença. O investimento é focado na construção de um ativo que pertencerá para sempre ao seu negócio.
+              </p>
+            </div>
           </motion.div>
 
           {/* VISUAL */}

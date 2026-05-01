@@ -8,7 +8,7 @@ const Footer = () => {
     whatsapp:
       "https://wa.me/5521991472417?text=Quero%20um%20site%20simples%20e%20aut%C3%B4nomo.%20Pode%20me%20explicar%20como%20funciona%3F",
     linkedin: "https://linkedin.com/company/brototec",
-    instagram: "https://instagram.com/brototec.br",
+    instagram: "https://instagram.com/brototecbr",
   };
 
   return (

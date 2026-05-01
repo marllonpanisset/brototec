@@ -4,13 +4,13 @@ import { Link } from "react-router-dom";
 export default function CaseCard({
   slug,
   title,
-  subtitle,
-  tags,
-  challenge,
-  vision,
-  status,
-  cover,
-  autonomy,
+  subtitle = "", // Adicionado valor padrão
+  tags = [],     // Adicionado valor padrão
+  challenge = "", // Adicionado valor padrão
+  vision = "",    // Adicionado valor padrão
+  status = "",    // Adicionado valor padrão
+  cover = "",     // Adicionado valor padrão
+  autonomy = "",  // Adicionado valor padrão
 }) {
   return (
     <Link
@@ -75,24 +75,28 @@ export default function CaseCard({
         {/* NARRATIVA */}
         <div className="space-y-6">
           {/* PROBLEMA */}
-          <div className="space-y-2">
-            <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-primary/60">
-              Problema
-            </p>
-            <p className="text-sm text-muted-foreground leading-relaxed">
-              {challenge}
-            </p>
-          </div>
+          {challenge && (
+            <div className="space-y-2">
+              <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-primary/60">
+                Problema
+              </p>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                {challenge}
+              </p>
+            </div>
+          )}
 
           {/* SOLUÇÃO */}
-          <div className="p-5 rounded-xl bg-secondary/30 border border-border/40 space-y-2">
-            <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-primary">
-              Estratégia
-            </p>
-            <p className="text-sm text-foreground leading-relaxed italic font-heading">
-              "{vision}"
-            </p>
-          </div>
+          {vision && (
+            <div className="p-5 rounded-xl bg-secondary/30 border border-border/40 space-y-2">
+              <p className="text-[10px] font-bold tracking-[0.2em] uppercase text-primary">
+                Estratégia
+              </p>
+              <p className="text-sm text-foreground leading-relaxed italic font-heading">
+                "{vision}"
+              </p>
+            </div>
+          )}
 
           {/* DIFERENCIAL (AUTONOMIA) */}
           {autonomy && (

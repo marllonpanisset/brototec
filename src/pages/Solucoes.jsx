@@ -1,5 +1,4 @@
-import { Monitor, ShoppingCart, FileText, Layout, Megaphone } from "lucide-react";
-
+import { Monitor, ShoppingCart, Database, Layout, Megaphone } from "lucide-react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import CtaSection from "../components/home/CtaSection";
@@ -9,59 +8,45 @@ import ExplanationBlocks from "../components/solucoes/ExplanationBlocks";
 
 const services = [
   {
-    icon: Layout,
-    title: "Sites institucionais",
-    tagline: "Sua presença digital com clareza e controle.",
+    icon: Database,
+    title: "Sistemas de Gestão & Dashboards",
+    tagline: "Inteligência operacional em Flask/Python.",
     description:
-      "Criamos sites institucionais que posicionam sua marca com clareza e profissionalismo. Nada de templates genéricos: cada estrutura é pensada para comunicar valor e gerar confiança — com um painel simples para você mesmo editar textos e imagens.",
+      "Desenvolvemos sistemas sob medida para gerir clínicas e negócios complexos. Controle de agendamentos, painéis financeiros e bancos de dados privados. Você é dono da ferramenta e tem visão total do seu faturamento em tempo real.",
     items: [
-      "Estrutura estratégica focada em posicionamento",
-      "Design leve, rápido e responsivo",
-      "Painel administrativo para edição de conteúdo",
-      "Base preparada para SEO",
-      "Entrega completa + treinamento de uso",
+      "Arquitetura Multi-unidade (Gestão de várias clínicas)",
+      "Dashboard de indicadores e faturamento",
+      "Controle de agendamentos e pacientes",
+      "Backup diário e segurança de dados",
+      "Propriedade total do código-fonte",
+    ],
+  },
+  {
+    icon: Layout,
+    title: "Sites Institucionais High-End",
+    tagline: "Sua autoridade com autonomia real.",
+    description:
+      "Sites que comunicam valor e geram confiança. Com design minimalista e editorial, entregamos uma estrutura rápida onde você mesmo altera textos e imagens através do seu dashboard exclusivo.",
+    items: [
+      "Design minimalista e editorial",
+      "Painel administrativo para gestão de conteúdo",
+      "Otimização extrema de performance (SEO)",
+      "Hospedagem simplificada",
+      "Treinamento de uso incluso",
     ],
   },
   {
     icon: Monitor,
-    title: "Landing pages",
-    tagline: "Páginas feitas para conversão.",
+    title: "Landing Pages de Alta Conversão",
+    tagline: "Foco total em transformar cliques em clientes.",
     description:
-      "Desenvolvemos landing pages focadas em resultado. Cada elemento existe para guiar o usuário até a ação — sem distrações, sem excesso. Você recebe uma página pronta para rodar campanhas e ajustar quando quiser.",
+      "Páginas estratégicas para tráfego pago. Estrutura leve, copy persuasiva e carregamento instantâneo. Feitas para quem precisa de resultados imediatos sem mensalidades de plataformas de página.",
     items: [
-      "Estrutura otimizada para tráfego pago",
-      "Copy e layout orientados à conversão",
-      "Carregamento rápido",
-      "Edição simples via painel",
-      "Entrega pronta para campanhas",
-    ],
-  },
-  {
-    icon: ShoppingCart,
-    title: "Lojas virtuais",
-    tagline: "Seu e-commerce pronto para operar.",
-    description:
-      "Configuramos sua loja completa em plataformas como Shopify ou Nuvemshop. Você recebe catálogo organizado, pagamentos funcionando e um painel intuitivo para gerenciar produtos, pedidos e conteúdo sem depender de ninguém.",
-    items: [
-      "Configuração completa da loja",
-      "Cadastro de produtos e categorias",
-      "Checkout funcional e integrado",
-      "Integração com pagamentos",
-      "Treinamento para gestão da loja",
-    ],
-  },
-  {
-    icon: FileText,
-    title: "Blogs e conteúdo",
-    tagline: "Construa autoridade com consistência.",
-    description:
-      "Criamos estruturas de blog integradas ao seu site, pensadas para SEO e produção de conteúdo contínuo. Você publica, edita e organiza tudo sozinho com facilidade.",
-    items: [
-      "Estrutura otimizada para SEO",
-      "Sistema de posts simples de usar",
-      "Organização por categorias",
-      "Edição completa via painel",
-      "Base pronta para crescimento orgânico",
+      "Otimizada para Google e Meta Ads",
+      "Design focado em ação única",
+      "Integração direta com WhatsApp/CRM",
+      "Edição simples de ofertas pelo painel",
+      "Sem custo de licença mensal",
     ],
   },
 ];
@@ -73,58 +58,44 @@ export default function Solucoes() {
       <SolucoesHero />
 
       {/* SERVIÇOS PRINCIPAIS */}
-      {services.map((service, i) => (
-        <ServiceDetail
-          key={service.title}
-          index={i}
-          flipped={i % 2 !== 0}
-          {...service}
-        />
-      ))}
+      <div className="py-12">
+        {services.map((service, i) => (
+          <ServiceDetail
+            key={service.title}
+            index={i}
+            flipped={i % 2 !== 0}
+            {...service}
+          />
+        ))}
+      </div>
 
-      {/* SOCIAL MEDIA (SEPARADO E OPCIONAL) */}
+      {/* SOCIAL MEDIA (OPCIONAL) */}
       <section className="py-24 border-t border-border/40">
         <div className="max-w-5xl mx-auto px-6">
-          <div className="border border-border/40 rounded-2xl p-10 bg-background space-y-6">
-            
+          <div className="border border-border/40 rounded-2xl p-10 bg-card/30 backdrop-blur-sm space-y-6">
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                 <Megaphone className="text-primary" size={18} />
               </div>
               <div>
-                <h2 className="font-heading text-2xl font-bold">
-                  Social media (opcional)
-                </h2>
-                <p className="text-sm text-muted-foreground">
-                  Conteúdo estratégico para acompanhar seu site.
-                </p>
+                <h2 className="font-heading text-2xl font-bold">Social Media Estratégico</h2>
+                <p className="text-sm text-muted-foreground italic text-gradient-green">Opcional para acompanhamento de marca.</p>
               </div>
             </div>
-
             <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-              Oferecemos criação de conteúdo para redes sociais como um serviço complementar.
-              Os pacotes são personalizados de acordo com o momento do seu negócio — podendo incluir posts, carrosséis, stories e reels.
+              Criação de conteúdo com design profissional para alimentar sua presença digital. 
+              Ideal para quem já tem o sistema e quer focar em atrair novos pacientes com autoridade visual.
             </p>
-
-            <div className="grid sm:grid-cols-2 gap-4 text-sm text-muted-foreground">
+            <div className="grid sm:grid-cols-2 gap-4 text-xs text-muted-foreground">
               <ul className="space-y-2">
-                <li>• Planejamento de conteúdo</li>
-                <li>• Criação de posts e carrosséis</li>
-                <li>• Roteiro para reels</li>
+                <li>• Planejamento e linha editorial</li>
+                <li>• Design High-End para posts e carrosséis</li>
               </ul>
               <ul className="space-y-2">
-                <li>• Frequência flexível (semanal ou mensal)</li>
-                <li>• Volume ajustado por necessidade</li>
-                <li>• Escopo definido por proposta</li>
+                <li>• Gestão de autoridade unificada</li>
+                <li>• Relatórios de engajamento mensal</li>
               </ul>
             </div>
-
-            <div className="pt-4 border-t border-border/40">
-              <p className="text-xs text-muted-foreground">
-                Serviço opcional. Não incluso nos projetos de criação de site.
-              </p>
-            </div>
-
           </div>
         </div>
       </section>
@@ -132,10 +103,10 @@ export default function Solucoes() {
       <ExplanationBlocks />
 
       <CtaSection
-        heading="Você não precisa de manutenção. Precisa de controle."
-        body="A gente constrói seu site completo, funcional e editável. Depois disso, você mesmo gerencia — com autonomia total."
-        cta="Quero meu site com autonomia"
-        hint="Sem mensalidade escondida. Sem dependência."
+        heading="Construa seu patrimônio digital hoje."
+        body="Pare de pagar aluguel por ferramentas que não são suas. Vamos criar um sistema que pertence ao seu negócio."
+        cta="Solicitar Proposta de Soberania"
+        hint="Projetos com escopo fechado e autonomia vitalícia."
       />
 
       <Footer />

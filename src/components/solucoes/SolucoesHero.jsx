@@ -45,9 +45,9 @@ export default function SolucoesHero() {
           }}
           className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight max-w-4xl"
         >
-          O que construímos —{" "}
+          Soberania Digital —{" "}
           <span className="text-gradient-green italic">
-            e por que funciona.
+            seu sistema, suas regras.
           </span>
         </motion.h1>
 
@@ -57,9 +57,9 @@ export default function SolucoesHero() {
           transition={{ duration: 0.6, delay: 0.25 }}
           className="mt-8 text-base text-muted-foreground max-w-lg leading-relaxed"
         >
-          Sites, landing pages e automações construídos com escopo claro e
-          entregues com autonomia real. Você termina o projeto sabendo operar
-          tudo — sem depender de nós para cada mudança.
+          Desenvolvemos ecossistemas digitais e automações sob medida. 
+          Entregamos o código, a propriedade e a chave de tudo. 
+          Na Brototec, você não aluga o seu sucesso; você é dono da sua estrutura.
         </motion.p>
 
         <motion.p

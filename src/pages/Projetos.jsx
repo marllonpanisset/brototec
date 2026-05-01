@@ -109,7 +109,7 @@ export default function Projetos() {
           <p className="text-muted-foreground leading-relaxed mb-8">
             Acompanhe cada decisão, cada erro e cada entrega no nosso{" "}
             <a
-              href="https://instagram.com/brototec.br"
+              href="https://instagram.com/brototecbr"
               target="_blank"
               rel="noopener noreferrer"
               className="text-primary font-semibold hover:underline"

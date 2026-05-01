@@ -3,11 +3,10 @@ export const cases = [
   {
     slug: "schio-consultoria",
     title: "Schio Consultoria",
-    category: "Site Institucional",
-    subtitle:
+    category: 
       "Plataforma de consultoria imobiliária focada em educação financeira e conquista consciente da casa própria.",
 
-    tags: ["WordPress", "Tema Sob Medida", "UI/UX", "Gestão de Conteúdo", "Conversão"],
+    tags: ["Next.js", "Painel Administrativo Customizado", "UI/UX", "Arquitetura de Dados", "Otimização de Conversão"],
 
     challenge:
       "O site anterior apresentava grande volume de informação, mas sem estrutura de conversão. O desafio era transformar um conteúdo educativo extenso em uma experiência clara, guiada e focada em gerar contatos qualificados via WhatsApp.",
@@ -21,14 +20,12 @@ export const cases = [
     cover: "/images/home/schio-thumb.webp",
 
     autonomy:
-      "Sistema em WordPress com blocos editáveis permitindo atualização total de textos, FAQs, CTAs e seções sem dependência técnica.",
-
+"Interface administrativa proprietária que permite a gestão dinâmica de fluxos educacionais, edição de FAQs estratégicos e controle total sobre os gatilhos de conversão via WhatsApp, sem tocar em código.",
     about:
       "Schio Consultoria é uma empresa especializada em crédito imobiliário e intermediação de imóveis, com mais de 10 anos de experiência no mercado. Liderada por Alexander Schio, a consultoria atua traduzindo o processo de financiamento em uma jornada simples, transparente e educativa.",
 
     solution:
-      "Foi proposta a reconstrução do site em WordPress com foco em performance, clareza de comunicação e estrutura de conversão. A nova arquitetura prioriza educação do usuário, redução de objeções e direcionamento para contato direto via WhatsApp.",
-
+"Desenvolvimento de uma arquitetura digital baseada em blocos modulares e um gerenciador de conteúdo leve. O foco foi a eliminação de ruídos visuais e a implementação de uma lógica de funil onde o conteúdo educativo prepara o usuário para a tomada de decisão.",
     highlights: [
       "Conteúdo reorganizado em jornada de decisão",
       "CTAs otimizados para WhatsApp",
