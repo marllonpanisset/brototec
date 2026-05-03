@@ -1,4 +1,4 @@
-import { Monitor, ShoppingCart, Database, Layout, Megaphone } from "lucide-react";
+import { Monitor, ShoppingCart, Database, Layout } from "lucide-react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import CtaSection from "../components/home/CtaSection";
@@ -19,6 +19,20 @@ const services = [
       "Controle de agendamentos e pacientes",
       "Backup diário e segurança de dados",
       "Propriedade total do código-fonte",
+    ],
+  },
+  {
+    icon: ShoppingCart,
+    title: "E-commerce & Lojas de Performance",
+    tagline: "Sua vitrine aberta 24h com checkout fluido.",
+    description:
+      "Desenvolvemos lojas virtuais focadas em experiência de compra e velocidade. Integramos sua operação com meios de pagamento e logística, garantindo que você tenha o controle total das suas vendas sem depender de mensalidades pesadas de marketplaces.",
+    items: [
+      "Integração com meios de pagamento (Stripe/Asaas/Pix)",
+      "Cálculo de frete automatizado",
+      "Painel de gestão de produtos e estoque",
+      "Otimização para conversão mobile",
+      "Soberania sobre a base de clientes e dados",
     ],
   },
   {
@@ -69,7 +83,7 @@ export default function Solucoes() {
         ))}
       </div>
 
-      {/* SOCIAL MEDIA (OPCIONAL) */}
+      {/* SOCIAL MEDIA (OPCIONAL)
       <section className="py-24 border-t border-border/40">
         <div className="max-w-5xl mx-auto px-6">
           <div className="border border-border/40 rounded-2xl p-10 bg-card/30 backdrop-blur-sm space-y-6">
@@ -98,7 +112,7 @@ export default function Solucoes() {
             </div>
           </div>
         </div>
-      </section>
+      </section> */}
 
       <ExplanationBlocks />
 
