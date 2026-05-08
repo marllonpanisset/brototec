@@ -154,15 +154,22 @@ export default function Projetos() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-end justify-between mb-12 border-b border-white/5 pb-6">
             <div className="space-y-1">
-               <h3 className="font-heading text-2xl md:text-3xl font-bold tracking-tight text-gradient-green">Outros sistemas</h3>
-               <p className="text-[10px] text-muted-foreground uppercase tracking-widest">A evolução contínua da Brototec</p>
+              <h3 className="font-heading text-2xl md:text-3xl font-bold tracking-tight text-gradient-green">
+                Próximos Lançamentos
+              </h3>
+              <p className="text-[10px] text-muted-foreground uppercase tracking-widest">
+                A evolução contínua da engenharia Brototec
+              </p>
             </div>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-8 md:gap-12">
-            {cases.map((c) => (
-              <CaseCard key={c.slug} {...c} />
-            ))}
+            {/* Filtramos o 'schio-consultoria' para não repetir */}
+            {cases
+              .filter((c) => c.slug !== "schio-consultoria")
+              .map((c) => (
+                <CaseCard key={c.slug} {...c} />
+              ))}
           </div>
         </div>
       </section>
