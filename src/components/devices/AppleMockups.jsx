@@ -113,7 +113,7 @@ export const IntroIpadMockup = ({ ipadSrc }) => {
 // ================= CORE SYSTEM COMBO: MACBOOK + IPHONE (Ajustado para Desktop Only no Mobile) =================
 export const ComboMockup = ({ desktopSrc, mobileSrc, reverse = false }) => {
   return (
-    <div className="relative w-full flex flex-col md:flex-row items-center justify-center py-12 md:py-24 px-4">
+    <div className="relative w-full flex flex-col md:flex-row items-center justify-center py-12 md:py-22 px-4">
       
       {/* MACBOOK: Escondido no mobile (hidden), visível no desktop (md:block) */}
       <div className={`hidden md:block relative z-10 w-full md:max-w-[850px] transition-all duration-500 
@@ -126,7 +126,7 @@ export const ComboMockup = ({ desktopSrc, mobileSrc, reverse = false }) => {
         className={`z-20 w-[300px] md:w-[243px] drop-shadow-2xl transition-all duration-500
           ${reverse 
             ? 'md:absolute md:left-[8%] md:bottom-10' 
-            : 'md:absolute md:right-[15%] md:top-[15%]'
+            : 'md:absolute md:right-[0%] md:top-[10%]'
           }`}
       >
         <motion.div
