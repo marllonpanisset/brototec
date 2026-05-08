@@ -1,60 +1,37 @@
 // src/data/cases.js
 export const cases = [
   {
-    slug: "schio-consultoria",
-    title: "Schio Consultoria",
-    category: 
-      "Plataforma de consultoria imobiliária focada em educação financeira e conquista consciente da casa própria.",
+  slug: "schio-consultoria",
 
-    tags: ["Next.js", "Painel Administrativo Customizado", "UI/UX", "Arquitetura de Dados", "Otimização de Conversão"],
+  title: "Schio Consultoria",
+  subtitle: "Sistema de captação e qualificação para crédito imobiliário",
 
-    challenge:
-      "O site anterior apresentava grande volume de informação, mas sem estrutura de conversão. O desafio era transformar um conteúdo educativo extenso em uma experiência clara, guiada e focada em gerar contatos qualificados via WhatsApp.",
+  tags: ["Next.js", "Sistema de Conversão", "UX de Decisão", "WhatsApp Flow", "SEO"],
 
-    vision:
-      "Criar um site institucional moderno que une educação financeira, autoridade e geração de leads, traduzindo o crédito imobiliário em uma jornada simples e confiável para o usuário.",
+  challenge:
+    "O site anterior funcionava como vitrine informativa, mas não guiava o usuário até a decisão. A jornada era passiva e dependente de contato manual.",
 
-    status: "Em Desenvolvimento",
+  vision:
+    "Transformar o site em um sistema de decisão guiada, onde o usuário entende seu próprio perfil e é conduzido naturalmente até o contato via WhatsApp.",
 
-    thumbnail: "/images/home/schio-thumb.webp",
-    cover: "/images/home/schio-thumb.webp",
+  solution:
+    "Reestruturamos toda a experiência como um fluxo de qualificação: diagnóstico → simulação → decisão. O conteúdo deixou de ser institucional e passou a funcionar como sistema de pré-venda automatizado.",
 
-    autonomy:
-"Interface administrativa proprietária que permite a gestão dinâmica de fluxos educacionais, edição de FAQs estratégicos e controle total sobre os gatilhos de conversão via WhatsApp, sem tocar em código.",
-    about:
-      "Schio Consultoria é uma empresa especializada em crédito imobiliário e intermediação de imóveis, com mais de 10 anos de experiência no mercado. Liderada por Alexander Schio, a consultoria atua traduzindo o processo de financiamento em uma jornada simples, transparente e educativa.",
+  autonomy:
+    "Painel proprietário permite edição de etapas da jornada, FAQs estratégicos e ajustes de conversão sem necessidade técnica.",
 
-    solution:
-"Desenvolvimento de uma arquitetura digital baseada em blocos modulares e um gerenciador de conteúdo leve. O foco foi a eliminação de ruídos visuais e a implementação de uma lógica de funil onde o conteúdo educativo prepara o usuário para a tomada de decisão.",
-    highlights: [
-      "Conteúdo reorganizado em jornada de decisão",
-      "CTAs otimizados para WhatsApp",
-      "FAQ estratégico para redução de objeções",
-      "Estrutura educacional focada em crédito imobiliário",
-      "Design centrado em confiança e clareza"
-    ],
+  status: "Em Produção",
 
-    faq: [
-      {
-        question: "Como saber se estou pronto para financiar um imóvel?",
-        answer:
-          "A análise vai além da renda. Considera organização financeira, reserva de emergência e comprometimento de até 30% da renda mensal."
-      },
-      {
-        question: "Alugar ou comprar: o que vale mais a pena?",
-        answer:
-          "Depende do momento de vida. O site ajuda o usuário a entender qual decisão faz mais sentido com base em estabilidade e planejamento."
-      },
-      {
-        question: "Posso usar FGTS no financiamento?",
-        answer:
-          "Sim, o FGTS pode ser usado para entrada, amortização ou redução de parcelas, conforme regras da Caixa."
-      }
-    ],
+  cover: "/images/cases/schio/cover.webp",
 
-    cta:
-      "Plataforma focada em transformar visitantes em clientes através de educação, clareza e confiança no processo de compra imobiliária."
-  },
+  // NOVO: para narrativa premium
+  result: [
+    "Jornada de decisão estruturada em 3 etapas",
+    "Redução de fricção até contato via WhatsApp",
+    "Conteúdo reorganizado como funil educativo",
+    "Autoridade baseada em clareza, não volume de texto"
+  ]
+},
   {
     slug: "tais-salles",
     title: "Portfólio Taís Salles",

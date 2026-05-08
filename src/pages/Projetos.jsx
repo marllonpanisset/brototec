@@ -1,149 +1,144 @@
 import { motion } from "framer-motion";
-import { ArrowUpRight, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
-import CtaSection from "../components/home/CtaSection";
-import CaseCard from "../components/projetos/CaseCard";
 import { cases } from "../data/cases";
+import CaseCard from "../components/projetos/CaseCard";
+
+// Importando a nova estrutura de mockups com iPad Portrait
+import { ComboMockup, IntroIpadMockup } from "../components/devices/AppleMockups";
 
 export default function Projetos() {
+  const schio = cases.find((c) => c.slug === "schio-consultoria");
+
   return (
     <div className="min-h-screen bg-background text-foreground bg-noise">
       <Navbar />
 
-      {/* HERO */}
-      <section className="relative pt-44 pb-24 overflow-hidden">
-        <div className="absolute top-0 right-0 -z-10 w-[600px] h-[600px] opacity-10 pointer-events-none">
-          <div className="absolute inset-0 bg-gradient-radial from-primary/60 to-transparent blur-[120px] translate-x-1/4 -translate-y-1/4" />
+      {/* ================= HERO ================= */}
+      <section className="relative pt-32 md:pt-44 pb-16 md:pb-24 overflow-hidden">
+        <div className="absolute inset-0 -z-10 opacity-20">
+          <div className="absolute top-[-10%] right-[-10%] w-[300px] md:w-[600px] h-[300px] md:h-[600px] bg-primary/20 blur-[80px] md:blur-[140px] rounded-full" />
         </div>
 
-        <div className="relative max-w-7xl mx-auto px-6">
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="inline-block text-[10px] font-bold text-primary tracking-[0.25em] uppercase mb-8"
-          >
-            Processo & Entrega
-          </motion.span>
+        <div className="max-w-7xl mx-auto px-6">
+          <span className="text-[10px] font-bold text-primary tracking-[0.25em] uppercase">
+            Engenharia de Produto
+          </span>
 
-          <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.06] tracking-tight max-w-3xl"
-          >
-            Projetos com <br />
-            <span className="text-gradient-green italic">intenção real.</span>
-          </motion.h1>
+          <h1 className="mt-6 font-heading text-5xl md:text-6xl lg:text-7xl font-bold leading-[1.1] max-w-4xl">
+            Projetos construídos como{" "}
+            <span className="text-gradient-green italic">sistemas vivos.</span>
+          </h1>
 
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.7, delay: 0.2 }}
-            className="mt-8 text-base text-muted-foreground max-w-lg leading-relaxed"
-          >
-            Cada projeto aqui tem uma lógica documentada por trás. Não mostramos logos — mostramos o raciocínio.
-          </motion.p>
-
-          <motion.div
-            initial={{ scaleX: 0 }}
-            animate={{ scaleX: 1 }}
-            transition={{ duration: 1.2, delay: 0.4, ease: "easeOut" }}
-            className="mt-16 h-px bg-gradient-to-r from-primary/50 via-primary/10 to-transparent origin-left"
-          />
+          <p className="mt-8 text-muted-foreground text-sm md:text-base max-w-xl leading-relaxed">
+            Estruturas digitais completas com lógica, fluxo e decisão.
+          </p>
         </div>
       </section>
 
-      {/* CARD PROJETO PILOTO — destaque no topo */}
-      <section className="pb-16">
+      {/* ================= FEATURE CASE ================= */}
+      {schio && (
+        <section className="pb-24 md:pb-44">
+          <div className="max-w-7xl mx-auto px-6 space-y-32 md:space-y-48">
+
+            {/* ================= 1. INTRO (Text + iPad Portrait) ================= */}
+            <div className="grid lg:grid-cols-2 gap-16 md:gap-24 items-center">
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.6 }}
+                className="space-y-6 order-2 lg:order-1"
+              >
+                <span className="text-[10px] font-bold text-primary uppercase tracking-[0.35em]">
+                  Projeto em destaque
+                </span>
+                <h2 className="font-heading text-4xl md:text-5xl font-bold">
+                  {schio.title}
+                </h2>
+                <p className="text-muted-foreground text-sm md:text-lg max-w-lg leading-relaxed">
+                  {schio.vision}
+                </p>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, scale: 0.95 }}
+                whileInView={{ opacity: 1, scale: 1 }}
+                viewport={{ once: true }}
+                className="relative flex justify-center order-1 lg:order-2"
+              >
+                <div className="absolute w-[300px] md:w-[500px] h-[300px] md:h-[500px] bg-primary/15 blur-[100px] md:blur-[150px] rounded-full -z-10" />
+                
+                {/* Aqui usamos a nova composição IntroCombo */}
+                <IntroIpadMockup 
+                  ipadSrc="/images/cases/schio-ipad_portrait.png"
+                />
+              </motion.div>
+            </div>
+
+            {/* ================= 2. CORE SYSTEM (MacBook + IPhone - Desktop Only) ================= */}
+            <motion.div
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              className="relative pt-20"
+            >
+              <div className="text-center mb-16 space-y-4 px-4">
+                <h3 className="text-3xl font-heading font-bold italic">Ecossistema Digital</h3>
+                <p className="text-muted-foreground text-[10px] md:text-xs uppercase tracking-[0.3em]">Performance Total & Responsividade no Desktop</p>
+              </div>
+
+              {/* O MacBook se esconde no mobile dentro deste componente ajustado */}
+              <ComboMockup 
+                desktopSrc="/images/cases/schio-macbookair.png" 
+                mobileSrc="/images/cases/schio-iphone.png"
+                reverse={false}
+              />
+            </motion.div>
+
+          </div>
+        </section>
+      )}
+
+      {/* ================= OUTROS PROJETOS ================= */}
+      <section className="pb-24 md:pb-32">
+        <div className="max-w-7xl mx-auto px-6 space-y-10">
+          <div className="flex flex-col md:flex-row md:justify-between md:items-end gap-2">
+            <h3 className="font-heading text-xl md:text-2xl font-bold">Outros projetos</h3>
+            <span className="text-[10px] md:text-xs text-muted-foreground uppercase tracking-widest">expansão contínua do sistema</span>
+          </div>
+
+          <div className="grid sm:grid-cols-2 gap-8 md:gap-10">
+            {cases.map((c) => (
+              <CaseCard key={c.slug} {...c} />
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ================= CTA ================= */}
+      <section className="pb-16 md:pb-20">
         <div className="max-w-7xl mx-auto px-6">
           <motion.div
-            initial={{ opacity: 0, y: 16 }}
+            initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="rounded-2xl border border-primary/30 bg-primary/[0.04] p-8 md:p-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6"
+            className="rounded-2xl border border-primary/30 bg-primary/[0.04] p-8 md:p-10 flex flex-col md:flex-row justify-between items-center gap-8"
           >
-            <div className="space-y-2 max-w-xl">
-              <span className="inline-flex items-center gap-2 text-[10px] font-bold text-primary tracking-widest uppercase">
-                <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse" />
-                Projeto piloto aberto
-              </span>
-              <h2 className="font-heading text-xl md:text-2xl font-bold leading-snug">
-                Estamos nos primeiros projetos com parceiros externos.
-              </h2>
-              <p className="text-sm text-muted-foreground leading-relaxed">
-                Se você quer um site feito com atenção real — não como mais um ticket na fila — esse é o momento certo pra conversar. Você entra primeiro.
-              </p>
+            <div className="text-center md:text-left">
+              <h2 className="font-heading text-lg md:text-xl font-bold">Construindo sistemas reais da Brototec.</h2>
+              <p className="text-xs md:text-sm text-muted-foreground mt-2">Cada projeto define o próximo nível da plataforma.</p>
             </div>
             <Link
               to="/contato"
-              className="shrink-0 inline-flex items-center gap-2 bg-primary text-primary-foreground text-sm font-semibold px-7 py-3.5 rounded-xl hover:shadow-lg hover:opacity-90 transition-all whitespace-nowrap"
+              className="w-full md:w-auto inline-flex items-center justify-center gap-2 bg-primary text-primary-foreground px-8 py-4 rounded-xl font-bold text-sm transition-transform hover:scale-105"
             >
-              Quero ser parceiro piloto <ArrowRight size={15} />
+              Entrar como parceiro <ArrowRight size={16} />
             </Link>
           </motion.div>
         </div>
       </section>
-
-      {/* CASES */}
-<section className="pb-32">
-  <div className="max-w-7xl mx-auto px-6">
-    <div className="grid md:grid-cols-2 gap-10">
-      {cases.map((c) => (
-        <CaseCard key={c.slug} {...c} />
-      ))}
-    </div>
-  </div>
-</section>
-
-      {/* BUILD IN PUBLIC */}
-      <section className="py-24 border-t border-border/40 bg-eco/30">
-        <div className="max-w-3xl mx-auto px-6 text-center">
-          <h2 className="font-heading text-3xl font-bold mb-6 text-foreground">
-            Sempre em construção.
-          </h2>
-          <p className="text-muted-foreground leading-relaxed mb-4">
-            A Brototec está nascendo. Enquanto finalizamos nossos primeiros projetos parceiros, documentamos nossa própria evolução.
-          </p>
-          <p className="text-muted-foreground leading-relaxed mb-8">
-            Acompanhe cada decisão, cada erro e cada entrega no nosso{" "}
-            <a
-              href="https://instagram.com/brototecbr"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary font-semibold hover:underline"
-            >
-              Instagram
-            </a>{" "}
-            e{" "}
-            <a
-              href="https://linkedin.com/company/brototec"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-primary font-semibold hover:underline"
-            >
-              LinkedIn
-            </a>
-            {" "}— construção transparente, em público.
-          </p>
-          <a
-            href="https://linkedin.com/company/brototec"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 text-primary font-bold hover:underline"
-          >
-            Ver bastidores no LinkedIn <ArrowUpRight size={16} />
-          </a>
-        </div>
-      </section>
-
-      <CtaSection
-        heading="Vamos plantar algo novo?"
-        body="Se você precisa de uma presença digital que você realmente controle, a Brototec é o lugar certo."
-        cta="Conversar sobre meu projeto"
-        hint="Respondemos em até 24h. Sem enrolação."
-      />
 
       <Footer />
     </div>

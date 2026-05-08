@@ -3,14 +3,13 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function CtaSection({
-  heading = "Pronto para ter soberania digital?",
-  body = "Construímos ferramentas que pertencem ao seu negócio, não o contrário. Vamos transformar sua operação em um ativo real?",
-  cta = "Iniciar Consultoria",
-  hint = "Conversa direta, sem intermediários.",
+  heading = "Transforme seu negócio em um sistema próprio.",
+  body = "Não criamos sites ou ferramentas isoladas. Criamos infraestrutura digital completa para operação, vendas e crescimento — totalmente sua.",
+  cta = "Solicitar Proposta de Sistema",
+  hint = "Conversa direta com análise de escopo.",
 }) {
   return (
     <section className="relative py-32 border-t border-border/40 overflow-hidden bg-primary/[0.01]">
-      {/* Elemento Decorativo de Fundo (Sutil) */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-primary/5 rounded-full blur-[120px] pointer-events-none" />
 
       <div className="relative max-w-2xl mx-auto px-6 text-center">
@@ -37,7 +36,7 @@ export default function CtaSection({
               to="/contato"
               className="group relative inline-flex items-center gap-3 bg-primary text-primary-foreground text-sm font-bold px-10 py-5 rounded-2xl transition-all hover:shadow-2xl hover:shadow-primary/20 hover:-translate-y-1"
             >
-              {cta} 
+              {cta}
               <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
 
@@ -45,15 +44,21 @@ export default function CtaSection({
               <p className="text-[10px] font-bold tracking-[0.2em] text-primary uppercase">
                 {hint}
               </p>
-              <div className="flex items-center justify-center gap-4 mt-2">
+
+              <div className="flex flex-wrap items-center justify-center gap-4 mt-2">
                 <span className="text-[10px] text-muted-foreground/60 uppercase tracking-widest flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full bg-primary/40" /> Sem Mensalidade
+                  <div className="w-1 h-1 rounded-full bg-primary/40" />
+                  Sem mensalidade de software
                 </span>
+
                 <span className="text-[10px] text-muted-foreground/60 uppercase tracking-widest flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full bg-primary/40" /> Código Aberto
+                  <div className="w-1 h-1 rounded-full bg-primary/40" />
+                  Código e dados sob sua propriedade
                 </span>
+
                 <span className="text-[10px] text-muted-foreground/60 uppercase tracking-widest flex items-center gap-2">
-                  <div className="w-1 h-1 rounded-full bg-primary/40" /> Suporte Direto
+                  <div className="w-1 h-1 rounded-full bg-primary/40" />
+                  Entrega sob escopo fechado
                 </span>
               </div>
             </div>
