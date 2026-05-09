@@ -22,7 +22,7 @@ export const cases = [
 
   status: "Em Produção",
 
-  cover: "/images/cases/schio/cover.webp",
+  cover: "/images/cases/schio-case-home.jpeg",
 
   // NOVO: para narrativa premium
   result: [
@@ -45,10 +45,10 @@ export const cases = [
     status: "Em Desenvolvimento",
 
     thumbnail:
-      "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=574&h=574&crop=entropy",
+      "/images/cases/tais-salles-case-home.jpeg",
 
     cover:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&q=80&w=1200",
+      "/images/cases/tais-salles-case-home.jpeg",
 
     autonomy:
       "Painel intuitivo para gerenciamento de projetos e conteúdos, permitindo total autonomia na atualização do portfólio.",

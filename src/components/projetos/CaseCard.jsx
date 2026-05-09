@@ -23,12 +23,12 @@ export default function CaseCard({
       <div className="relative aspect-square overflow-hidden bg-secondary/20">
 
         {/* overlay de leitura */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent z-10 opacity-60" />
+        <div className="absolute inset-0 z-10 opacity-60" />
 
         <img
           src={cover}
           alt={title}
-          className="w-full h-full object-cover object-top opacity-90 group-hover:scale-105 transition-transform duration-700"
+          className="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700"
         />
 
         {/* STATUS */}
