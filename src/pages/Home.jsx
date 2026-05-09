@@ -13,13 +13,15 @@ export default function Home() {
     <div className="min-h-screen bg-background text-foreground bg-noise selection:bg-primary/10 selection:text-primary">
       <Navbar />
       <HeroSection />
+      
+      {/* Prova Social e Capacidade Técnica logo no topo */}
+      <ProjectsSection /> 
+      
       <ConceptSection />
       <ServicesSection />
       <DifferentiationSection />
       <ImpactSection />
-      <ProjectsSection />
       
-      {/* CTA Section com Copy atualizada para Autonomia */}
       <CtaSection 
         heading="Pronto para ter soberania digital?"
         body="Construímos o sistema que você controla, não o sistema que controla você. Vamos conversar?"
