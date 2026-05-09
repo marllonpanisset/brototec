@@ -62,34 +62,35 @@ export default function Manifesto() {
       <Navbar />
 
       {/* HERO */}
-      <section className="pt-44 pb-28">
-        <div className="max-w-7xl mx-auto px-6">
-          <motion.span
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="text-xs uppercase tracking-[0.2em] text-primary/70"
-          >
+      <section className="relative pt-44 pb-28 min-h-[100vh] flex items-center overflow-hidden">
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/manifesto/manifesto-hero-solarpunk.jpeg" 
+            alt="Solarpunk Rio" 
+            className="w-full h-full object-cover object-center"
+          />
+                
+          <div className="absolute inset-0 bg-background/1 backdrop-blur-[1px] z-10" style={{ maskImage: 'linear-gradient(to right, black 30%, transparent 70%)' }} />
+        </div>
+
+        <div className="max-w-7xl mx-auto px-6 relative z-20 w-full">
+          <motion.span className="text-xs font-bold uppercase tracking-[0.2em] text-primary drop-shadow-md">
             Como trabalhamos
           </motion.span>
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="font-heading text-5xl md:text-6xl font-bold mt-6 max-w-4xl"
+            className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight max-w-4xl drop-shadow-[0_4px_12px_rgba(0,0,0,0.5)]"
           >
-            Tecnologia sem dependência.
+            Tecnologia sem <br className="hidden md:block" />
+            <span className="text-primary">dependência.</span>
             <br />
-            <span className="text-gradient-green">
-              E isso muda tudo.
-            </span>
+            <span>E isso muda tudo.</span>
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            className="mt-6 text-muted-foreground max-w-xl"
+            className="mt-6 max-w-xl text-lg md:text-xl leading-relaxed drop-shadow-md font-medium text-white text drop-shadow-[0_4px_12px_rgba(0,0,0,0.9)]"
           >
-            A maioria dos projetos prende o cliente.  
+            A maioria dos projetos prende o cliente. <br />
             O nosso faz o contrário: entrega controle.
           </motion.p>
         </div>
@@ -124,7 +125,7 @@ export default function Manifesto() {
               transition={{ delay: i * 0.06 }}
               className="grid md:grid-cols-3 gap-6 border-t border-border/40 pt-8"
             >
-              <span className="text-xs text-primary/50">{p.num}</span>
+              <span className="text-xs text-primary">{p.num}</span>
 
               <h3 className="font-heading font-semibold">
                 {p.title}
