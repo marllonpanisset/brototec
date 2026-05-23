@@ -1,4 +1,11 @@
-import { Mail, Phone, MapPin, Linkedin, Instagram, MessageCircle } from "lucide-react";
+import {
+  Mail,
+  Phone,
+  MapPin,
+  Linkedin,
+  Instagram,
+  MessageCircle,
+} from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
@@ -14,9 +21,7 @@ const Footer = () => {
   return (
     <footer className="relative bg-[#121614] text-white border-t border-white/10 pt-24 pb-12">
       <div className="max-w-7xl mx-auto px-6">
-
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-20">
-
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-12 mb-10">
           {/* Marca */}
           <div className="lg:col-span-4">
             <Link to="/" className="inline-block">
@@ -26,11 +31,15 @@ const Footer = () => {
             </Link>
 
             <p className="mt-8 text-sm text-white/70 leading-relaxed max-w-sm">
-              Tecnologia feita para você não depender de ninguém depois da entrega.
-              <br /><br />
-              Plataformas, portfólios e canais de conversão que você controla sozinho —
-              com autonomia visual, flexibilidade e independência total.
-              <br /><br />
+              Tecnologia feita para você não depender de ninguém depois da
+              entrega.
+              <br />
+              <br />
+              Estruturamos ambientes digitais, landing pages e plataformas web com
+          foco em autonomia, performance extrema e posicionamento estratégico de
+          marca.
+              <br />
+              <br />
               Sem dependência de agências. Sem manutenção obrigatória.
             </p>
 
@@ -86,12 +95,18 @@ const Footer = () => {
 
             <ul className="space-y-4">
               <li>
-                <Link to="/politica-de-privacidade" className="text-sm text-white/70 hover:text-primary">
+                <Link
+                  to="/politica-de-privacidade"
+                  className="text-sm text-white/70 hover:text-primary"
+                >
                   Privacidade
                 </Link>
               </li>
               <li>
-                <Link to="/termos-de-uso" className="text-sm text-white/70 hover:text-primary">
+                <Link
+                  to="/termos-de-uso"
+                  className="text-sm text-white/70 hover:text-primary"
+                >
                   Termos
                 </Link>
               </li>
@@ -138,10 +153,9 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* SEO leve higienizado */}
-        <div className="mb-8 text-[11px] text-white/50 max-w-3xl leading-relaxed">
-          Estruturamos ambientes digitais, landing pages e plataformas web com foco em autonomia, 
-          performance extrema e posicionamento estratégico de marca.
+        {/* Dados institucionais */}
+        <div className="mb-6 text-[11px] text-white/35 max-w-3xl leading-relaxed">
+          Empresa registrada no Brasil • CNPJ 66.944.942/0001-36
         </div>
 
         {/* Final */}
@@ -154,7 +168,6 @@ const Footer = () => {
             Autonomia digital construída na prática.
           </p>
         </div>
-
       </div>
     </footer>
   );
