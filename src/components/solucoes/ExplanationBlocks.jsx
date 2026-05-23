@@ -37,12 +37,12 @@ export default function ExplanationBlocks() {
           <span className="text-xs font-medium text-primary tracking-[0.2em] uppercase">
             Tecnologia Regenerativa
           </span>
-          <h2 className="font-heading text-3xl sm:text-4xl font-bold mt-4 leading-tight">
+          <h2 className="font-heading text-3xl sm:text-4xl font-bold mt-4 leading-tight text-white">
             Tecnologia feita para libertar, <br />não para aprisionar.
           </h2>
           <p className="mt-5 text-muted-foreground text-sm leading-relaxed">
-            Nosso modelo de Economia Solidária elimina a dependência de grandes plataformas. 
-            Você paga pelo desenvolvimento e mantém apenas o custo de operação.
+            Nosso modelo elimina a dependência de plataformas proprietárias. 
+            Você investe no desenvolvimento e mantém apenas o custo real de operação.
           </p>
         </motion.div>
 
@@ -59,7 +59,7 @@ export default function ExplanationBlocks() {
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
                 <b.icon size={16} className="text-primary" />
               </div>
-              <h3 className="font-heading text-sm font-semibold mb-2">{b.title}</h3>
+              <h3 className="font-heading text-sm font-semibold mb-2 text-white">{b.title}</h3>
               <p className="text-xs text-muted-foreground leading-relaxed">{b.desc}</p>
             </motion.div>
           ))}

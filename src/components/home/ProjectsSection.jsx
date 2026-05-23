@@ -24,11 +24,11 @@ export default function ProjectsSection() {
 
           <h2 className="font-heading text-4xl lg:text-5xl font-bold mt-4 tracking-tight text-foreground leading-[1.1]">
             O que estamos <br />
-            <span className="text-gradient-green italic">construindo agora.</span>
+            <span className="text-gradient-amber italic">estruturando agora.</span>
           </h2>
 
           <p className="mt-6 text-muted-foreground max-w-xl leading-relaxed text-base">
-            Soluções e interfaces digitais em desenvolvimento, focadas em transformar processos de comunicação em experiências simples, visuais e autônomas.
+            Interfaces e ecossistemas de posicionamento em desenvolvimento, focados em transformar processos de comunicação em experiências simples, visuais e autônomas.
           </p>
         </motion.div>
 
@@ -42,8 +42,7 @@ export default function ProjectsSection() {
               viewport={{ once: true }}
               transition={{ delay: i * 0.2 }}
             >
-              {/* 
-                  Passando as props do objeto 'p' (seu cases.js) 
+              {/* Passando as props do objeto 'p' (seu cases.js) 
                   ajustadas para o componente CaseCard 
               */}
               <CaseCard 

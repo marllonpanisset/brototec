@@ -62,10 +62,10 @@ export default function Contato() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight max-w-4xl"
+            className="font-heading text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight max-w-4xl text-white"
           >
             Vamos conversar sobre <br />
-            <span className="text-gradient-green italic">o seu projeto.</span>
+            <span className="text-gradient-amber italic">o seu projeto.</span>
           </motion.h1>
 
           <motion.p
@@ -75,7 +75,7 @@ export default function Contato() {
             className="text-base text-muted-foreground mt-8 max-w-xl leading-relaxed"
           >
             Conte o que você precisa construir —{" "}
-            <span className="text-foreground font-medium">respondemos em até 24h</span>{" "}
+            <span className="text-white font-medium">respondemos em até 24h</span>{" "}
             com clareza, sem enrolação técnica. Se preferir, fale direto pelo WhatsApp.
           </motion.p>
 
@@ -111,7 +111,7 @@ export default function Contato() {
                     <MessageCircle size={20} className="text-primary" />
                   </div>
                   <div>
-                    <p className="text-sm font-bold text-foreground">💬 Falar pelo WhatsApp agora</p>
+                    <p className="text-sm font-bold text-white">💬 Falar pelo WhatsApp agora</p>
                     <p className="text-xs text-muted-foreground mt-0.5">Resposta mais rápida — geralmente no mesmo dia</p>
                   </div>
                 </div>
@@ -134,7 +134,7 @@ export default function Contato() {
                   className="p-8 rounded-2xl border border-primary/30 bg-primary/[0.04] text-center space-y-3"
                 >
                   <p className="text-2xl">🌱</p>
-                  <p className="font-heading text-xl font-bold">Mensagem recebida!</p>
+                  <p className="font-heading text-xl font-bold text-white">Mensagem recebida!</p>
                   <p className="text-sm text-muted-foreground">
                     Entramos em contato em até 24 horas úteis. Obrigado por plantar com a gente.
                   </p>
@@ -153,7 +153,7 @@ export default function Contato() {
                         onChange={handleChange}
                         required
                         placeholder="Como podemos te chamar?"
-                        className="w-full bg-transparent border-b border-border/60 py-3 focus:outline-none focus:border-primary transition-colors placeholder:text-muted-foreground/30 text-lg"
+                        className="w-full bg-transparent border-b border-border/60 py-3 focus:outline-none focus:border-primary transition-colors placeholder:text-muted-foreground/30 text-lg text-white"
                       />
                     </div>
 
@@ -168,7 +168,7 @@ export default function Contato() {
                         onChange={handleChange}
                         required
                         placeholder="(21) 99999-9999 ou seu@email.com"
-                        className="w-full bg-transparent border-b border-border/60 py-3 focus:outline-none focus:border-primary transition-colors placeholder:text-muted-foreground/30 text-lg"
+                        className="w-full bg-transparent border-b border-border/60 py-3 focus:outline-none focus:border-primary transition-colors placeholder:text-muted-foreground/30 text-lg text-white"
                       />
                     </div>
                   </div>
@@ -184,7 +184,7 @@ export default function Contato() {
                       onChange={handleChange}
                       required
                       placeholder="Conte brevemente o que quer estruturar na sua presença digital — sem precisar de termos complexos..."
-                      className="w-full bg-transparent border-b border-border/60 py-3 focus:outline-none focus:border-primary transition-colors placeholder:text-muted-foreground/30 text-lg resize-none"
+                      className="w-full bg-transparent border-b border-border/60 py-3 focus:outline-none focus:border-primary transition-colors placeholder:text-muted-foreground/30 text-lg text-white resize-none"
                     />
                   </div>
 
@@ -242,11 +242,11 @@ export default function Contato() {
                     href={socialLinks.whatsapp}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center justify-between p-6 rounded-2xl border border-border/40 bg-white/50 hover:border-primary/40 transition-all duration-500"
+                    className="group flex items-center justify-between p-6 rounded-2xl border border-border/40 bg-card/30 hover:border-primary/40 transition-all duration-500"
                   >
                     <div className="flex items-center gap-4">
                       <MessageCircle size={20} className="text-primary" />
-                      <span className="font-medium">WhatsApp</span>
+                      <span className="font-medium text-white">WhatsApp</span>
                     </div>
                     <ArrowRight
                       size={14}
@@ -258,11 +258,11 @@ export default function Contato() {
                     href={socialLinks.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center justify-between p-6 rounded-2xl border border-border/40 bg-white/50 hover:border-primary/40 transition-all duration-500"
+                    className="group flex items-center justify-between p-6 rounded-2xl border border-border/40 bg-card/30 hover:border-primary/40 transition-all duration-500"
                   >
                     <div className="flex items-center gap-4">
                       <Linkedin size={20} className="text-primary" />
-                      <span className="font-medium">LinkedIn</span>
+                      <span className="font-medium text-white">LinkedIn</span>
                     </div>
                     <ArrowRight
                       size={14}
@@ -274,11 +274,11 @@ export default function Contato() {
                     href={socialLinks.instagram}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="group flex items-center justify-between p-6 rounded-2xl border border-border/40 bg-white/50 hover:border-primary/40 transition-all duration-500"
+                    className="group flex items-center justify-between p-6 rounded-2xl border border-border/40 bg-card/30 hover:border-primary/40 transition-all duration-500"
                   >
                     <div className="flex items-center gap-4">
                       <Instagram size={20} className="text-primary" />
-                      <span className="font-medium">Instagram</span>
+                      <span className="font-medium text-white">Instagram</span>
                     </div>
                     <ArrowRight
                       size={14}

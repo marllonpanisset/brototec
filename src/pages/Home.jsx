@@ -24,7 +24,7 @@ export default function Home() {
       
       <CtaSection 
         heading="Pronto para ter soberania digital?"
-        body="Construímos o sistema que você controla, não o sistema que controla você. Vamos conversar?"
+        body="Construímos o ecossistema que você controla, não a ferramenta que aprisiona seu negócio. Vamos conversar?"
         cta="Iniciar Conversa"
       />
       

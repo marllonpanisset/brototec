@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 export default function SolucoesHero() {
   return (
     <section
-      className="relative pt-40 pb-28 overflow-hidden"
+      className="relative pt-40 pb-28 overflow-hidden bg-black"
       style={{
         backgroundImage: "url('/images/solucoes/solucoes-hero.webp')",
         backgroundSize: "cover",
@@ -28,10 +28,10 @@ export default function SolucoesHero() {
           initial={{ opacity: 0, y: 28 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
-          className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight max-w-4xl"
+          className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight max-w-4xl text-white"
         >
           Interfaces digitais que viram{" "}
-          <span className="text-gradient-green italic">
+          <span className="text-gradient-amber italic">
             ativos reais de negócio.
           </span>
         </motion.h1>
@@ -42,8 +42,8 @@ export default function SolucoesHero() {
           transition={{ delay: 0.2 }}
           className="mt-8 text-base text-muted-foreground max-w-xl leading-relaxed"
         >
-          Estruturamos plataformas completas para posicionamento, vendas e crescimento de negócios.  
-          Arquitetura de informação sob medida, eliminando dependências desnecessárias de ferramentas externas.
+          Estruturamos ecossistemas completos para posicionamento, vendas e crescimento de negócios.  
+          Arquitetura de informação sob medida, eliminando dependências desnecessárias de ferramentas de aluguel.
         </motion.p>
 
         <motion.p

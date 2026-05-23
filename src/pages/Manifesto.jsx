@@ -15,7 +15,7 @@ const pillars = [
   {
     num: "01",
     title: "Autonomia real",
-    desc: "Você recebe o projeto completo, com acesso, painel e controle. Nada fica preso com a gente.",
+    desc: "Você recebe a estrutura completa, com acessos, painéis e controle. Nada fica preso com a gente.",
   },
   {
     num: "02",
@@ -24,8 +24,8 @@ const pillars = [
   },
   {
     num: "03",
-    title: "Tecnologia simples",
-    desc: "Nada de interfaces complexas desnecessárias. Tudo é feito para funcionar de verdade e ser fácil de usar.",
+    title: "Layout descomplicado",
+    desc: "Nada de interfaces complexas desnecessárias. Tudo é feito para funcionar de verdade e ser fácil de gerir.",
   },
   {
     num: "04",
@@ -87,8 +87,8 @@ export default function Manifesto() {
           <motion.h1
             className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight max-w-4xl mt-8 text-white"
           >
-            Tecnologia sem <br className="hidden md:block" />
-            <span className="text-gradient-green italic">dependência.</span>
+            Interfaces sem <br className="hidden md:block" />
+            <span className="text-gradient-amber italic">dependência.</span>
             <br />
             E isso muda tudo.
           </motion.h1>
@@ -105,12 +105,12 @@ export default function Manifesto() {
       {/* PROBLEMA */}
       <section className="py-12 md:py-24 border-t border-border/40">
         <div className="max-w-5xl mx-auto px-6">
-          <motion.h2 {...fadeUp} className="font-heading text-2xl md:text-4xl font-bold">
+          <motion.h2 {...fadeUp} className="font-heading text-2xl md:text-4xl font-bold text-white">
             O padrão do mercado é criar barreiras.
           </motion.h2>
 
           <motion.p {...fadeUp} className="mt-6 text-muted-foreground max-w-xl text-base md:text-lg">
-            Plataformas que só quem criou consegue mexer. Mudanças simples que viram cobranças abusivas. Estruturas rígidas que travam o crescimento do seu negócio.
+            Ambientes que só quem criou consegue mexer. Mudanças simples que viram cobranças abusivas. Estruturas rígidas que travam o crescimento do seu negócio.
           </motion.p>
 
           <motion.p {...fadeUp} className="mt-4 text-muted-foreground max-w-xl text-base md:text-lg">
@@ -130,7 +130,7 @@ export default function Manifesto() {
               className="grid md:grid-cols-3 gap-4 md:gap-6 border-t border-border/40 pt-6 md:pt-8"
             >
               <span className="text-xs text-primary font-bold">{p.num}</span>
-              <h3 className="font-heading font-semibold text-lg md:text-xl">
+              <h3 className="font-heading font-semibold text-lg md:text-xl text-white">
                 {p.title}
               </h3>
               <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
@@ -158,7 +158,7 @@ export default function Manifesto() {
 
           <div className="w-full md:w-1/2 px-6 md:pr-12 lg:pr-24 xl:pr-32 order-1 md:order-2">
             <div className="max-w-xl ml-auto">
-              <motion.h2 {...fadeUp} className="font-heading text-2xl md:text-3xl font-bold mb-6 md:mb-8">
+              <motion.h2 {...fadeUp} className="font-heading text-2xl md:text-3xl font-bold mb-6 md:mb-8 text-white">
                 O que isso significa na prática
               </motion.h2>
 
@@ -179,7 +179,7 @@ export default function Manifesto() {
       {/* COMO FUNCIONAMOS POR DENTRO */}
       <section className="py-12 md:py-24 border-t border-border/40">
         <div className="max-w-6xl mx-auto px-6">
-          <motion.h2 {...fadeUp} className="font-heading text-2xl md:text-3xl font-bold mb-8 md:mb-10">
+          <motion.h2 {...fadeUp} className="font-heading text-2xl md:text-3xl font-bold mb-8 md:mb-10 text-white">
             Como operamos internamente
           </motion.h2>
 
@@ -191,7 +191,7 @@ export default function Manifesto() {
                 transition={{ delay: i * 0.05 }}
                 className="p-6 rounded-2xl border border-border/40 bg-primary/[0.02]"
               >
-                <h3 className="font-heading font-semibold mb-2">
+                <h3 className="font-heading font-semibold mb-2 text-white">
                   {item.title}
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -209,10 +209,10 @@ export default function Manifesto() {
           
           <div className="w-full md:w-1/2 px-6 md:pl-12 lg:pl-24 xl:pl-32 order-1">
             <div className="max-w-xl">
-              <motion.h2 {...fadeUp} className="font-heading text-2xl md:text-4xl font-bold leading-tight">
+              <motion.h2 {...fadeUp} className="font-heading text-2xl md:text-4xl font-bold leading-tight text-white">
                 Você não precisa de um fornecedor fixo.
                 <br />
-                <span className="text-gradient-green">Precisa de uma interface que funcione.</span>
+                <span className="text-gradient-amber">Precisa de uma interface que funcione.</span>
               </motion.h2>
 
               <motion.p {...fadeUp} className="mt-6 text-muted-foreground text-base md:text-lg">
@@ -235,7 +235,7 @@ export default function Manifesto() {
       </section>
 
       <CtaSection
-        heading="Quer uma plataforma que você realmente controle?"
+        heading="Quer um ecossistema que você realmente controle?"
         body="A gente constrói junto com você — e entrega sem nenhuma dependência futura."
         cta="Quero entender como funciona"
         hint="Sem compromisso. Só clareza."

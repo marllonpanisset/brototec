@@ -3,11 +3,11 @@ import { motion } from "framer-motion";
 const audience = [
   {
     num: "01",
-    text: "Empreendedores que buscam soberania sobre suas ferramentas e dados.",
+    text: "Empreendedores que buscam soberania sobre suas estruturas e dados.",
   },
   {
     num: "02",
-    text: "Negócios que precisam de plataformas robustas que escalam sem taxas de licença.",
+    text: "Negócios que precisam de ecossistemas robustos que escalam sem taxas de licença ou mensalidades.",
   },
   {
     num: "03",
@@ -38,13 +38,13 @@ export default function ConceptSection() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-heading text-2xl sm:text-3xl font-bold mt-3 max-w-xl leading-tight"
+          className="font-heading text-2xl sm:text-3xl font-bold mt-3 max-w-xl leading-tight text-white"
         >
-          Tecnologia para quem entende que <br />
-          <span className="text-gradient-green italic">liberdade digital é um ativo.</span>
+          Estruturas para quem entende que <br />
+          <span className="text-gradient-amber italic">liberdade digital é um ativo.</span>
         </motion.h2>
 
-        <div className="mt-12 grid md:grid-cols-4 gap-px bg-border/40 rounded-2xl overflow-hidden border border-border/40 shadow-sm">
+        <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-px bg-border/40 rounded-2xl overflow-hidden border border-border/40 shadow-sm">
           {audience.map((a, i) => (
             <motion.div
               key={a.num}
@@ -85,7 +85,7 @@ export default function ConceptSection() {
           transition={{ delay: 0.5 }}
           className="mt-8 text-center text-[10px] text-muted-foreground/40 uppercase tracking-[0.3em]"
         >
-          Brototec — Tecnologia Ética & Independente
+          Brototec — Design Estrutural & Autonomia Digital
         </motion.p>
 
       </div>

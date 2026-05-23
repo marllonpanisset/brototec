@@ -14,7 +14,7 @@ export default function ServiceDetail({
   return (
     <section className="relative py-24 overflow-hidden">
       {isEven && (
-        <div className="absolute inset-0 bg-gradient-to-r from-primary/3 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent pointer-events-none" />
       )}
 
       <div className="max-w-7xl mx-auto px-6">
@@ -36,11 +36,11 @@ export default function ServiceDetail({
               </span>
             </div>
 
-            <h2 className="font-heading text-3xl sm:text-4xl font-bold">
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-white">
               {title}
             </h2>
 
-            <p className="mt-3 text-lg text-gradient-green font-medium font-heading">
+            <p className="mt-3 text-lg text-gradient-amber font-medium font-heading">
               {tagline}
             </p>
 
@@ -58,13 +58,12 @@ export default function ServiceDetail({
             </ul>
 
             {/* 🔥 gatilho high ticket */}
-            {/* 🔥 gatilho high ticket */}
             <div className="mt-6 p-4 rounded-xl bg-primary/5 border border-primary/10 max-w-sm">
               <p className="text-[10px] uppercase tracking-wider font-bold text-primary mb-1">
                 Compromisso Brototec
               </p>
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Este projeto não possui mensalidade de licença. O investimento é focado na construção de um ativo que pertencerá para sempre ao seu negócio.
+                Este ecossistema não possui mensalidade de licença. O investimento é focado na construção de um ativo que pertencerá para sempre ao seu negócio.
               </p>
             </div>
           </motion.div>

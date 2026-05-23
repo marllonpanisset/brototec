@@ -30,9 +30,9 @@ export default function Projetos() {
               Design de Produto Digital
             </span>
 
-            <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight max-w-4xl">
+            <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight max-w-4xl text-white">
               Projetos como{" "}<br />
-              <span className="text-gradient-green italic">estruturas vivas.</span>
+              <span className="text-gradient-amber italic">estruturas vivas.</span>
             </h1>
 
             <p className="mt-8 text-muted-foreground text-base md:text-lg max-w-xl leading-relaxed opacity-80">
@@ -65,7 +65,7 @@ export default function Projetos() {
                   </div>
                   
                   <div className="space-y-2">
-                    <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight">
+                    <h2 className="font-heading text-4xl md:text-6xl font-bold tracking-tight text-white">
                       {schio.title}
                     </h2>
                     <p className="text-lg md:text-xl text-primary/80 font-medium italic">
@@ -132,7 +132,7 @@ export default function Projetos() {
               className="relative pt-16 md:pt-16 border-t border-white/5"
             >
               <div className="text-center mb-12 space-y-2">
-                <h3 className="text-2xl md:text-4xl font-heading font-bold tracking-tight italic">Arquitetura de Interface</h3>
+                <h3 className="text-2xl md:text-4xl font-heading font-bold tracking-tight italic text-white">Arquitetura de Interface</h3>
                 <p className="text-muted-foreground text-[10px] md:text-xs uppercase tracking-[0.4em] opacity-60">Ecossistema de alta fidelidade</p>
               </div>
 
@@ -154,7 +154,7 @@ export default function Projetos() {
         <div className="max-w-7xl mx-auto px-6">
           <div className="flex items-end justify-between mb-12 border-b border-white/5 pb-6">
             <div className="space-y-1">
-              <h3 className="font-heading text-2xl md:text-3xl font-bold tracking-tight text-gradient-green">
+              <h3 className="font-heading text-2xl md:text-3xl font-bold tracking-tight text-gradient-amber">
                 Próximos Lançamentos
               </h3>
               <p className="text-[10px] text-muted-foreground uppercase tracking-widest">
@@ -183,7 +183,7 @@ export default function Projetos() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] -z-10" />
             
             <div className="text-center md:text-left space-y-4">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold leading-tight">Vamos construir sua<br />próxima plataforma?</h2>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold leading-tight text-white">Vamos construir seu<br />próximo ecossistema?</h2>
               <p className="text-sm md:text-base text-muted-foreground max-w-sm">Cada elemento de design e fluxo é pensado para escala, conversão e autonomia digital.</p>
             </div>
 

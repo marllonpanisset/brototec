@@ -106,11 +106,11 @@ const Footer = () => {
 
             <div className="space-y-4">
               <a
-                href="mailto:contato@brototec.com.br"
+                href="mailto:brototec@outlook.com.br"
                 className="flex items-center gap-3 text-sm text-white/70 hover:text-primary transition-colors"
               >
                 <Mail size={16} className="text-primary" />
-                contato@brototec.com.br
+                brototec@outlook.com.br
               </a>
 
               <a

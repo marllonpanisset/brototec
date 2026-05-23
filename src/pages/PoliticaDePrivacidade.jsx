@@ -37,9 +37,9 @@ export default function PoliticaPrivacidade() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading text-5xl sm:text-6xl font-bold leading-[1.1] tracking-tight"
+            className="font-heading text-5xl sm:text-6xl font-bold leading-[1.1] tracking-tight text-white"
           >
-            Política de <span className="text-gradient-green italic">Privacidade.</span>
+            Política de <span className="text-gradient-amber italic">Privacidade.</span>
           </motion.h1>
           
           <motion.div
@@ -105,12 +105,12 @@ export default function PoliticaPrivacidade() {
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p>Utilizamos cookies estritamente necessários para entender como você interage com o nosso ecossistema digital.</p>
                 <div className="space-y-4">
-                  <div className="p-5 rounded-2xl border border-border/40 bg-white/50">
-                    <h4 className="text-foreground font-bold text-sm mb-2 uppercase tracking-tighter">Essenciais</h4>
+                  <div className="p-5 rounded-2xl border border-border/40 bg-card/30 backdrop-blur-sm">
+                    <h4 className="text-white font-bold text-sm mb-2 uppercase tracking-tighter">Essenciais</h4>
                     <p className="text-xs">Garantem a navegação e o funcionamento correto da interface. Não podem ser desativados.</p>
                   </div>
-                  <div className="p-5 rounded-2xl border border-border/40 bg-white/50">
-                    <h4 className="text-foreground font-bold text-sm mb-2 uppercase tracking-tighter">Analytics</h4>
+                  <div className="p-5 rounded-2xl border border-border/40 bg-card/30 backdrop-blur-sm">
+                    <h4 className="text-white font-bold text-sm mb-2 uppercase tracking-tighter">Analytics</h4>
                     <p className="text-xs">Google Analytics (_ga, _gid) para entendermos o fluxo de visitas e métricas de conversão de forma inteiramente anônima.</p>
                   </div>
                 </div>
@@ -122,7 +122,7 @@ export default function PoliticaPrivacidade() {
               <h2 className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] pt-2">05. Contato</h2>
               <div className="text-muted-foreground">
                 <p className="mb-6">Dúvidas sobre como cuidamos da sua autonomia e privacidade de dados?</p>
-                <div className="bg-primary text-primary-foreground p-8 rounded-[2rem] inline-block">
+                <div className="bg-primary text-primary-foreground p-8 rounded-[2rem] inline-block shadow-lg shadow-primary/10">
                   <p className="text-xs uppercase tracking-widest font-bold mb-1 opacity-80">Encarregado de Dados (DPO)</p>
                   <p className="text-xl font-bold italic font-heading">Marllon Panisset</p>
                   <p className="text-sm mt-4 opacity-90">privacidade@brototec.com.br</p>

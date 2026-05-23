@@ -24,9 +24,9 @@ export const cases = [
   {
     slug: "tais-salles",
     title: "Portfólio Taís Salles",
-    category: "Portfólio Profissional",
     subtitle: "Identidade digital pessoal com foco em posicionamento e autenticidade.",
-    tags: ["Configuração WordPress", "Layout Personalizado", "UI/UX", "Gestão de Conteúdo"],
+    category: "Portfólio Profissional",
+    tags: ["Configuração CMS", "Layout Personalizado", "UI/UX", "Gestão de Conteúdo"],
     challenge:
       "Criar uma presença digital que represente personalidade, estética e trajetória profissional de forma autêntica e estratégica.",
     vision:

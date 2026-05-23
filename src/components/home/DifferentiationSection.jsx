@@ -8,13 +8,13 @@ const steps = [
   },
   {
     num: "02",
-    title: "Arquitetura",
-    desc: "Definição de escopo fechado e arquitetura de informação. Sem letras miúdas ou custos ocultos.",
+    title: "Estruturação",
+    desc: "Definição de escopo fechado e organização da informação visual. Sem letras miúdas ou custos ocultos.",
   },
   {
     num: "03",
-    title: "Implementação",
-    desc: "Estruturação visual da plataforma com foco em carregamento rápido, segurança e interface responsiva.",
+    title: "Customização Visual",
+    desc: "Montagem estética e diagramação da interface com foco em carregamento rápido, clareza e adaptabilidade responsiva.",
   },
   {
     num: "04",
@@ -41,10 +41,10 @@ export default function DifferentiationSection() {
           initial={{ opacity: 0, y: 16 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
-          className="font-heading text-3xl font-bold mt-4 max-w-xl leading-tight"
+          className="font-heading text-3xl font-bold mt-4 max-w-xl leading-tight text-white"
         >
           Um processo transparente, <br />
-          <span className="text-gradient-green italic">da lógica à propriedade.</span>
+          <span className="text-gradient-amber italic">do design à propriedade.</span>
         </motion.h2>
 
         <div className="mt-12 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border border-border/40 rounded-3xl overflow-hidden shadow-sm">
@@ -64,7 +64,7 @@ export default function DifferentiationSection() {
                 <div className="w-1.5 h-1.5 rounded-full bg-primary/30" />
               </div>
               
-              <h3 className="font-heading text-base font-bold mb-3">{s.title}</h3>
+              <h3 className="font-heading text-base font-bold mb-3 text-white">{s.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">
                 {s.desc}
               </p>

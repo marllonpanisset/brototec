@@ -1,6 +1,5 @@
-/* 🌱 Google font 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap');
-*/
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap'); */
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -10,61 +9,36 @@
     --font-heading: 'Space Grotesk', sans-serif;
     --font-body: 'Inter', sans-serif;
 
-    /* 🌱 BASE (LIGHT FIRST) */
-    --background: 0 0% 100%;
-    --foreground: 140 10% 8%;
+    /* 🌙 SITE 100% ESCURO POR PADRÃO (SOLARPUNK AMBER) */
+    --background: 220 24% 7%;           /* Azul Obsidian profundo e atmosférico */
+    --foreground: 32 30% 96%;           /* Branco Marfim quente e confortável */
 
-    --card: 0 0% 100%;
-    --card-foreground: 140 10% 8%;
+    --card: 220 20% 10%;                /* Superfícies ligeiramente mais claras */
+    --card-foreground: 32 30% 96%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 140 10% 8%;
+    --popover: 220 20% 9%;
+    --popover-foreground: 32 30% 96%;
 
-    /* 🌿 PRIMARY (BROTO TEC) */
-    --primary: 142 45% 32%;
-    --primary-foreground: 0 0% 100%;
+    /* ☀️ PRIMARY (O SOL / O BROTO AQUECIDO) */
+    --primary: 28 92% 54%;              /* Âmbar Solar vibrante e tecnológico */
+    --primary-foreground: 220 24% 6%;   /* Texto escuro para alto contraste no botão */
 
-    --secondary: 140 25% 94%;
-    --secondary-foreground: 142 35% 25%;
+    --secondary: 220 15% 14%;
+    --secondary-foreground: 28 90% 65%;
 
-    --accent: 150 35% 88%;
-    --accent-foreground: 142 40% 25%;
+    --accent: 25 80% 20%;
+    --accent-foreground: 28 92% 60%;
 
-    /* 🪨 NEUTROS */
-    --muted: 140 10% 96%;
-    --muted-foreground: 140 5% 45%;
+    /* 🪨 NEUTROS E BORDAS */
+    --muted: 220 15% 13%;
+    --muted-foreground: 220 10% 65%;
 
-    --border: 140 10% 90%;
-    --input: 140 10% 92%;
+    --border: 220 15% 15%;
+    --input: 220 15% 15%;
 
-    --ring: 142 45% 32%;
+    --ring: 28 92% 54%;
 
     --radius: 0.9rem;
-  }
-
-  .dark {
-    --background: 140 15% 6%;
-    --foreground: 0 0% 95%;
-
-    --card: 140 15% 8%;
-    --card-foreground: 0 0% 95%;
-
-    --primary: 142 55% 48%;
-    --primary-foreground: 140 15% 6%;
-
-    --secondary: 140 20% 14%;
-    --secondary-foreground: 140 20% 80%;
-
-    --accent: 140 20% 18%;
-    --accent-foreground: 140 20% 85%;
-
-    --muted: 140 15% 12%;
-    --muted-foreground: 140 10% 60%;
-
-    --border: 140 15% 18%;
-    --input: 140 15% 18%;
-
-    --ring: 142 55% 48%;
   }
 }
 
@@ -74,42 +48,42 @@
   }
 
   body {
-    @apply bg-background text-foreground font-body;
+    @apply bg-background text-foreground font-body antialiased;
   }
 }
 
 @layer utilities {
 
-  /* 🌱 brilho orgânico (não neon) */
-  .glow-green {
-    box-shadow: 0 0 40px rgba(47, 107, 63, 0.10);
+  /* ☀️ Brilho orgânico termal (não neon, lembra o calor solar) */
+  .glow-amber {
+    box-shadow: 0 0 40px rgba(239, 115, 22, 0.08);
   }
 
   .glow-soft {
-    box-shadow: 0 10px 30px rgba(47, 107, 63, 0.08);
+    box-shadow: 0 10px 30px rgba(239, 115, 22, 0.04);
   }
 
-  /* 🌿 gradiente vida */
-  .text-gradient-green {
+  /* 🌅 Gradiente Vida Solar (Transita do Laranja Energético para um Ouro Quente) */
+  .text-gradient-amber {
     background: linear-gradient(135deg,
-      hsl(142 45% 32%),
-      hsl(150 35% 45%)
+      hsl(28 92% 54%),
+      hsl(42 90% 60%)
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
 
-  /* 🌱 fundo vivo leve */
+  /* 🪐 Fundo Atmosférico Solar */
   .bg-eco {
     background: radial-gradient(
       circle at top,
-      rgba(47, 107, 63, 0.06),
-      transparent 60%
+      rgba(239, 115, 22, 0.05),
+      transparent 65%
     );
   }
 
-  /* 🌿 noise mais suave */
+  /* 🌿 Noise sofisticado mantido em opacidade sutil */
   .bg-noise {
-    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.02'/%3E%3C/svg%3E");
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.018'/%3E%3C/svg%3E");
   }
 }

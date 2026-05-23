@@ -40,13 +40,13 @@ export default function ImpactSection() {
               Impacto e Resultados
             </span>
             <h2 className="font-heading text-3xl sm:text-4xl font-bold mt-4 leading-tight">
-              Onde a tecnologia <br />
-              <span className="text-gradient-green italic">encontra a viabilidade.</span>
+              Onde o posicionamento <br />
+              <span className="text-gradient-amber italic">encontra a viabilidade.</span>
             </h2>
             <p className="mt-6 text-base text-muted-foreground leading-relaxed max-w-lg">
-              Não acreditamos em tecnologia por tecnologia. Nosso foco é criar ativos digitais que reduzem seus custos fixos e aumentam sua eficiência operacional. 
+              Não acreditamos em estruturas complexas por vaidade. Nosso foco é criar ativos de marca digitais que reduzem seus custos fixos e aumentam sua eficiência operacional. 
               <br /><br />
-              Na Brototec, o sucesso do projeto é medido pela sua independência tecnológica.
+              Na Brototec, o sucesso do projeto é medido pela sua independência e soberania digital.
             </p>
           </motion.div>
 

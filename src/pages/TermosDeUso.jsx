@@ -37,9 +37,9 @@ export default function TermosDeUso() {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, ease: [0.16, 1, 0.3, 1] }}
-            className="font-heading text-5xl sm:text-6xl font-bold leading-[1.1] tracking-tight"
+            className="font-heading text-5xl sm:text-6xl font-bold leading-[1.1] tracking-tight text-white"
           >
-            Termos de <span className="text-gradient-green italic">Uso.</span>
+            Termos de <span className="text-gradient-amber italic">Uso.</span>
           </motion.h1>
           
           <motion.div
@@ -77,7 +77,7 @@ export default function TermosDeUso() {
               <h2 className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] pt-2">02. Uso da Marca</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
                 <p>
-                  É concedida permissão para navegar e visualizar temporariamente os materiais informativos e de portfólio no site da brototec, apenas para fins de consulta pessoal, corporativa e não comercial.
+                  Es concedida permissão para navegar e visualizar temporariamente os materiais informativos e de portfólio no site da brototec, apenas para fins de consulta pessoal, corporativa e não comercial.
                 </p>
                 <div className="bg-secondary/20 p-6 rounded-2xl border border-border/40 text-sm italic">
                   Esta é a concessão de uma licença de visualização, não uma transferência de título. Você não pode modificar os materiais visuais, copiá-los para fins de revenda externa ou tentar replicar layouts e marcas contidas neste ecossistema.
@@ -93,7 +93,7 @@ export default function TermosDeUso() {
                   Os materiais no site da brototec são fornecidos 'como estão'. Não oferecemos garantias comerciais implícitas além da exatidão das propostas de design apresentadas em nosso portfólio.
                 </p>
                 <p>
-                  Em nenhum caso o estúdio brototec será responsável por quaisquer danos colaterais decorrentes do uso inadequado ou da incapacidade de utilizar os materiais informativos de nossa plataforma.
+                  Em nenhum caso o estúdio brototec será responsável por quaisquer danos colaterais decorrentes do uso inadequado ou da incapacidade de utilizar os materiais informativos de nossa estrutura.
                 </p>
               </div>
             </div>
@@ -118,7 +118,7 @@ export default function TermosDeUso() {
                 <div className="bg-primary text-primary-foreground p-8 rounded-[2rem] inline-block shadow-lg shadow-primary/10">
                   <p className="text-xs uppercase tracking-widest font-bold mb-1 opacity-80">Contato Institucional</p>
                   <p className="text-xl font-bold italic font-heading">Brototec Digital</p>
-                  <p className="text-sm mt-4 opacity-90">contato@brototec.com.br</p>
+                  <p className="text-sm mt-4 opacity-90">brototec@outlook.com.br</p>
                 </div>
                 <p className="mt-12 text-[10px] uppercase tracking-widest opacity-40">Última atualização: {ultimaAtualizacao}</p>
               </div>

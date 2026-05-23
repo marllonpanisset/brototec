@@ -49,7 +49,7 @@ function HighlightBlock({ highlights }) {
           <Zap size={240} />
         </div>
 
-        <h2 className="font-heading text-3xl font-bold mb-10">Entrega de Valor</h2>
+        <h2 className="font-heading text-3xl font-bold mb-10 text-white">Entrega de Valor</h2>
 
         <div className="grid sm:grid-cols-2 gap-8">
           {highlights.map((item) => (
@@ -73,12 +73,12 @@ function FAQBlock({ faq }) {
 
   return (
     <section className="max-w-4xl mx-auto px-6 mb-28">
-      <h2 className="text-2xl font-bold mb-10 font-heading">Perguntas Estratégicas</h2>
+      <h2 className="text-2xl font-bold mb-10 font-heading text-white">Perguntas Estratégicas</h2>
       <div className="space-y-0 border-t border-border/60">
         {faq.map((item, i) => (
           <details key={i} className="group border-b border-border/60">
             <summary className="flex justify-between items-center cursor-pointer py-6 list-none">
-              <span className="font-semibold text-lg pr-4">{item.question}</span>
+              <span className="font-semibold text-lg pr-4 text-white group-hover:text-primary transition-colors">{item.question}</span>
               <span className="text-primary transition-transform group-open:rotate-180">↓</span>
             </summary>
             <p className="text-muted-foreground pb-6 text-lg leading-relaxed">
@@ -160,7 +160,7 @@ export default function ProjetoDetalhe() {
           </Link>
 
           <div className="max-w-4xl">
-            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.9]">
+            <h1 className="text-5xl md:text-8xl font-bold tracking-tighter leading-[0.9] text-white">
               {projeto.title}
             </h1>
             <p className="text-xl md:text-2xl text-muted-foreground mt-8 font-medium leading-relaxed">
@@ -189,8 +189,8 @@ export default function ProjetoDetalhe() {
 
         {/* CTA FINAL PERSONALIZADO */}
         <section className="max-w-4xl mx-auto px-6 mt-32 text-center py-24 border-t border-border/40">
-           <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
-             {projeto.cta || "Pronto para construir sua plataforma independente?"}
+           <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight text-white">
+             {projeto.cta || "Pronto para construir seu ecossistema independente?"}
            </h2>
            <Link
              to="/contato"
