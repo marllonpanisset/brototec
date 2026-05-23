@@ -2,6 +2,8 @@ import { Toaster } from "@/components/ui/toaster";
 import { QueryClientProvider } from '@tanstack/react-query';
 import { queryClientInstance } from '@/lib/query-client';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import { usePageMetadata } from './hooks/usePageMetadata'; // Importando seu novo hook
+
 import PageNotFound from './lib/PageNotFound';
 import Home from './pages/Home';
 import Solucoes from './pages/Solucoes';
@@ -13,10 +15,17 @@ import TermosDeUso from './pages/TermosDeUso';
 import ProjetoDetalhe from './pages/ProjetoDetalhe';
 import CookieBanner from './components/CookieBanner';
 
+// Este componente dispara o hook a cada mudança de rota
+function MetadataUpdater() {
+  usePageMetadata();
+  return null;
+}
+
 function App() {
   return (
     <QueryClientProvider client={queryClientInstance}>
       <Router>
+        <MetadataUpdater /> {/* Centralizador de SEO */}
         <CookieBanner />
 
         <Routes>
