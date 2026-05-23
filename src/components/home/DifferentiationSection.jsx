@@ -4,22 +4,22 @@ const steps = [
   {
     num: "01",
     title: "Mapeamento",
-    desc: "Analisamos seus gargalos operacionais antes de propor qualquer tecnologia.",
+    desc: "Analisamos seus gargalos de posicionamento e comunicação antes de propor o design da interface.",
   },
   {
     num: "02",
     title: "Arquitetura",
-    desc: "Definição de escopo fechado e lógica de dados. Sem letras miúdas ou custos ocultos.",
+    desc: "Definição de escopo fechado e arquitetura de informação. Sem letras miúdas ou custos ocultos.",
   },
   {
     num: "03",
-    title: "Desenvolvimento",
-    desc: "Criação do sistema em camadas (Flask/React) com foco em segurança e performance.",
+    title: "Implementação",
+    desc: "Estruturação visual da plataforma com foco em carregamento rápido, segurança e interface responsiva.",
   },
   {
     num: "04",
     title: "Soberania",
-    desc: "Entrega das chaves, treinamento e documentação. Você é o dono do seu ativo.",
+    desc: "Entrega das chaves, treinamento de autonomia e documentação. Você é o dono do seu ativo.",
   },
 ];
 
@@ -79,7 +79,7 @@ export default function DifferentiationSection() {
           transition={{ delay: 0.6 }}
           className="mt-10 text-center text-[11px] text-muted-foreground/60 leading-relaxed max-w-2xl mx-auto"
         >
-          * Seguimos os princípios da <strong>Economia Solidária</strong>: remuneração justa pelo desenvolvimento e liberdade total para o cliente gerir sua própria infraestrutura.
+          * Seguimos os princípios da <strong>Economia Solidária</strong>: remuneração justa pelo design estrutural e liberdade total para o cliente gerir sua própria infraestrutura.
         </motion.p>
 
       </div>

@@ -3,23 +3,23 @@ import { motion } from "framer-motion";
 const stats = [
   {
     value: "100%",
-    label: "Propriedade do Código",
-    desc: "O cliente detém todos os direitos e acessos ao final do projeto.",
+    label: "Propriedade Estrutural",
+    desc: "O cliente detém todos os direitos de propriedade, arquivos e acessos ao final do projeto.",
   },
   {
     value: "Zero",
     label: "Taxas de Licença",
-    desc: "Economia vitalícia em mensalidades de software proprietário.",
+    desc: "Economia vitalícia em mensalidades e assinaturas de plataformas proprietárias travadas.",
   },
   {
     value: "24/7",
     label: "Autonomia Operacional",
-    desc: "Gestão total de conteúdo e dados via dashboard exclusivo.",
+    desc: "Gestão total de conteúdo, mídias e dados via painel administrativo exclusivo.",
   },
   {
     value: "High",
     label: "Padrão de Performance",
-    desc: "Sistemas leves e rápidos construídos com Flask e React.",
+    desc: "Interfaces leves, fluidas e rápidas estruturadas com tecnologias de alto rendimento.",
   },
 ];
 

@@ -27,16 +27,16 @@ export default function Projetos() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-[10px] font-bold text-primary tracking-[0.4em] uppercase mb-4 block">
-              Engenharia de Produto
+              Design de Produto Digital
             </span>
 
             <h1 className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight max-w-4xl">
               Projetos como{" "}<br />
-              <span className="text-gradient-green italic">sistemas vivos.</span>
+              <span className="text-gradient-green italic">estruturas vivas.</span>
             </h1>
 
             <p className="mt-8 text-muted-foreground text-base md:text-lg max-w-xl leading-relaxed opacity-80">
-              Estruturas digitais completas que evoluem com o negócio, unindo lógica back-end à precisão de interface.
+              Ambientes digitais completos que evoluem com o negócio, unindo fluxos inteligentes à precisão de interface.
             </p>
           </motion.div>
         </div>
@@ -110,7 +110,7 @@ export default function Projetos() {
                 </div>
               </motion.div>
 
-              {/* VISUAL: Ipad Portrait com Sticky ajustado */}
+              {/* VISUAL */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.98 }}
                 whileInView={{ opacity: 1, scale: 1 }}
@@ -124,7 +124,7 @@ export default function Projetos() {
               </motion.div>
             </div>
 
-            {/* VISÃO DE ENGENHARIA: Ajuste de Padding focado em Mobile/Desktop */}
+            {/* VISÃO DE ARQUITETURA DE INTERFACE */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -132,7 +132,7 @@ export default function Projetos() {
               className="relative pt-16 md:pt-16 border-t border-white/5"
             >
               <div className="text-center mb-12 space-y-2">
-                <h3 className="text-2xl md:text-4xl font-heading font-bold tracking-tight italic">Visão de Engenharia</h3>
+                <h3 className="text-2xl md:text-4xl font-heading font-bold tracking-tight italic">Arquitetura de Interface</h3>
                 <p className="text-muted-foreground text-[10px] md:text-xs uppercase tracking-[0.4em] opacity-60">Ecossistema de alta fidelidade</p>
               </div>
 
@@ -158,13 +158,12 @@ export default function Projetos() {
                 Próximos Lançamentos
               </h3>
               <p className="text-[10px] text-muted-foreground uppercase tracking-widest">
-                A evolução contínua da engenharia Brototec
+                A evolução contínua das soluções Brototec
               </p>
             </div>
           </div>
 
           <div className="grid sm:grid-cols-2 gap-8 md:gap-12">
-            {/* Filtramos o 'schio-consultoria' para não repetir */}
             {cases
               .filter((c) => c.slug !== "schio-consultoria")
               .map((c) => (
@@ -184,15 +183,15 @@ export default function Projetos() {
             <div className="absolute top-0 right-0 w-64 h-64 bg-primary/10 blur-[100px] -z-10" />
             
             <div className="text-center md:text-left space-y-4">
-              <h2 className="font-heading text-3xl md:text-4xl font-bold leading-tight">Vamos construir o seu<br />próximo sistema vivo?</h2>
-              <p className="text-sm md:text-base text-muted-foreground max-w-sm">Cada linha de código é pensada para escala, conversão e autonomia.</p>
+              <h2 className="font-heading text-3xl md:text-4xl font-bold leading-tight">Vamos construir sua<br />próxima plataforma?</h2>
+              <p className="text-sm md:text-base text-muted-foreground max-w-sm">Cada elemento de design e fluxo é pensado para escala, conversão e autonomia digital.</p>
             </div>
 
             <Link
               to="/contato"
               className="group relative w-full md:w-auto inline-flex items-center justify-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded-2xl font-bold text-sm transition-all hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.4)]"
             >
-              Iniciar consultoria <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
+              Iniciar Alinhamento Estratégico <ArrowRight size={18} className="group-hover:translate-x-1 transition-transform" />
             </Link>
           </motion.div>
         </div>

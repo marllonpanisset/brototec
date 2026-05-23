@@ -3,7 +3,7 @@ import {
   ArrowLeft,
   CheckCircle2,
   Globe,
-  Code2,
+  Target, // Substituído Code2 por Target para blindagem do MEI
   Layout,
   MessageCircle,
   Zap,
@@ -17,7 +17,6 @@ import { cases } from "../data/cases";
 /* ---------------------------
    SECTION BASE (Corrigido)
 ----------------------------*/
-// Adicionamos icon=null para torná-lo opcional e evitar o erro do VS Code
 function Section({ title, icon: Icon = null, children }) {
   if (!children) return null;
 
@@ -40,7 +39,6 @@ function Section({ title, icon: Icon = null, children }) {
 /* ---------------------------
    BLOCKS
 ----------------------------*/
-
 function HighlightBlock({ highlights }) {
   if (!highlights?.length) return null;
 
@@ -96,11 +94,10 @@ function FAQBlock({ faq }) {
 /* ---------------------------
    RENDER ENGINE
 ----------------------------*/
-
 const SectionRenderer = ({ type, projeto }) => {
   const map = {
     problem: (
-      <Section title="O Desafio" icon={Code2}>
+      <Section title="O Desafio" icon={Target}> {/* Ícone atualizado para Target */}
         {projeto.challenge}
       </Section>
     ),
@@ -129,7 +126,6 @@ const SectionRenderer = ({ type, projeto }) => {
 /* ---------------------------
    PAGE
 ----------------------------*/
-
 export default function ProjetoDetalhe() {
   const { slug } = useParams();
   const projeto = cases.find((c) => c.slug === slug);
@@ -194,14 +190,14 @@ export default function ProjetoDetalhe() {
         {/* CTA FINAL PERSONALIZADO */}
         <section className="max-w-4xl mx-auto px-6 mt-32 text-center py-24 border-t border-border/40">
            <h2 className="text-3xl md:text-5xl font-bold mb-8 tracking-tight">
-             {projeto.cta || "Pronto para ter um ativo digital assim?"}
+             {projeto.cta || "Pronto para construir sua plataforma independente?"}
            </h2>
            <Link
              to="/contato"
              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-5 rounded-2xl font-bold hover:scale-105 transition-all shadow-xl shadow-primary/20"
            >
              <MessageCircle size={20} />
-             Iniciar Consultoria
+             Iniciar Alinhamento Estratégico
            </Link>
         </section>
       </main>

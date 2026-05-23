@@ -1,3 +1,4 @@
+// src/pages/Contato.jsx
 import { motion } from "framer-motion";
 import { useState } from "react";
 import Navbar from "../components/layout/Navbar";
@@ -33,7 +34,7 @@ export default function Contato() {
   };
 
   const socialLinks = {
-    whatsapp: "https://wa.me/5521991472417?text=Quero%20um%20site%20simples%2C%20rápido%20e%20que%20eu%20consiga%20editar%20sozinho(a).%20Pode%20me%20explicar%20como%20funciona%20e%20quanto%20custa%3F",
+    whatsapp: "https://wa.me/5521991472417?text=Quero%20uma%20plataforma%20digital%20flex%C3%ADvel%20e%20que%20eu%20consiga%20gerenciar%20sozinho(a).%20Pode%20me%20explicar%20como%20funciona%3F",
     linkedin: "https://linkedin.com/company/brototec",
     instagram: "https://instagram.com/brototecbr",
   };
@@ -73,9 +74,9 @@ export default function Contato() {
             transition={{ duration: 0.7, delay: 0.2 }}
             className="text-base text-muted-foreground mt-8 max-w-xl leading-relaxed"
           >
-            Conte o que você precisa —{" "}
+            Conte o que você precisa construir —{" "}
             <span className="text-foreground font-medium">respondemos em até 24h</span>{" "}
-            com clareza, sem enrolação. Se preferir, fala direto pelo WhatsApp.
+            com clareza, sem enrolação técnica. Se preferir, fale direto pelo WhatsApp.
           </motion.p>
 
           <motion.div
@@ -98,7 +99,7 @@ export default function Contato() {
               transition={{ duration: 0.8 }}
               className="lg:col-span-7"
             >
-              {/* CTA WhatsApp em destaque — acima do formulário */}
+              {/* CTA WhatsApp em destaque */}
               <a
                 href={socialLinks.whatsapp}
                 target="_blank"
@@ -182,7 +183,7 @@ export default function Contato() {
                       value={formData.mensagem}
                       onChange={handleChange}
                       required
-                      placeholder="Conte brevemente o que quer construir — sem precisar ser técnico..."
+                      placeholder="Conte brevemente o que quer estruturar na sua presença digital — sem precisar de termos complexos..."
                       className="w-full bg-transparent border-b border-border/60 py-3 focus:outline-none focus:border-primary transition-colors placeholder:text-muted-foreground/30 text-lg resize-none"
                     />
                   </div>
@@ -288,16 +289,19 @@ export default function Contato() {
               </div>
 
               <div className="pt-10 border-t border-border/40 space-y-4">
-                <div className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors cursor-default">
+                <a
+                  href="mailto:brototec@outlook.com.br"
+                  className="flex items-center gap-4 text-muted-foreground hover:text-primary transition-colors duration-300"
+                >
                   <Mail size={16} />
                   <span className="text-sm font-medium">brototec@outlook.com.br</span>
-                </div>
+                </a>
                 <p className="text-[10px] text-muted-foreground/60 leading-relaxed uppercase tracking-widest">
-                  Localizado no Rio de Janeiro, disponível para o mundo.
+                  Sediado no Rio de Janeiro, atendendo remotamente o mundo.
                 </p>
                 <p className="text-[10px] text-muted-foreground/50 leading-relaxed">
-                  Atendimento de segunda a sexta, 9h às 18h.<br />
-                  Fora desse horário? WhatsApp também funciona.
+                  Atendimento corporativo de segunda a sexta, 9h às 18h.<br />
+                  Fora desse horário? Nosso canal do WhatsApp permanece aberto.
                 </p>
               </div>
             </motion.div>

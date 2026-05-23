@@ -1,4 +1,4 @@
-import { Monitor, ShoppingCart, Database, Layout } from "lucide-react";
+import { Monitor, ShoppingCart, Database, Layout, Megaphone } from "lucide-react";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
 import CtaSection from "../components/home/CtaSection";
@@ -9,16 +9,16 @@ import ExplanationBlocks from "../components/solucoes/ExplanationBlocks";
 const services = [
   {
     icon: Database,
-    title: "Plataformas de Operação & Gestão",
-    tagline: "Seu negócio rodando em um sistema próprio.",
+    title: "Plataformas de Informação & Fluxos",
+    tagline: "Seu negócio rodando com total autonomia.",
     description:
-      "Criamos sistemas completos para centralizar operação, dados e decisões do seu negócio. Tudo construído sob medida em uma única base tecnológica, escalável e sua para sempre.",
+      "Configuramos painéis integrados para centralizar a visualização de dados, indicadores e fluxos do seu negócio. Estruturas organizadas sob medida para visualização limpa, escalável e sua para sempre.",
     items: [
-      "Dashboards em tempo real",
-      "Gestão de clientes, agenda e operações",
-      "Controle financeiro e relatórios",
-      "Multiunidade e multiusuário",
-      "Banco de dados proprietário",
+      "Painéis e dashboards em tempo real",
+      "Organização visual de fluxos e operações",
+      "Estruturação de relatórios e faturamento",
+      "Interfaces multiusuário intuitivas",
+      "Ambiente de dados centralizado e seguro",
     ],
   },
   {
@@ -26,11 +26,11 @@ const services = [
     title: "Presença Digital Estratégica",
     tagline: "Sites que viram estrutura de marca.",
     description:
-      "Desenvolvemos sites institucionais que não são só presença digital — são parte do seu sistema de aquisição e autoridade.",
+      "Estruturamos ambientes institucionais de alto padrão que transcendem a presença digital — são desenhados como canais de autoridade e posicionamento.",
     items: [
       "Design premium focado em conversão",
       "SEO e performance extrema",
-      "Painel para edição de conteúdo",
+      "Painel integrado para edição de conteúdo",
       "Estrutura responsiva e rápida",
       "Hospedagem simplificada",
     ],
@@ -40,13 +40,13 @@ const services = [
     title: "Estruturas de Conversão",
     tagline: "Landing pages que viram receita.",
     description:
-      "Páginas criadas exclusivamente para transformar tráfego em clientes, com foco em campanhas e performance.",
+      "Páginas criadas exclusivamente para transformar tráfego em clientes, atuando diretamente em campanhas de promoção de vendas e performance.",
     items: [
       "Copy orientada à conversão",
-      "Integração com WhatsApp e CRM",
-      "Otimização para Ads",
+      "Integração com canais de atendimento (WhatsApp/CRM)",
+      "Otimização para tráfego pago (Ads)",
       "Carregamento instantâneo",
-      "Estrutura de teste e validação rápida",
+      "Estrutura de validação e testes rápidos",
     ],
   },
   {
@@ -54,13 +54,13 @@ const services = [
     title: "E-commerce Operacional",
     tagline: "Lojas prontas para vender sem dependência.",
     description:
-      "Implementamos ou configuramos lojas em plataformas consolidadas, garantindo operação rápida e estável.",
+      "Implementamos e configuramos canais de venda em plataformas consolidadas do mercado, garantindo uma operação estável, rápida e livre de travas.",
     items: [
-      "Shopify ou Nuvemshop configuradas",
-      "Pagamentos e frete integrados",
+      "Canais Shopify ou Nuvemshop configurados",
+      "Sistemas de pagamento e logística integrados",
       "Estrutura de catálogo otimizada",
-      "Foco em conversão",
-      "Entrega pronta para operação",
+      "Design fluido focado em conversão",
+      "Entrega pronta para faturamento",
     ],
   },
 ];
@@ -83,43 +83,47 @@ export default function Solucoes() {
         ))}
       </div>
 
-      {/* SOCIAL MEDIA (OPCIONAL)
+      {/* SOCIAL MEDIA (OPCIONAL) */}
       <section className="py-24 border-t border-border/40">
         <div className="max-w-5xl mx-auto px-6">
           <div className="border border-border/40 rounded-2xl p-10 bg-card/30 backdrop-blur-sm space-y-6">
+            
             <div className="flex items-center gap-4">
               <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center">
                 <Megaphone className="text-primary" size={18} />
               </div>
               <div>
                 <h2 className="font-heading text-2xl font-bold">Social Media Estratégico</h2>
-                <p className="text-sm text-muted-foreground italic text-gradient-green">Opcional para acompanhamento de marca.</p>
+                <p className="text-sm text-muted-foreground italic text-gradient-green">Posicionamento e acompanhamento de marca.</p>
               </div>
             </div>
+
             <p className="text-sm text-muted-foreground leading-relaxed max-w-2xl">
-              Criação de conteúdo com design profissional para alimentar sua presença digital. 
-              Ideal para quem já tem o sistema e quer focar em atrair novos pacientes com autoridade visual.
+              Criação de conteúdo com design profissional e diagramação editorial para alimentar sua presença digital. 
+              Ideal para marcas que já estruturaram sua plataforma independente e querem focar em atrair novos clientes com autoridade visual.
             </p>
+
             <div className="grid sm:grid-cols-2 gap-4 text-xs text-muted-foreground">
               <ul className="space-y-2">
-                <li>• Planejamento e linha editorial</li>
-                <li>• Design High-End para posts e carrosséis</li>
+                <li>• Planejamento de comunicação e linha editorial</li>
+                <li>• Design High-End para posts, informativos e carrosséis</li>
               </ul>
               <ul className="space-y-2">
-                <li>• Gestão de autoridade unificada</li>
-                <li>• Relatórios de engajamento mensal</li>
+                <li>• Gestão de posicionamento visual unificado</li>
+                <li>• Relatórios de alcance e engajamento mensal</li>
               </ul>
             </div>
+
           </div>
         </div>
-      </section> */}
+      </section>
 
       <ExplanationBlocks />
 
       <CtaSection
         heading="Construa seu patrimônio digital hoje."
-        body="Pare de pagar aluguel por ferramentas que não são suas. Vamos criar um sistema que pertence ao seu negócio."
-        cta="Solicitar Proposta de Soberania"
+        body="Pare de pagar taxas abusivas por ferramentas travadas. Vamos estruturar uma plataforma que pertence inteiramente ao seu negócio."
+        cta="Solicitar Proposta de Projeto"
         hint="Projetos com escopo fechado e autonomia vitalícia."
       />
 

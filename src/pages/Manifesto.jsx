@@ -1,3 +1,4 @@
+// src/pages/Manifesto.jsx
 import { motion } from "framer-motion";
 import Navbar from "../components/layout/Navbar";
 import Footer from "../components/layout/Footer";
@@ -24,12 +25,12 @@ const pillars = [
   {
     num: "03",
     title: "Tecnologia simples",
-    desc: "Nada de sistemas complexos desnecessários. Tudo é feito para funcionar e ser usado.",
+    desc: "Nada de interfaces complexas desnecessárias. Tudo é feito para funcionar de verdade e ser fácil de usar.",
   },
   {
     num: "04",
     title: "Estrutura que evolui",
-    desc: "Seu site cresce com o negócio sem precisar refazer tudo do zero.",
+    desc: "Seu ambiente digital cresce com o negócio sem precisar refazer tudo do zero.",
   },
 ];
 
@@ -50,9 +51,9 @@ const internal = [
 
 const practice = [
   "Escopo claro antes de começar",
-  "Entrega completa + treinamento",
-  "Painel simples para você editar",
-  "Sem contrato de manutenção",
+  "Entrega completa + treinamento prático",
+  "Painel intuitivo para você editar",
+  "Sem contrato de manutenção obrigatório",
   "Você controla hospedagem e domínio",
 ];
 
@@ -61,65 +62,59 @@ export default function Manifesto() {
     <div className="min-h-screen bg-background text-foreground bg-noise">
       <Navbar />
 
-      {/* HERO */}
+      {/* HERO — Contraste Corrigido para Padrão Premium */}
       <section className="relative pt-32 md:pt-44 pb-16 md:pb-28 min-h-[90vh] md:min-h-[100vh] flex items-center overflow-hidden bg-black">
-  {/* BACKGROUND LAYER */}
-  <div className="absolute inset-0 z-0">
-    <img 
-      src="/images/manifesto/manifesto-hero-solarpunk.jpeg" 
-      alt="Solarpunk Rio" 
-      className="w-full h-full object-cover object-[17%] md:object-center opacity-80 md:opacity-100 " 
-    />
-    
-    {/* 
-      MASK DE LEGIBILIDADE: 
-      1. Gradiente da esquerda para direita (protege o texto no Desktop)
-      2. Gradiente de baixo para cima (protege o texto no Mobile/Empilhado)
-      3. Overlay sutil de escurecimento para dar punch nas cores
-    */}
-    <div className="absolute inset-0 bg-gradient-to-r from-background via-background/10 to-transparent z-10 hidden md:block" />
-    <div className="absolute inset-0 bg-gradient-to-t from-background via-background/20 to-transparent z-10 md:hidden" />
-    <div className="absolute inset-0 bg-black/20 z-0" /> 
-  </div>
+        {/* BACKGROUND LAYER */}
+        <div className="absolute inset-0 z-0">
+          <img 
+            src="/images/manifesto/manifesto-hero-solarpunk.jpeg" 
+            alt="Solarpunk Rio" 
+            className="w-full h-full object-cover object-[17%] md:object-center opacity-40 md:opacity-50 select-none pointer-events-none" 
+          />
+          
+          {/* MASK DE LEGIBILIDADE ULTRA REFINADA */}
+          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10 hidden md:block" />
+          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent z-10 md:hidden" />
+        </div>
 
-  <div className="max-w-7xl mx-auto px-6 relative z-20 w-full">
-    <motion.span 
-      className="text-xs font-bold uppercase tracking-[0.2em] text-primary drop-shadow-sm bg-background/40 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none px-2 py-1 md:p-0 rounded"
-    >
-      Como trabalhamos
-    </motion.span>
+        <div className="max-w-7xl mx-auto px-6 relative z-20 w-full">
+          <motion.span 
+            className="text-xs font-bold uppercase tracking-[0.2em] text-primary bg-primary/10 border border-primary/20 px-3 py-1 rounded-full backdrop-blur-md inline-block"
+          >
+            Como trabalhamos
+          </motion.span>
 
-    <motion.h1
-      className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight max-w-4xl mt-6 text-white"
-    >
-      <span className="text-black drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Tecnologia sem</span> <br className="hidden md:block" />
-      <span className="text-primary drop-shadow-[0_2px_15px_rgba(0,0,0,0.4)]">dependência.</span>
-      <br />
-      <span className="text-black drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">E isso muda tudo.</span>
-    </motion.h1>
+          <motion.h1
+            className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.1] tracking-tight max-w-4xl mt-8 text-white"
+          >
+            Tecnologia sem <br className="hidden md:block" />
+            <span className="text-gradient-green italic">dependência.</span>
+            <br />
+            E isso muda tudo.
+          </motion.h1>
 
-    <motion.p
-      className="mt-8 max-w-xl text-lg md:text-xl leading-relaxed font-medium text-black drop-shadow-[0_2px_8px_rgba(0,0,0,0.8)]"
-    >
-      A maioria dos projetos prende o cliente. <br className="hidden sm:block" />
-      O nosso faz o contrário: <span className="underline decoration-primary/50 underline-offset-4">entrega controle.</span>
-    </motion.p>
-  </div>
-</section>
+          <motion.p
+            className="mt-8 max-w-xl text-lg md:text-xl leading-relaxed font-normal text-white/80"
+          >
+            A maioria dos projetos prende o cliente corporativo. <br className="hidden sm:block" />
+            O nosso faz o contrário: <span className="underline decoration-primary/50 underline-offset-4 font-semibold text-white">entrega controle absoluto.</span>
+          </motion.p>
+        </div>
+      </section>
 
       {/* PROBLEMA */}
       <section className="py-12 md:py-24 border-t border-border/40">
         <div className="max-w-5xl mx-auto px-6">
           <motion.h2 {...fadeUp} className="font-heading text-2xl md:text-4xl font-bold">
-            O padrão do mercado é criar dependência.
+            O padrão do mercado é criar barreiras.
           </motion.h2>
 
           <motion.p {...fadeUp} className="mt-6 text-muted-foreground max-w-xl text-base md:text-lg">
-            Sites que só quem criou entende. Mudanças que viram cobrança. Sistemas que travam o crescimento.
+            Plataformas que só quem criou consegue mexer. Mudanças simples que viram cobranças abusivas. Estruturas rígidas que travam o crescimento do seu negócio.
           </motion.p>
 
           <motion.p {...fadeUp} className="mt-4 text-muted-foreground max-w-xl text-base md:text-lg">
-            No início parece prático. Depois vira limitação.
+            No início parece prático delegar tudo. Depois, vira limitação comercial.
           </motion.p>
         </div>
       </section>
@@ -157,8 +152,8 @@ export default function Manifesto() {
             <img 
               src="/images/manifesto/manifesto-2.jpeg" 
               alt="Entrega e Autonomia Brototec" 
-              className="w-full h-[350px] md:h-[650px] object-cover object-center rounded-r-2xl md:rounded-r-[80px] border-r border-y border-border/40" 
-            />
+              className="w-full h-[350px] md:h-[650px] object-cover object-center rounded-r-2xl md:rounded-r-[80px] border-r border-y border-border/40 select-none pointer-events-none" 
+          />
           </motion.div>
 
           <div className="w-full md:w-1/2 px-6 md:pr-12 lg:pr-24 xl:pr-32 order-1 md:order-2">
@@ -215,13 +210,13 @@ export default function Manifesto() {
           <div className="w-full md:w-1/2 px-6 md:pl-12 lg:pl-24 xl:pl-32 order-1">
             <div className="max-w-xl">
               <motion.h2 {...fadeUp} className="font-heading text-2xl md:text-4xl font-bold leading-tight">
-                Você não precisa de um fornecedor.
+                Você não precisa de um fornecedor fixo.
                 <br />
-                <span className="text-gradient-green">Precisa de um sistema que funcione.</span>
+                <span className="text-gradient-green">Precisa de uma interface que funcione.</span>
               </motion.h2>
 
               <motion.p {...fadeUp} className="mt-6 text-muted-foreground text-base md:text-lg">
-                A gente constrói, te entrega, te ensina — e você segue com controle absoluto sobre sua tecnologia.
+                A gente planeja, constrói a identidade, te entrega e capacita — e você segue com controle absoluto sobre a sua presença digital.
               </motion.p>
             </div>
           </div>
@@ -232,16 +227,16 @@ export default function Manifesto() {
           >
             <img 
               src="/images/manifesto/manifesto-1.jpeg" 
-              alt="Sistema Autônomo Brototec" 
-              className="w-full h-[350px] md:h-[650px] object-cover object-center rounded-l-2xl md:rounded-l-[80px] border-l border-y border-border/40" 
+              alt="Ambiente Autônomo Brototec" 
+              className="w-full h-[350px] md:h-[650px] object-cover object-center rounded-l-2xl md:rounded-l-[80px] border-l border-y border-border/40 select-none pointer-events-none" 
             />
           </motion.div>
         </div>
       </section>
 
       <CtaSection
-        heading="Quer um site que você realmente controle?"
-        body="A gente constrói junto com você — e entrega sem dependência."
+        heading="Quer uma plataforma que você realmente controle?"
+        body="A gente constrói junto com você — e entrega sem nenhuma dependência futura."
         cta="Quero entender como funciona"
         hint="Sem compromisso. Só clareza."
       />

@@ -11,7 +11,8 @@ const fadeUp = {
 };
 
 export default function PoliticaPrivacidade() {
-  const dataAtual = new Date().toLocaleDateString('pt-BR');
+  // Versão fixa para dar veracidade jurídica e conformidade à política
+  const ultimaAtualizacao = "Maio de 2026";
 
   return (
     <div className="min-h-screen bg-background text-foreground bg-noise selection:bg-primary/10 selection:text-primary">
@@ -75,11 +76,11 @@ export default function PoliticaPrivacidade() {
             <div className="grid md:grid-cols-[200px_1fr] gap-8 border-t border-border/40 pt-16">
               <h2 className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] pt-2">02. Coleta de Dados</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>Ao utilizar nossos canais de contato, coletamos apenas o essencial:</p>
+                <p>Ao utilizar nossos canais de contato, coletamos apenas o essencial para o atendimento:</p>
                 <ul className="space-y-3">
-                  <li className="flex gap-3"><span className="text-primary font-bold">•</span> <strong>Identificação:</strong> Nome para um atendimento humanizado.</li>
-                  <li className="flex gap-3"><span className="text-primary font-bold">•</span> <strong>Contato:</strong> E-mail para retorno de orçamentos e dúvidas.</li>
-                  <li className="flex gap-3"><span className="text-primary font-bold">•</span> <strong>Navegação:</strong> Dados anônimos de comportamento para melhoria da interface.</li>
+                  <li className="flex gap-3"><span className="text-primary font-bold">•</span> <strong>Identificação:</strong> Nome para um atendimento humanizado e personalizado.</li>
+                  <li className="flex gap-3"><span className="text-primary font-bold">•</span> <strong>Contato:</strong> E-mail ou telefone para retorno de orçamentos e dúvidas estratégicas.</li>
+                  <li className="flex gap-3"><span className="text-primary font-bold">•</span> <strong>Navegação:</strong> Dados anônimos de comportamento para otimização da experiência e interface.</li>
                 </ul>
               </div>
             </div>
@@ -88,12 +89,12 @@ export default function PoliticaPrivacidade() {
             <div className="grid md:grid-cols-[200px_1fr] gap-8 border-t border-border/40 pt-16">
               <h2 className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] pt-2">03. Seus Direitos</h2>
               <div className="space-y-4 text-muted-foreground leading-relaxed">
-                <p>Em conformidade com a LGPD, você possui soberania sobre seus dados, incluindo o direito de:</p>
+                <p>Em conformidade com a Lei Geral de Proteção de Dados (LGPD), você possui total soberania sobre suas informações, incluindo o direito de:</p>
                 <div className="grid sm:grid-cols-2 gap-4 text-sm bg-secondary/20 p-6 rounded-2xl border border-border/40">
-                  <p>• Acesso e confirmação</p>
-                  <p>• Correção de dados</p>
-                  <p>• Eliminação ou anonimização</p>
-                  <p>• Revogação de consentimento</p>
+                  <p>• Acesso e confirmação de tratamento</p>
+                  <p>• Correção de dados incompletos ou inexatos</p>
+                  <p>• Eliminação ou anonimização de dados desnecessários</p>
+                  <p>• Revogação do consentimento a qualquer momento</p>
                 </div>
               </div>
             </div>
@@ -102,15 +103,15 @@ export default function PoliticaPrivacidade() {
             <div className="grid md:grid-cols-[200px_1fr] gap-8 border-t border-border/40 pt-16" id="cookies">
               <h2 className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] pt-2">04. Cookies</h2>
               <div className="space-y-6 text-muted-foreground leading-relaxed">
-                <p>Utilizamos cookies para entender como você interage com o nosso ecossistema digital.</p>
+                <p>Utilizamos cookies estritamente necessários para entender como você interage com o nosso ecossistema digital.</p>
                 <div className="space-y-4">
                   <div className="p-5 rounded-2xl border border-border/40 bg-white/50">
                     <h4 className="text-foreground font-bold text-sm mb-2 uppercase tracking-tighter">Essenciais</h4>
-                    <p className="text-xs">Garantem que o site funcione. Não podem ser desativados.</p>
+                    <p className="text-xs">Garantem a navegação e o funcionamento correto da interface. Não podem ser desativados.</p>
                   </div>
                   <div className="p-5 rounded-2xl border border-border/40 bg-white/50">
                     <h4 className="text-foreground font-bold text-sm mb-2 uppercase tracking-tighter">Analytics</h4>
-                    <p className="text-xs">Google Analytics (_ga, _gid) para entendermos o fluxo de visitas de forma anônima.</p>
+                    <p className="text-xs">Google Analytics (_ga, _gid) para entendermos o fluxo de visitas e métricas de conversão de forma inteiramente anônima.</p>
                   </div>
                 </div>
               </div>
@@ -120,13 +121,13 @@ export default function PoliticaPrivacidade() {
             <div className="grid md:grid-cols-[200px_1fr] gap-8 border-t border-border/40 pt-16">
               <h2 className="text-[10px] font-bold text-primary uppercase tracking-[0.2em] pt-2">05. Contato</h2>
               <div className="text-muted-foreground">
-                <p className="mb-6">Dúvidas sobre como cuidamos da sua autonomia e privacidade?</p>
+                <p className="mb-6">Dúvidas sobre como cuidamos da sua autonomia e privacidade de dados?</p>
                 <div className="bg-primary text-primary-foreground p-8 rounded-[2rem] inline-block">
-                  <p className="text-xs uppercase tracking-widest font-bold mb-1 opacity-80">Encarregado (DPO)</p>
+                  <p className="text-xs uppercase tracking-widest font-bold mb-1 opacity-80">Encarregado de Dados (DPO)</p>
                   <p className="text-xl font-bold italic font-heading">Marllon Panisset</p>
                   <p className="text-sm mt-4 opacity-90">privacidade@brototec.com.br</p>
                 </div>
-                <p className="mt-12 text-[10px] uppercase tracking-widest">Última atualização: {dataAtual}</p>
+                <p className="mt-12 text-[10px] uppercase tracking-widest text-muted-foreground/40">Última atualização: {ultimaAtualizacao}</p>
               </div>
             </div>
 

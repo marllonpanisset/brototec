@@ -28,7 +28,7 @@ export default function ProjectsSection() {
           </h2>
 
           <p className="mt-6 text-muted-foreground max-w-xl leading-relaxed text-base">
-            Sistemas e plataformas em desenvolvimento, focados em transformar processos complexos em experiências simples e autônomas.
+            Soluções e interfaces digitais em desenvolvimento, focadas em transformar processos de comunicação em experiências simples, visuais e autônomas.
           </p>
         </motion.div>
 

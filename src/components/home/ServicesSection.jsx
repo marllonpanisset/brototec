@@ -6,23 +6,23 @@ const services = [
   {
     icon: Monitor,
     num: "01",
-    title: "Ecossistemas Digitais",
+    title: "Plataformas & Landing Pages",
     tagline: "Sua presença com soberania.",
-    desc: "Desenvolvemos sites e landing pages de alto padrão (React/Next.js) com painéis administrativos intuitivos. Você altera conteúdo e evolui sua marca sem depender de chamados técnicos ou taxas extras.",
+    desc: "Estruturamos interfaces e páginas institucionais de alta performance com painéis de gerenciamento intuitivos. Você edita conteúdos e evolui sua marca com total autonomia, sem depender de taxas extras ou intermediários.",
   },
   {
     icon: Cpu,
     num: "02",
-    title: "Sistemas & Dashboards",
-    tagline: "Gestão inteligente em Flask.",
-    desc: "Criamos sistemas personalizados para gerir clínicas, estoques ou faturamento. Dashboards privados e seguros onde você é dono dos dados e da lógica de negócio. Sem mensalidade de licença por usuário.",
+    title: "Arquitetura & Dashboards de Dados",
+    tagline: "Gestão integrada e inteligente.",
+    desc: "Configuramos painéis privados e centralizados para organizar fluxos operacionais, estoques ou indicadores de faturamento. Ambientes seguros onde você mantém o controle absoluto das informações e da sua estratégia.",
   },
   {
     icon: ShieldCheck,
     num: "03",
     title: "Patrimônio Digital",
     tagline: "A chave é sempre sua.",
-    desc: "Entregamos o código-fonte, a documentação e a infraestrutura. Diferente de plataformas fechadas, na Brototec você constrói um ativo que pertence legalmente à sua empresa. Liberdade total de migração.",
+    desc: "Entregamos a propriedade total da estrutura digital, arquivos de layout e infraestrutura de hospedagem. Na Brototec você constrói um ativo visual e estrutural que pertence legalmente à sua empresa, com liberdade de migração.",
   },
 ];
 
@@ -46,7 +46,7 @@ export default function ServicesSection() {
           viewport={{ once: true }}
           className="font-heading text-3xl sm:text-4xl font-bold mt-4 max-w-xl leading-[1.1]"
         >
-          Transformamos custos de software em <br />
+          Transformamos presença digital em <br />
           <span className="text-gradient-green italic">ativos de faturamento.</span>
         </motion.h2>
 

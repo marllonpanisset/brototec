@@ -6,7 +6,7 @@ const Footer = () => {
 
   const socialLinks = {
     whatsapp:
-      "https://wa.me/5521991472417?text=Quero%20um%20site%20simples%20e%20aut%C3%B4nomo.%20Pode%20me%20explicar%20como%20funciona%3F",
+      "https://wa.me/5521991472417?text=Quero%20uma%20plataforma%20digital%20independente.%20Pode%20me%20explicar%20como%20funciona%3F",
     linkedin: "https://linkedin.com/company/brototec",
     instagram: "https://instagram.com/brototecbr",
   };
@@ -28,10 +28,10 @@ const Footer = () => {
             <p className="mt-8 text-sm text-white/70 leading-relaxed max-w-sm">
               Tecnologia feita para você não depender de ninguém depois da entrega.
               <br /><br />
-              Sites, sistemas e automações que você controla sozinho —
-              com código, infra e autonomia total.
+              Plataformas, portfólios e canais de conversão que você controla sozinho —
+              com autonomia visual, flexibilidade e independência total.
               <br /><br />
-              Sem dependência. Sem manutenção obrigatória.
+              Sem dependência de agências. Sem manutenção obrigatória.
             </p>
 
             {/* Social */}
@@ -106,11 +106,11 @@ const Footer = () => {
 
             <div className="space-y-4">
               <a
-                href="mailto:brototec@outlook.com.br"
+                href="mailto:contato@brototec.com.br"
                 className="flex items-center gap-3 text-sm text-white/70 hover:text-primary transition-colors"
               >
                 <Mail size={16} className="text-primary" />
-                brototec@outlook.com.br
+                contato@brototec.com.br
               </a>
 
               <a
@@ -132,16 +132,16 @@ const Footer = () => {
                 to="/contato"
                 className="inline-flex items-center gap-2 text-xs font-bold text-primary uppercase tracking-widest hover:underline"
               >
-                Quero meu site independente →
+                Quero minha plataforma independente →
               </Link>
             </div>
           </div>
         </div>
 
-        {/* SEO leve */}
+        {/* SEO leve higienizado */}
         <div className="mb-8 text-[11px] text-white/50 max-w-3xl leading-relaxed">
-          Criamos sites, landing pages e sistemas web com foco em autonomia digital,
-          performance e independência técnica.
+          Estruturamos ambientes digitais, landing pages e plataformas web com foco em autonomia, 
+          performance extrema e posicionamento estratégico de marca.
         </div>
 
         {/* Final */}

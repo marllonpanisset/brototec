@@ -3,9 +3,9 @@ import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
 
 export default function CtaSection({
-  heading = "Transforme seu negócio em um sistema próprio.",
-  body = "Não criamos sites ou ferramentas isoladas. Criamos infraestrutura digital completa para operação, vendas e crescimento — totalmente sua.",
-  cta = "Solicitar Proposta de Sistema",
+  heading = "Transforme sua presença em uma plataforma independente.",
+  body = "Não criamos páginas genéricas ou temporárias. Estruturamos plataformas digitais completas para posicionamento, conversão e crescimento — totalmente suas.",
+  cta = "Solicitar Proposta de Projeto",
   hint = "Conversa direta com análise de escopo.",
 }) {
   return (
@@ -53,7 +53,7 @@ export default function CtaSection({
 
                 <span className="text-[10px] text-muted-foreground/60 uppercase tracking-widest flex items-center gap-2">
                   <div className="w-1 h-1 rounded-full bg-primary/40" />
-                  Código e dados sob sua propriedade
+                  Estrutura e dados sob sua propriedade
                 </span>
 
                 <span className="text-[10px] text-muted-foreground/60 uppercase tracking-widest flex items-center gap-2">

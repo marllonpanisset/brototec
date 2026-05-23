@@ -40,7 +40,7 @@ export default function HeroSection() {
               transition={{ duration: 0.85, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
               className="font-heading text-5xl lg:text-6xl font-bold leading-[1.06] tracking-tight"
             >
-              Seu sistema, seu patrimônio. <br />
+              Sua plataforma, seu patrimônio. <br />
               <span className="text-gradient-green italic">
                 Sem aluguel de software.
               </span>
@@ -52,8 +52,8 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.25 }}
               className="mt-6 text-base text-muted-foreground max-w-lg leading-relaxed"
             >
-              Construímos sistemas de gestão, sites e landing pages de alto padrão em Flask e React. 
-              Entregamos o controle total e a propriedade do código para o seu negócio — sem taxas de licença abusivas.
+              Estruturamos plataformas de posicionamento, interfaces institucionais e landing pages de alto padrão. 
+              Entregamos o controle operacional e a propriedade intelectual da estrutura para o seu negócio — sem taxas de licença abusivas.
             </motion.p>
 
             <motion.div
@@ -67,7 +67,7 @@ export default function HeroSection() {
                   to="/contato"
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground text-sm font-semibold px-7 py-3.5 rounded-xl hover:shadow-lg transition-all"
                 >
-                  Construir minha solução <ArrowRight size={15} />
+                  Estruturar meu projeto <ArrowRight size={15} />
                 </Link>
 
                 <Link

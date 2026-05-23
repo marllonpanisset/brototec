@@ -7,15 +7,15 @@ const audience = [
   },
   {
     num: "02",
-    text: "Negócios que precisam de sistemas robustos que escalam sem taxas de licença.",
+    text: "Negócios que precisam de plataformas robustas que escalam sem taxas de licença.",
   },
   {
     num: "03",
-    text: "Equipes que exigem autonomia total para gerir processos sem abrir chamados.",
+    text: "Equipes que exigem autonomia total para gerir processos de conteúdo sem abrir chamados.",
   },
   {
     num: "04",
-    text: "Não aceitamos projetos baseados em obsolescência programada, aprisionamento de código ou modelos que lucram com a dependência técnica do cliente.",
+    text: "Não aceitamos projetos baseados em obsolescência programada, aprisionamento de ecossistemas ou modelos que lucram com a dependência técnica do cliente.",
     negative: true,
   },
 ];

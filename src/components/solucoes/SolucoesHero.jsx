@@ -30,7 +30,7 @@ export default function SolucoesHero() {
           transition={{ duration: 0.8 }}
           className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight max-w-4xl"
         >
-          Sistemas digitais que viram{" "}
+          Interfaces digitais que viram{" "}
           <span className="text-gradient-green italic">
             ativos reais de negócio.
           </span>
@@ -42,8 +42,8 @@ export default function SolucoesHero() {
           transition={{ delay: 0.2 }}
           className="mt-8 text-base text-muted-foreground max-w-xl leading-relaxed"
         >
-          Construímos plataformas completas para operação, vendas e crescimento de negócios.  
-          Tudo em uma única stack, sob medida, sem dependência de ferramentas externas.
+          Estruturamos plataformas completas para posicionamento, vendas e crescimento de negócios.  
+          Arquitetura de informação sob medida, eliminando dependências desnecessárias de ferramentas externas.
         </motion.p>
 
         <motion.p
@@ -52,7 +52,7 @@ export default function SolucoesHero() {
           transition={{ delay: 0.35 }}
           className="mt-3 text-sm text-muted-foreground/60 max-w-md"
         >
-          Da landing page ao sistema interno — tudo pertence a você.
+          Da landing page ao painel de controle — tudo pertence à sua empresa.
         </motion.p>
 
         <motion.div

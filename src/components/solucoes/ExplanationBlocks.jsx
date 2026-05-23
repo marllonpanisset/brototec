@@ -5,22 +5,22 @@ const blocks = [
   {
     icon: ShieldCheck,
     title: "Soberania Digital",
-    desc: "O código e os dados são seus. Você não aluga o sucesso da sua empresa; você constrói um patrimônio digital próprio.",
+    desc: "A estrutura de design e as informações são suas. Você não aluga a presença da sua empresa; você constrói um patrimônio digital de propriedade da sua marca.",
   },
   {
     icon: UserCheck,
     title: "Autonomia via Dashboard",
-    desc: "Gerencie textos, imagens e dados sem abrir chamados. Entregamos o controle total na sua mão através de um painel intuitivo.",
+    desc: "Gerencie textos, imagens e dados sem abrir chamados técnicos. Entregamos o controle operacional na sua mão através de um painel de gerenciamento intuitivo.",
   },
   {
     icon: Settings,
     title: "Custeio Operacional",
-    desc: "Para sistemas, cobramos apenas a manutenção da infraestrutura (Hospedagem e Backup). Sem taxas de licença abusivas.",
+    desc: "Para as plataformas, você mantém apenas o custo essencial da infraestrutura de hospedagem e backup. Sem taxas de licença ou assinaturas abusivas.",
   },
   {
     icon: Repeat,
     title: "Evolução sob Demanda",
-    desc: "Seu sistema cresce com você. Novas funções são orçadas e integradas conforme sua necessidade, sem mensalidades infladas.",
+    desc: "Sua estrutura digital cresce com o seu negócio. Novas expansões visuais e funcionais são planejadas conforme sua necessidade, sem mensalidades infladas.",
   },
 ];
 
@@ -38,7 +38,7 @@ export default function ExplanationBlocks() {
             Tecnologia Regenerativa
           </span>
           <h2 className="font-heading text-3xl sm:text-4xl font-bold mt-4 leading-tight">
-            Software feito para libertar, <br />não para aprisionar.
+            Tecnologia feita para libertar, <br />não para aprisionar.
           </h2>
           <p className="mt-5 text-muted-foreground text-sm leading-relaxed">
             Nosso modelo de Economia Solidária elimina a dependência de grandes plataformas. 
