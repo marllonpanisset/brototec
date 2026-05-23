@@ -72,9 +72,9 @@ export default function Manifesto() {
             className="w-full h-full object-cover object-[17%] md:object-center opacity-40 md:opacity-50 select-none pointer-events-none" 
           />
           
-          {/* MASK DE LEGIBILIDADE ULTRA REFINADA */}
-          <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent z-10 hidden md:block" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black via-black/90 to-transparent z-10 md:hidden" />
+          {/* MASK DE LEGIBILIDADE AJUSTADA */}
+<div className="absolute inset-0 bg-gradient-to-r from-black/80 via-black/45 to-black/10 z-10 hidden md:block" />
+<div className="absolute inset-0 bg-gradient-to-t from-black/75 via-black/35 to-transparent z-10 md:hidden" />
         </div>
 
         <div className="max-w-7xl mx-auto px-6 relative z-20 w-full">

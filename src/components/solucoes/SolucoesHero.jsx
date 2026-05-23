@@ -2,15 +2,7 @@ import { motion } from "framer-motion";
 
 export default function SolucoesHero() {
   return (
-    <section
-      className="relative pt-40 pb-28 overflow-hidden bg-black"
-      style={{
-        backgroundImage: "url('/images/solucoes/solucoes-hero.webp')",
-        backgroundSize: "cover",
-        backgroundPosition: "75% center",
-        backgroundRepeat: "no-repeat",
-      }}
-    >
+    <section className="relative pt-40 pb-28 overflow-hidden bg-black">
       {/* OVERLAY */}
       <div className="absolute inset-0 z-10 bg-gradient-to-r from-background via-background/85 to-background/30" />
       <div className="absolute inset-0 z-10 bg-gradient-to-b from-transparent via-transparent to-background/70" />
