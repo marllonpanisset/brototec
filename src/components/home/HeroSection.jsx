@@ -68,8 +68,8 @@ export default function HeroSection() {
               transition={{ duration: 0.6, delay: 0.35 }}
               className="mt-8 text-base md:text-lg text-white/80 max-w-lg leading-relaxed font-normal antialiased"
             >
-              Estruturamos ecossistemas de posicionamento de alto padrão e interfaces otimizadas para o seu fluxo operacional. 
-              Entregamos a propriedade intelectual definitiva e o controle total da sua estrutura digital — sem taxas ou licenças abusivas.
+              Plataformas digitais com autonomia, performance e identidade.
+              Tecnologia feita para você não depender de ninguém depois da entrega.
             </motion.p>
 
             <motion.div
@@ -79,12 +79,12 @@ export default function HeroSection() {
               className="mt-12 flex flex-col gap-6"
             >
               <div className="flex items-center gap-4 flex-wrap">
-                <Link
-                  to="/contato"
+                <a
+                  href="#ConceptSection"
                   className="inline-flex items-center gap-2 bg-primary text-primary-foreground text-sm font-bold px-8 py-4 rounded-xl hover:shadow-[0_0_30px_rgba(var(--primary-rgb),0.3)] hover:scale-[1.02] transition-all duration-300"
                 >
                   Conhecer o modelo Brototec <ArrowRight size={16} />
-                </Link>
+                </a>
 
                 <Link
                   to="/solucoes"

@@ -22,7 +22,7 @@ const audience = [
 
 export default function ConceptSection() {
   return (
-    <section className="py-24 border-t border-border/40">
+    <section id="ConceptSection" className="py-24 border-t border-border/40">
       <div className="max-w-7xl mx-auto px-6">
 
         <motion.span 
