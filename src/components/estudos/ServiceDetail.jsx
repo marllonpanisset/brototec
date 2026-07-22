@@ -19,7 +19,7 @@ export default function ServiceDetail({
 
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
-          
+
           {/* TEXT */}
           <motion.div
             initial={{ opacity: 0, x: isEven ? 30 : -30 }}
@@ -31,8 +31,9 @@ export default function ServiceDetail({
               <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center">
                 <Icon size={18} className="text-primary" />
               </div>
+
               <span className="text-sm font-medium text-primary tracking-widest uppercase">
-                {String(index + 1).padStart(2, "0")}
+                Estudo {String(index + 1).padStart(2, "0")}
               </span>
             </div>
 
@@ -50,20 +51,25 @@ export default function ServiceDetail({
 
             <ul className="mt-8 space-y-3">
               {items.map((item) => (
-                <li key={item} className="flex items-center gap-3 text-sm text-muted-foreground">
+                <li
+                  key={item}
+                  className="flex items-center gap-3 text-sm text-muted-foreground"
+                >
                   <div className="w-1.5 h-1.5 rounded-full bg-primary" />
                   {item}
                 </li>
               ))}
             </ul>
 
-            {/* 🔥 gatilho high ticket */}
             <div className="mt-6 p-4 rounded-xl bg-primary/5 border border-primary/10 max-w-sm">
               <p className="text-[10px] uppercase tracking-wider font-bold text-primary mb-1">
-                Compromisso Brototec
+                Conceito Explorado
               </p>
+
               <p className="text-xs text-muted-foreground leading-relaxed">
-                Este ecossistema não possui mensalidade de licença. O investimento é focado na construção de um ativo que pertencerá para sempre ao seu negócio.
+                Este projeto representa uma exploração prática de design,
+                tecnologia e experiência digital aplicada a diferentes
+                cenários.
               </p>
             </div>
           </motion.div>

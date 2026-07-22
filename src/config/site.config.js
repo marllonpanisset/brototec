@@ -3,44 +3,48 @@ export const siteConfig = {
 
   siteName: "Brototec",
 
-  defaultTitle: "Brototec | Plataformas digitais com autonomia",
+  defaultTitle: "Brototec | Estudo de design e tecnologia digital",
 
   defaultDescription:
-    "Criamos sites, landing pages e plataformas digitais com performance, identidade e autonomia para você gerenciar sem depender de ninguém depois da entrega.",
+    "Brototec é um projeto conceitual criado para explorar identidade visual, interfaces digitais, experiência do usuário e desenvolvimento web.",
 
   routes: [
+
     {
       path: "/",
       name: "Home",
       priority: 1.0,
       changefreq: "weekly",
-      title: "Brototec | Plataformas digitais com autonomia",
+      title: "Brototec | Estudo de design e tecnologia digital",
       description:
-        "Criamos sites, landing pages e plataformas digitais com performance, identidade e autonomia para você gerenciar sem depender de ninguém depois da entrega.",
+        "Um projeto conceitual explorando design de interfaces, tecnologia web, arquitetura visual e experiências digitais.",
       inMenu: true,
     },
 
+
     {
-      path: "/solucoes",
-      name: "Soluções",
+      path: "/estudos",
+      name: "Estudos",
       priority: 0.8,
       changefreq: "monthly",
-      title: "Soluções | Brototec",
+      title: "Estudos e Experimentos | Brototec",
       description:
-        "Sites, landing pages e soluções digitais sob medida para sua presença online.",
+        "Explorações conceituais envolvendo interfaces, experiência do usuário, arquitetura da informação e desenvolvimento web.",
       inMenu: true,
     },
+
 
     {
       path: "/projetos",
       name: "Projetos",
       priority: 0.8,
       changefreq: "monthly",
-      title: "Projetos | Brototec",
+      title: "Projetos Conceituais | Brototec",
       description:
-        "Conheça alguns dos projetos digitais desenvolvidos pela Brototec.",
+        "Conheça experimentos e projetos conceituais criados para explorar possibilidades de design e tecnologia digital.",
       inMenu: true,
     },
+
 
     {
       path: "/manifesto",
@@ -49,41 +53,21 @@ export const siteConfig = {
       changefreq: "monthly",
       title: "Manifesto | Brototec",
       description:
-        "Conheça a visão da Brototec sobre autonomia digital, tecnologia e propriedade real no ambiente online.",
+        "A visão por trás do projeto conceitual Brototec e suas explorações sobre design, tecnologia e experiências digitais.",
       inMenu: true,
     },
+
 
     {
       path: "/contato",
       name: "Contato",
-      priority: 0.8,
+      priority: 0.5,
       changefreq: "monthly",
       title: "Contato | Brototec",
       description:
-        "Fale com a Brototec sobre seu próximo projeto digital.",
+        "Canal para conversar sobre ideias, estudos e experimentações digitais.",
       inMenu: true,
     },
 
-    {
-      path: "/politica-de-privacidade",
-      name: "Privacidade",
-      priority: 0.3,
-      changefreq: "yearly",
-      title: "Política de Privacidade | Brototec",
-      description:
-        "Saiba como tratamos seus dados e informações.",
-      inMenu: false,
-    },
-
-    {
-      path: "/termos-de-uso",
-      name: "Termos de Uso",
-      priority: 0.3,
-      changefreq: "yearly",
-      title: "Termos de Uso | Brototec",
-      description:
-        "Termos e condições de uso da Brototec.",
-      inMenu: false,
-    },
   ],
 };

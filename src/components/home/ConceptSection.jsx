@@ -3,19 +3,19 @@ import { motion } from "framer-motion";
 const audience = [
   {
     num: "01",
-    text: "Empreendedores que buscam soberania sobre suas estruturas e dados.",
+    text: "Demonstrar boas práticas de desenvolvimento Front-end utilizando React, TypeScript e Vite.",
   },
   {
     num: "02",
-    text: "Negócios que precisam de ecossistemas robustos que escalam sem taxas de licença ou mensalidades.",
+    text: "Explorar arquitetura de componentes reutilizáveis, organização de código e escalabilidade da interface.",
   },
   {
     num: "03",
-    text: "Equipes que exigem autonomia total para gerir processos de conteúdo sem abrir chamados.",
+    text: "Aplicar princípios de UX, responsividade, acessibilidade e performance em um projeto completo.",
   },
   {
     num: "04",
-    text: "Não aceitamos projetos baseados em obsolescência programada, aprisionamento de ecossistemas ou modelos que lucram com a dependência técnica do cliente.",
+    text: "A Brototec é um projeto fictício criado exclusivamente para estudo e composição de portfólio. Nenhum conteúdo representa uma empresa ou atividade comercial real.",
     negative: true,
   },
 ];
@@ -25,13 +25,13 @@ export default function ConceptSection() {
     <section id="ConceptSection" className="py-24 border-t border-border/40">
       <div className="max-w-7xl mx-auto px-6">
 
-        <motion.span 
+        <motion.span
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           className="text-xs font-medium text-primary tracking-[0.2em] uppercase"
         >
-          Manifesto de Atuação
+          Sobre o Projeto
         </motion.span>
 
         <motion.h2
@@ -40,8 +40,10 @@ export default function ConceptSection() {
           viewport={{ once: true }}
           className="font-heading text-2xl sm:text-3xl font-bold mt-3 max-w-xl leading-tight text-white"
         >
-          Estruturas para quem entende que <br />
-          <span className="text-gradient-amber italic">liberdade digital é um ativo.</span>
+          Mais do que um layout. <br />
+          <span className="text-gradient-amber italic">
+            Um estudo completo de desenvolvimento Front-end.
+          </span>
         </motion.h2>
 
         <div className="mt-12 grid grid-cols-1 md:grid-cols-4 gap-px bg-border/40 rounded-2xl overflow-hidden border border-border/40 shadow-sm">
@@ -63,8 +65,9 @@ export default function ConceptSection() {
                   a.negative ? "text-destructive/50" : "text-primary/60"
                 }`}
               >
-                {a.negative ? "Exclusão" : `Foco ${a.num}`}
+                {a.negative ? "Importante" : `Objetivo ${a.num}`}
               </span>
+
               <p
                 className={`text-sm leading-relaxed ${
                   a.negative
@@ -78,14 +81,14 @@ export default function ConceptSection() {
           ))}
         </div>
 
-        <motion.p 
+        <motion.p
           initial={{ opacity: 0 }}
           whileInView={{ opacity: 1 }}
           viewport={{ once: true }}
           transition={{ delay: 0.5 }}
           className="mt-8 text-center text-[10px] text-muted-foreground/40 uppercase tracking-[0.3em]"
         >
-          Brototec — Design Estrutural & Autonomia Digital
+          Brototec — Projeto fictício desenvolvido para fins educacionais e demonstração técnica.
         </motion.p>
 
       </div>

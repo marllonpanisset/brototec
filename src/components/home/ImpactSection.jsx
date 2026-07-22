@@ -3,23 +3,23 @@ import { motion } from "framer-motion";
 const stats = [
   {
     value: "100%",
-    label: "Propriedade Estrutural",
-    desc: "O cliente detém todos os direitos de propriedade, arquivos e acessos ao final do projeto.",
+    label: "Responsivo",
+    desc: "Interface desenvolvida para oferecer uma experiência consistente em desktops, tablets e smartphones.",
   },
   {
-    value: "Zero",
-    label: "Taxas de Licença",
-    desc: "Economia vitalícia em mensalidades e assinaturas de plataformas proprietárias travadas.",
+    value: "A11Y",
+    label: "Acessibilidade",
+    desc: "Aplicação de boas práticas de semântica, navegação e usabilidade para diferentes perfis de usuários.",
   },
   {
-    value: "24/7",
-    label: "Autonomia Operacional",
-    desc: "Gestão total de conteúdo, mídias e dados via painel administrativo exclusivo.",
+    value: "UI/UX",
+    label: "Experiência",
+    desc: "Projeto estruturado com foco em hierarquia visual, clareza das informações e navegação intuitiva.",
   },
   {
-    value: "High",
-    label: "Padrão de Performance",
-    desc: "Interfaces leves, fluidas e rápidas estruturadas com tecnologias de alto rendimento.",
+    value: "React",
+    label: "Tecnologia",
+    desc: "Aplicação construída com React, Vite e arquitetura baseada em componentes reutilizáveis.",
   },
 ];
 
@@ -28,7 +28,7 @@ export default function ImpactSection() {
     <section className="py-24 border-t border-border/40 bg-primary/[0.01]">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
+
           {/* TEXTO */}
           <motion.div
             initial={{ opacity: 0, x: -20 }}
@@ -37,20 +37,29 @@ export default function ImpactSection() {
             transition={{ duration: 0.6 }}
           >
             <span className="text-[10px] font-bold text-primary tracking-[0.3em] uppercase">
-              Impacto e Resultados
+              Tecnologias & Boas Práticas
             </span>
+
             <h2 className="font-heading text-3xl sm:text-4xl font-bold mt-4 leading-tight">
-              Onde o posicionamento <br />
-              <span className="text-gradient-amber italic">encontra a viabilidade.</span>
+              Um projeto pensado para <br />
+              <span className="text-gradient-amber italic">
+                demonstrar qualidade técnica.
+              </span>
             </h2>
+
             <p className="mt-6 text-base text-muted-foreground leading-relaxed max-w-lg">
-              Não acreditamos em estruturas complexas por vaidade. Nosso foco é criar ativos de marca digitais que reduzem seus custos fixos e aumentam sua eficiência operacional. 
-              <br /><br />
-              Na Brototec, o sucesso do projeto é medido pela sua independência e soberania digital.
+              A Brototec foi desenvolvida como um projeto de portfólio para
+              colocar em prática conceitos modernos de desenvolvimento Front-end,
+              arquitetura de componentes, experiência do usuário e organização
+              de código.
+              <br />
+              <br />
+              Cada decisão de design e implementação busca demonstrar boas
+              práticas utilizadas no desenvolvimento de aplicações web atuais.
             </p>
           </motion.div>
 
-          {/* STATS GRID */}
+          {/* GRID */}
           <div className="grid grid-cols-2 gap-4">
             {stats.map((s, i) => (
               <motion.div
@@ -64,15 +73,18 @@ export default function ImpactSection() {
                 <span className="font-heading text-3xl font-bold text-primary block mb-2">
                   {s.value}
                 </span>
+
                 <span className="text-[10px] font-bold tracking-widest uppercase text-foreground block mb-3">
                   {s.label}
                 </span>
+
                 <p className="text-xs text-muted-foreground leading-relaxed">
                   {s.desc}
                 </p>
               </motion.div>
             ))}
           </div>
+
         </div>
       </div>
     </section>

@@ -4,23 +4,23 @@ import { ShieldCheck, UserCheck, Settings, Repeat } from "lucide-react";
 const blocks = [
   {
     icon: ShieldCheck,
-    title: "Soberania Digital",
-    desc: "A estrutura de design e as informações são suas. Você não aluga a presença da sua empresa; você constrói um patrimônio digital de propriedade da sua marca.",
+    title: "Arquitetura Digital",
+    desc: "Exploração de estruturas digitais organizadas, com foco em clareza, escalabilidade visual e construção de experiências consistentes.",
   },
   {
     icon: UserCheck,
-    title: "Autonomia via Dashboard",
-    desc: "Gerencie textos, imagens e dados sem abrir chamados técnicos. Entregamos o controle operacional na sua mão através de um painel de gerenciamento intuitivo.",
+    title: "Experiência do Usuário",
+    desc: "Estudos de interfaces e fluxos pensados para facilitar navegação, gerenciamento de informações e interação entre diferentes elementos digitais.",
   },
   {
     icon: Settings,
-    title: "Custeio Operacional",
-    desc: "Para as plataformas, você mantém apenas o custo essencial da infraestrutura de hospedagem e backup. Sem taxas de licença ou assinaturas abusivas.",
+    title: "Sistemas Visuais",
+    desc: "Criação de componentes, padrões e estruturas reutilizáveis para demonstrar organização, consistência e eficiência no desenvolvimento de interfaces.",
   },
   {
     icon: Repeat,
-    title: "Evolução sob Demanda",
-    desc: "Sua estrutura digital cresce com o seu negócio. Novas expansões visuais e funcionais são planejadas conforme sua necessidade, sem mensalidades infladas.",
+    title: "Evolução Contínua",
+    desc: "Projetos experimentais desenvolvidos para explorar melhorias, novas abordagens visuais e diferentes possibilidades de experiência digital.",
   },
 ];
 
@@ -35,14 +35,20 @@ export default function ExplanationBlocks() {
           className="mb-16 max-w-xl"
         >
           <span className="text-xs font-medium text-primary tracking-[0.2em] uppercase">
-            Tecnologia Regenerativa
+            Princípios de Desenvolvimento
           </span>
+
           <h2 className="font-heading text-3xl sm:text-4xl font-bold mt-4 leading-tight text-white">
-            Tecnologia feita para libertar, <br />não para aprisionar.
+            Tecnologia pensada para criar, <br />
+            <span className="text-gradient-amber italic">
+              experimentar e evoluir.
+            </span>
           </h2>
+
           <p className="mt-5 text-muted-foreground text-sm leading-relaxed">
-            Nosso modelo elimina a dependência de plataformas proprietárias. 
-            Você investe no desenvolvimento e mantém apenas o custo real de operação.
+            Cada projeto apresentado funciona como um estudo de possibilidades
+            digitais, explorando diferentes abordagens de design, experiência
+            do usuário e construção de interfaces modernas.
           </p>
         </motion.div>
 
@@ -59,8 +65,14 @@ export default function ExplanationBlocks() {
               <div className="w-9 h-9 rounded-lg bg-primary/10 flex items-center justify-center mb-6">
                 <b.icon size={16} className="text-primary" />
               </div>
-              <h3 className="font-heading text-sm font-semibold mb-2 text-white">{b.title}</h3>
-              <p className="text-xs text-muted-foreground leading-relaxed">{b.desc}</p>
+
+              <h3 className="font-heading text-sm font-semibold mb-2 text-white">
+                {b.title}
+              </h3>
+
+              <p className="text-xs text-muted-foreground leading-relaxed">
+                {b.desc}
+              </p>
             </motion.div>
           ))}
         </div>

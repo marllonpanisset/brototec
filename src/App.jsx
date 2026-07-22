@@ -6,7 +6,7 @@ import { usePageMetadata } from './hooks/usePageMetadata'; // Importando seu nov
 
 import PageNotFound from './lib/PageNotFound';
 import Home from './pages/Home';
-import Solucoes from './pages/Solucoes';
+import Estudos from './pages/Estudos';
 import Projetos from './pages/Projetos';
 import Manifesto from './pages/Manifesto';
 import Contato from './pages/Contato';
@@ -30,7 +30,7 @@ function App() {
 
         <Routes>
           <Route path="/" element={<Home />} />
-          <Route path="/solucoes" element={<Solucoes />} />
+          <Route path="/estudos" element={<Estudos />} />
           <Route path="/projetos" element={<Projetos />} />
           <Route path="/projetos/:slug" element={<ProjetoDetalhe />} />
           <Route path="/manifesto" element={<Manifesto />} />

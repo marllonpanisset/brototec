@@ -15,8 +15,8 @@ export function createPageUrl(pageName: string) {
 export function getMenu() {
   return [
     {
-      label: "Soluções",
-      href: "/solucoes",
+      label: "Estudos",
+      href: "/estudos",
       description: "O que construímos",
     },
     {

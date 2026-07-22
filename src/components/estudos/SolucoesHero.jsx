@@ -13,7 +13,7 @@ export default function SolucoesHero() {
           animate={{ opacity: 1, y: 0 }}
           className="inline-block text-[10px] font-bold text-primary tracking-[0.4em] uppercase mb-8"
         >
-          Soluções
+          Laboratório Digital
         </motion.span>
 
         <motion.h1
@@ -22,9 +22,9 @@ export default function SolucoesHero() {
           transition={{ duration: 0.8 }}
           className="font-heading text-4xl sm:text-5xl lg:text-7xl font-bold leading-[1.05] tracking-tight max-w-4xl text-white"
         >
-          Interfaces digitais que viram{" "}
+          Experimentos digitais que exploram{" "}
           <span className="text-gradient-amber italic">
-            ativos reais de negócio.
+            novas possibilidades.
           </span>
         </motion.h1>
 
@@ -34,8 +34,9 @@ export default function SolucoesHero() {
           transition={{ delay: 0.2 }}
           className="mt-8 text-base text-muted-foreground max-w-xl leading-relaxed"
         >
-          Estruturamos ecossistemas completos para posicionamento, vendas e crescimento de negócios.  
-          Arquitetura de informação sob medida, eliminando dependências desnecessárias de ferramentas de aluguel.
+          Uma coleção de estudos envolvendo interfaces, arquitetura visual e
+          experiências digitais. Cada projeto explora diferentes formas de
+          organizar informações e criar interações mais intuitivas.
         </motion.p>
 
         <motion.p
@@ -44,7 +45,8 @@ export default function SolucoesHero() {
           transition={{ delay: 0.35 }}
           className="mt-3 text-sm text-muted-foreground/60 max-w-md"
         >
-          Da landing page ao painel de controle — tudo pertence à sua empresa.
+          Da criação de interfaces ao desenvolvimento de sistemas visuais
+          experimentais.
         </motion.p>
 
         <motion.div
